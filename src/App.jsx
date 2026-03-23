@@ -636,12 +636,16 @@ function BoardPage() {
           >
             <div className="grid gap-6 lg:grid-cols-[0.34fr_0.66fr] lg:gap-8">
               <div className="space-y-5">
-                <div className="mx-auto flex max-w-sm items-center justify-center overflow-hidden rounded-[28px] border border-mba-blue/10 bg-mba-tan/40 shadow-[0_18px_45px_-32px_rgba(27,44,92,0.35)] lg:mx-0 lg:max-w-none">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="h-[320px] w-full object-contain object-center sm:h-[360px] md:h-[420px] lg:h-[420px] lg:object-cover lg:object-[50%_18%]"
-                  />
+                <div className="mx-auto max-w-sm lg:mx-0 lg:max-w-none">
+                  <div className="rounded-[30px] bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(245,239,226,0.92))] p-3 shadow-[0_20px_48px_-34px_rgba(27,44,92,0.35)] ring-1 ring-mba-blue/8 sm:p-4">
+                    <div className="flex aspect-[4/5] items-center justify-center overflow-hidden rounded-[24px] border border-mba-blue/10 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.95),rgba(232,224,206,0.9))]">
+                      <img
+                        src={member.image}
+                        alt={member.name}
+                        className="h-full w-full object-contain object-center p-2 sm:p-3 lg:object-cover lg:object-[50%_18%] lg:p-0"
+                      />
+                    </div>
+                  </div>
                 </div>
                 <div className="text-center lg:text-left">
                   <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-mba-red">
