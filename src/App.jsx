@@ -235,6 +235,7 @@ const aboutServices = [
     id: 'als-emergency',
     eyebrow: 'ALS Emergency',
     title: 'Advanced Life Support Ambulance',
+    image: '/about-als.jpg',
     description:
       'MBA has provided Advanced Life Support and paramedic-level care for surrounding communities since the early 1980s, with emergency coverage available day and night in challenging desert conditions.',
     details: [
@@ -248,6 +249,7 @@ const aboutServices = [
     id: 'bls-non-emergency',
     eyebrow: 'BLS Non-Emergency',
     title: 'Basic Life Support Ambulance',
+    image: '/about-bls.jpg',
     description:
       'The dedicated BLS page in staging is currently very thin, but the staged site still positions BLS as part of MBA’s core ambulance offering for dependable non-emergency medical transportation across the Morongo Basin.',
     details: [
@@ -260,6 +262,7 @@ const aboutServices = [
     id: 'cct-rn-transport',
     eyebrow: 'Critical Care',
     title: 'Critical Care Transport Ambulance',
+    image: '/about-cct.jpg',
     description:
       'MBA’s critical care transport nurses and critical care paramedics provide direct patient care during transfers between facilities when a standard paramedic-level transport is not enough.',
     details: [
@@ -273,6 +276,7 @@ const aboutServices = [
     id: 'stand-by-ambulance',
     eyebrow: 'Special Events',
     title: 'Stand-By Ambulance',
+    image: '/about-standby.jpg',
     description:
       'Beyond emergency, non-emergency, and CCT transports, MBA also offers ALS and BLS stand-by services for one-day and multi-day events.',
     details: [
@@ -286,6 +290,7 @@ const aboutServices = [
     id: 'aha-courses',
     eyebrow: 'Training',
     title: 'American Heart Association Courses',
+    image: '/about-aha.jpg',
     description:
       'MBA provides AHA course scheduling, registration support, and on-site training information directly from its Joshua Tree location.',
     details: [
@@ -855,13 +860,20 @@ function AboutPage() {
               staging site says about local involvement.
             </p>
           </div>
-          <div className="rounded-[28px] border border-slate-200/80 bg-slate-50 p-6">
-            <p className="text-sm font-semibold text-slate-950">Community highlights</p>
-            <ul className="mt-4 space-y-3 text-sm leading-7 text-slate-600">
-              <li>Annual Holiday Toy Drive support</li>
-              <li>Participation in community parades and fairs</li>
-              <li>Visible presence at local events across the Morongo Basin</li>
-            </ul>
+          <div className="overflow-hidden rounded-[28px] border border-slate-200/80 bg-white shadow-[0_12px_35px_-28px_rgba(27,44,92,0.18)]">
+            <img
+              src="/about-community.jpg"
+              alt="MBA in the Community"
+              className="aspect-[4/3] w-full object-cover"
+            />
+            <div className="p-6">
+              <p className="text-sm font-semibold text-slate-950">Community highlights</p>
+              <ul className="mt-4 space-y-3 text-sm leading-7 text-slate-600">
+                <li>Annual Holiday Toy Drive support</li>
+                <li>Participation in community parades and fairs</li>
+                <li>Visible presence at local events across the Morongo Basin</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -892,7 +904,15 @@ function AboutPage() {
               id={service.id}
               className="scroll-mt-28 rounded-[30px] border border-slate-200/80 bg-gradient-to-br from-white via-white to-slate-50 p-6 shadow-[0_12px_35px_-28px_rgba(27,44,92,0.18)]"
             >
-              <div className="grid gap-5 lg:grid-cols-[0.42fr_0.58fr] lg:gap-8">
+              <div className="grid gap-5 lg:grid-cols-[0.3fr_0.3fr_0.4fr] lg:gap-8">
+                <div className="overflow-hidden rounded-[26px] border border-slate-200/80 bg-white shadow-[0_12px_35px_-28px_rgba(27,44,92,0.18)]">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="aspect-[4/3] w-full object-cover"
+                  />
+                </div>
+
                 <div>
                   <p className="text-[0.72rem] font-semibold uppercase tracking-[0.24em] text-mba-red">
                     {service.eyebrow}
