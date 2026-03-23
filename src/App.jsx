@@ -636,14 +636,14 @@ function BoardPage() {
           >
             <div className="grid gap-6 lg:grid-cols-[0.34fr_0.66fr] lg:gap-8">
               <div className="space-y-5">
-                <div className="overflow-hidden rounded-[28px] border border-mba-blue/10 bg-mba-tan/40 shadow-[0_18px_45px_-32px_rgba(27,44,92,0.35)]">
+                <div className="mx-auto max-w-sm overflow-hidden rounded-[28px] border border-mba-blue/10 bg-mba-tan/40 shadow-[0_18px_45px_-32px_rgba(27,44,92,0.35)] lg:mx-0 lg:max-w-none">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="h-[320px] w-full object-cover object-top sm:h-[380px] lg:h-[420px]"
+                    className="h-[320px] w-full object-cover object-center object-[50%_28%] sm:h-[360px] md:h-[420px] md:object-[50%_22%] lg:h-[420px] lg:object-[50%_18%]"
                   />
                 </div>
-                <div>
+                <div className="text-center lg:text-left">
                   <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-mba-red">
                     Leadership
                   </p>
