@@ -46,11 +46,11 @@ const serviceLinks = [
 ]
 
 const topNav = [
-  { label: 'Ambulance Services', href: '#services' },
-  { label: 'Memberships', href: '#support' },
-  { label: 'Careers with MBA', href: '#careers' },
-  { label: 'MBA in the Community', href: '#community' },
-  { label: 'Donations', href: '#support' },
+  { label: 'Ambulance Services', href: '/ambulance-services' },
+  { label: 'Memberships', href: '/memberships' },
+  { label: 'Careers with MBA', href: '/careers' },
+  { label: 'MBA in the Community', href: '/community' },
+  { label: 'Donations', href: '/donations' },
 ]
 
 const serviceArea = [
@@ -95,22 +95,28 @@ function App() {
         <header className="rounded-[30px] border border-white/70 bg-white/85 px-5 py-4 shadow-[0_18px_50px_-28px_rgba(27,44,92,0.28)] backdrop-blur md:px-7">
           <div className="flex items-start justify-between gap-4 lg:items-center">
             <div className="flex min-w-0 items-center gap-4">
-              <div className="shrink-0 rounded-2xl bg-white p-3 shadow-[0_12px_30px_-20px_rgba(27,44,92,0.3)]">
-                <img
-                  src="/mba-logo.png"
-                  alt="Morongo Basin Ambulance EMS logo"
-                  className="h-14 w-auto sm:h-20"
-                />
-              </div>
-              <div className="min-w-0">
-                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.3em] text-mba-blue">
-                  Morongo Basin Ambulance
-                </p>
-                <p className="mt-2 hidden max-w-xl text-sm leading-6 text-slate-500 sm:block">
-                  Non-profit and non-tax based 501(c)(3) ambulance service for the
-                  Morongo Basin and surrounding desert communities.
-                </p>
-              </div>
+              <a
+                href="/"
+                className="contents"
+                aria-label="Go to the Morongo Basin Ambulance homepage"
+              >
+                <div className="shrink-0 rounded-2xl bg-white p-3 shadow-[0_12px_30px_-20px_rgba(27,44,92,0.3)]">
+                  <img
+                    src="/mba-logo.png"
+                    alt="Morongo Basin Ambulance EMS logo"
+                    className="h-14 w-auto sm:h-20"
+                  />
+                </div>
+                <div className="min-w-0">
+                  <p className="text-[0.72rem] font-semibold uppercase tracking-[0.3em] text-mba-blue">
+                    Morongo Basin Ambulance
+                  </p>
+                  <p className="mt-2 hidden max-w-xl text-sm leading-6 text-slate-500 sm:block">
+                    Non-profit and non-tax based 501(c)(3) ambulance service for the
+                    Morongo Basin and surrounding desert communities.
+                  </p>
+                </div>
+              </a>
             </div>
 
             <button
@@ -189,7 +195,7 @@ function App() {
                 ))}
                 <a
                   className="mt-2 inline-flex min-h-11 items-center justify-center rounded-2xl bg-mba-blue px-4 py-3 text-sm font-semibold text-white no-underline transition hover:bg-mba-blue-deep"
-                  href="#support"
+                  href="/donations"
                   onClick={closeMenu}
                 >
                   Support MBA
