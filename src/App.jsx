@@ -46,11 +46,11 @@ const serviceLinks = [
 ]
 
 const topNav = [
-  { label: 'Ambulance Services', href: '/ambulance-services' },
-  { label: 'Memberships', href: '/memberships' },
+  { label: 'About MBA', href: '/about-mba' },
+  { label: 'Board of Directors', href: '/board-of-directors' },
   { label: 'Careers with MBA', href: '/careers' },
   { label: 'MBA in the Community', href: '/community' },
-  { label: 'Donations', href: '/donations' },
+  { label: 'Lifeline', href: '/lifeline' },
 ]
 
 const serviceArea = [
@@ -195,7 +195,7 @@ function App() {
                 ))}
                 <a
                   className="mt-2 inline-flex min-h-11 items-center justify-center rounded-2xl bg-mba-blue px-4 py-3 text-sm font-semibold text-white no-underline transition hover:bg-mba-blue-deep"
-                  href="/donations"
+                  href="/lifeline"
                   onClick={closeMenu}
                 >
                   Support MBA
@@ -252,7 +252,7 @@ function App() {
                   </a>
                   <a
                     className="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-mba-red/30 bg-white px-6 py-3 text-sm font-semibold text-mba-red transition hover:-translate-y-0.5 hover:border-mba-red hover:bg-mba-red hover:text-white sm:w-auto"
-                    href="#support"
+                    href="/lifeline"
                   >
                     Support MBA
                   </a>
@@ -277,17 +277,17 @@ function App() {
               <aside className="grid gap-4 self-end">
                 <div className="overflow-hidden rounded-[26px] border border-mba-blue/10 bg-white shadow-[0_16px_50px_-32px_rgba(27,44,92,0.22)] sm:rounded-[30px]">
                   <img
-                    src="/mba-community.jpg"
-                    alt="MBA in the Community"
+                    src="/mba-crew.jpg"
+                    alt="Morongo Basin Ambulance crew"
                     className="aspect-[4/3] w-full object-cover sm:aspect-square"
                   />
                   <div className="p-6">
                     <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-mba-red">
-                      MBA in the Community
+                      Updated staging photo
                     </p>
                     <p className="mt-3 text-sm leading-7 text-slate-600">
-                      The live site highlights toy drives, parades, fairs, and
-                      local events. That community story deserves real visual weight.
+                      Staging now includes newer photography, which gives the site a
+                      more current and professional feel than the older placeholder image.
                     </p>
                   </div>
                 </div>
@@ -363,7 +363,7 @@ function App() {
               id="support"
             >
               <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-mba-gold">
-                Memberships and Donations
+                Memberships and Lifeline
               </p>
               <h2 className="mt-4 max-w-xl font-heading text-3xl leading-tight tracking-[-0.04em] text-white sm:text-4xl">
                 Make support options feel concrete, affordable, and easy to act on.
@@ -371,7 +371,7 @@ function App() {
               <p className="mt-5 max-w-xl text-base leading-8 text-blue-50/90">
                 The MBA Emergency Services Discount Plan gives the community an
                 affordable way to help reduce ambulance costs if transport is needed,
-                while donations help sustain one of the only nonprofit ambulance
+                while Lifeline support helps sustain one of the only nonprofit ambulance
                 services in California.
               </p>
 
@@ -405,16 +405,16 @@ function App() {
 
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
-                  href="https://www.mbambulance.org/mba-memberships/"
+                  href="/memberships"
                   className="inline-flex min-h-12 items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-mba-blue no-underline transition hover:-translate-y-0.5"
                 >
                   Explore Memberships
                 </a>
                 <a
-                  href="https://www.mbambulance.org/donations/"
+                  href="/lifeline"
                   className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/30 px-5 py-3 text-sm font-semibold text-white no-underline transition hover:-translate-y-0.5 hover:bg-white/10"
                 >
-                  Make a Donation
+                  Explore Lifeline
                 </a>
               </div>
             </div>
@@ -424,22 +424,22 @@ function App() {
               id="community"
             >
               <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-mba-red">
-                Donations and Community
+                Lifeline and Community
               </p>
               <h2 className="mt-3 max-w-2xl font-heading text-3xl leading-tight tracking-[-0.04em] text-slate-950 sm:text-4xl">
                 Reinforce why support matters and connect it back to the community story.
               </h2>
               <p className="mt-5 text-base leading-8 text-slate-600">
-                The donations page explains that MBA has never received public
+                The Lifeline page explains that MBA has never received public
                 funding or tax dollars, and that rising operating costs make
                 community support matter. That message should be visible right on the homepage.
               </p>
 
               <div className="mt-8 grid gap-4">
                 <div className="rounded-3xl border border-mba-red/10 bg-mba-red/5 p-5">
-                  <p className="text-sm font-semibold text-slate-950">Why donate</p>
+                  <p className="text-sm font-semibold text-slate-950">Why Lifeline matters</p>
                   <p className="mt-2 text-sm leading-7 text-slate-600">
-                    Donations support your community and help save lives while covering the growing cost of supplies, communications, and operations.
+                    Lifeline support helps your community and helps save lives while covering the growing cost of supplies, communications, and operations.
                   </p>
                 </div>
                 <div className="rounded-3xl border border-slate-200 bg-white p-5" id="careers">
@@ -485,19 +485,19 @@ function App() {
                 </p>
                 <div className="mt-4 flex flex-col gap-3">
                   <a
-                    href="https://www.mbambulance.org/mba-memberships/"
+                    href="/memberships"
                     className="text-sm font-semibold text-white no-underline transition hover:text-mba-gold"
                   >
                     Memberships
                   </a>
                   <a
-                    href="https://www.mbambulance.org/donations/"
+                    href="/lifeline"
                     className="text-sm font-semibold text-white no-underline transition hover:text-mba-gold"
                   >
-                    Donations
+                    Lifeline
                   </a>
                   <a
-                    href="https://www.mbambulance.org/mba-in-the-community/"
+                    href="/community"
                     className="text-sm font-semibold text-white no-underline transition hover:text-mba-gold"
                   >
                     MBA in the Community
