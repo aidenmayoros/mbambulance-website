@@ -65,6 +65,17 @@ const serviceArea = [
   'Joshua Tree National Park',
 ]
 
+const socialLinks = [
+  {
+    label: 'Facebook',
+    href: 'https://www.facebook.com/MorongoBasinAmbulance/',
+  },
+  {
+    label: 'Instagram',
+    href: 'https://www.instagram.com/morongobasinambulance/?hl=en',
+  },
+]
+
 function App() {
   return (
     <div className="min-h-screen bg-[radial-gradient(circle_at_top_left,_rgba(43,74,182,0.16),_transparent_28%),linear-gradient(180deg,_#f9fbff_0%,_#eef3ff_44%,_#f7f4ef_100%)] text-slate-700">
@@ -254,7 +265,7 @@ function App() {
             </div>
           </section>
 
-          <section className="grid gap-5 lg:grid-cols-[0.95fr_1.05fr]">
+          <section className="grid gap-5 lg:grid-cols-[1.02fr_0.98fr]">
             <div
               className="rounded-[32px] border border-mba-blue/10 bg-mba-blue px-6 py-8 text-white shadow-[0_18px_50px_-30px_rgba(27,44,92,0.38)] md:px-8"
               id="support"
@@ -263,13 +274,43 @@ function App() {
                 Memberships and Donations
               </p>
               <h2 className="mt-4 max-w-xl font-heading text-3xl leading-tight tracking-[-0.04em] text-white sm:text-4xl">
-                Support pathways should feel just as visible as service pathways.
+                Make support options feel concrete, affordable, and easy to act on.
               </h2>
               <p className="mt-5 max-w-xl text-base leading-8 text-blue-50/90">
-                The live site gives memberships and donations top-level navigation.
-                This rebuild keeps that intent and gives those calls to action more
-                room to earn trust and attention.
+                The MBA Emergency Services Discount Plan gives the community an
+                affordable way to help reduce ambulance costs if transport is needed,
+                while donations help sustain one of the only nonprofit ambulance
+                services in California.
               </p>
+
+              <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                <div className="rounded-[28px] bg-white/10 p-5 ring-1 ring-white/15 backdrop-blur">
+                  <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-mba-gold">
+                    Membership
+                  </p>
+                  <p className="mt-3 text-2xl font-heading text-white">Individual Plan: $100</p>
+                  <p className="mt-2 text-sm leading-7 text-blue-50/85">
+                    Annual coverage option for individuals through the ESDP membership.
+                  </p>
+                </div>
+                <div className="rounded-[28px] bg-white/10 p-5 ring-1 ring-white/15 backdrop-blur">
+                  <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-mba-gold">
+                    Membership
+                  </p>
+                  <p className="mt-3 text-2xl font-heading text-white">Family Plan: $150</p>
+                  <p className="mt-2 text-sm leading-7 text-blue-50/85">
+                    Annual coverage for spouses and children under 18 at the same address.
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-6 rounded-[28px] border border-white/15 bg-slate-950/20 p-5">
+                <p className="text-sm leading-7 text-blue-50/90">
+                  To enroll in a membership, call <span className="font-semibold text-white">(760) 366-8474</span> and select Option 3,
+                  or stop by Station 1 at 6335 Park Blvd in Joshua Tree during business hours.
+                </p>
+              </div>
+
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
                   href="https://www.mbambulance.org/mba-memberships/"
@@ -291,30 +332,28 @@ function App() {
               id="community"
             >
               <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-mba-red">
-                MBA in the Community
+                Donations and Community
               </p>
               <h2 className="mt-3 max-w-2xl font-heading text-3xl leading-tight tracking-[-0.04em] text-slate-950 sm:text-4xl">
-                Giving back to our communities should feel like a real homepage feature.
+                Reinforce why support matters and connect it back to the community story.
               </h2>
               <p className="mt-5 text-base leading-8 text-slate-600">
-                MBA supports an annual Holiday Toy Drive, community parades, fairs,
-                and other local events throughout the hi-desert. That story builds
-                trust and should stay front and center in the redesign.
+                The donations page explains that MBA has never received public
+                funding or tax dollars, and that rising operating costs make
+                community support matter. That message should be visible right on the homepage.
               </p>
-              <div className="mt-8 grid gap-4 sm:grid-cols-2">
+
+              <div className="mt-8 grid gap-4">
                 <div className="rounded-3xl border border-mba-red/10 bg-mba-red/5 p-5">
-                  <p className="text-sm font-semibold text-slate-950">Community support</p>
+                  <p className="text-sm font-semibold text-slate-950">Why donate</p>
                   <p className="mt-2 text-sm leading-7 text-slate-600">
-                    The homepage can link directly into the full community page and highlight recent events.
+                    Donations support your community and help save lives while covering the growing cost of supplies, communications, and operations.
                   </p>
                 </div>
-                <div
-                  className="rounded-3xl border border-slate-200 bg-white p-5"
-                  id="careers"
-                >
+                <div className="rounded-3xl border border-slate-200 bg-white p-5" id="careers">
                   <p className="text-sm font-semibold text-slate-950">Careers with MBA</p>
                   <p className="mt-2 text-sm leading-7 text-slate-600">
-                    The site already positions MBA as an employer of paramedics, EMTs, nurses, and dispatchers.
+                    The site already positions MBA as an employer of paramedics, EMTs, nurses, and dispatchers, which is worth surfacing prominently.
                   </p>
                 </div>
               </div>
@@ -326,27 +365,70 @@ function App() {
           className="rounded-[30px] border border-slate-900/10 bg-slate-950 px-5 py-6 text-white shadow-[0_18px_50px_-30px_rgba(27,44,92,0.35)] md:px-7"
           id="contact"
         >
-          <div className="grid gap-6 md:grid-cols-[1.1fr_0.9fr] md:items-center">
-            <div className="flex items-center gap-4">
+          <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
+            <div className="flex items-start gap-4">
               <img
                 src="/mba-footer-logo.png"
                 alt="Morongo Basin Ambulance EMS footer logo"
-                className="h-16 w-auto sm:h-20"
+                className="h-16 w-auto shrink-0 sm:h-20"
               />
               <div>
                 <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-mba-gold">
                   Contact
                 </p>
                 <h2 className="mt-2 font-heading text-3xl leading-tight tracking-[-0.04em] text-white">
-                  A cleaner contact block with the real location and phone details.
+                  A cleaner footer with the real contact details and social links from the live site.
                 </h2>
+                <div className="mt-5 space-y-2 text-sm leading-7 text-slate-300">
+                  <p>6335 Park Blvd (mailing to PO Box 460), Joshua Tree, CA 92252</p>
+                  <p>760-366-8474</p>
+                </div>
               </div>
             </div>
 
-            <div className="space-y-3 text-sm leading-7 text-slate-300">
-              <p>6335 Park Blvd (mailing to PO Box 460), Joshua Tree, CA 92252</p>
-              <p>760-366-8474</p>
-              <p>Facebook and Instagram links can be restored here in the next pass.</p>
+            <div className="grid gap-4 sm:grid-cols-2">
+              <div className="rounded-[26px] border border-white/10 bg-white/5 p-5">
+                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-mba-gold">
+                  Support
+                </p>
+                <div className="mt-4 flex flex-col gap-3">
+                  <a
+                    href="https://www.mbambulance.org/mba-memberships/"
+                    className="text-sm font-semibold text-white no-underline transition hover:text-mba-gold"
+                  >
+                    Memberships
+                  </a>
+                  <a
+                    href="https://www.mbambulance.org/donations/"
+                    className="text-sm font-semibold text-white no-underline transition hover:text-mba-gold"
+                  >
+                    Donations
+                  </a>
+                  <a
+                    href="https://www.mbambulance.org/mba-in-the-community/"
+                    className="text-sm font-semibold text-white no-underline transition hover:text-mba-gold"
+                  >
+                    MBA in the Community
+                  </a>
+                </div>
+              </div>
+
+              <div className="rounded-[26px] border border-white/10 bg-white/5 p-5">
+                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-mba-gold">
+                  Connect
+                </p>
+                <div className="mt-4 flex flex-col gap-3">
+                  {socialLinks.map((link) => (
+                    <a
+                      key={link.label}
+                      href={link.href}
+                      className="text-sm font-semibold text-white no-underline transition hover:text-mba-gold"
+                    >
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </footer>
