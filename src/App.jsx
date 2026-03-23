@@ -200,54 +200,59 @@ function App() {
         </header>
 
         <main className="flex flex-col gap-5">
-          <section className="overflow-hidden rounded-[34px] border border-white/70 bg-white/90 shadow-[0_24px_70px_-34px_rgba(27,44,92,0.28)]">
-            <div className="grid gap-8 px-6 py-8 md:px-10 md:py-10 lg:grid-cols-[1.1fr_0.9fr] lg:px-12 lg:py-14">
+          <section className="overflow-hidden rounded-[30px] border border-white/70 bg-white/90 shadow-[0_24px_70px_-34px_rgba(27,44,92,0.28)] sm:rounded-[34px]">
+            <div className="grid gap-6 px-4 py-5 sm:gap-8 sm:px-6 sm:py-8 md:px-10 md:py-10 lg:grid-cols-[1.1fr_0.9fr] lg:px-12 lg:py-14">
               <div className="relative">
-                <div className="absolute -left-8 top-0 h-36 w-36 rounded-full bg-mba-blue/10 blur-3xl" />
-                <div className="absolute left-20 top-28 h-24 w-24 rounded-full bg-mba-red/14 blur-3xl" />
+                <div className="absolute -left-10 top-0 h-28 w-28 rounded-full bg-mba-blue/10 blur-3xl sm:-left-8 sm:h-36 sm:w-36" />
+                <div className="absolute left-12 top-24 h-20 w-20 rounded-full bg-mba-red/14 blur-3xl sm:left-20 sm:top-28 sm:h-24 sm:w-24" />
 
-                <p className="relative inline-flex rounded-full border border-mba-blue/15 bg-mba-blue/5 px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-mba-blue">
+                <p className="relative inline-flex max-w-full rounded-full border border-mba-blue/15 bg-mba-blue/5 px-3 py-2 text-[0.62rem] font-semibold uppercase tracking-[0.22em] text-mba-blue sm:px-4 sm:text-[0.72rem] sm:tracking-[0.28em]">
                   9-1-1 emergency and non-emergency medical transportation
                 </p>
 
-                <h1 className="relative mt-6 max-w-4xl font-heading text-5xl leading-[0.94] tracking-[-0.055em] text-slate-950 sm:text-6xl lg:text-7xl">
+                <h1 className="relative mt-4 max-w-4xl font-heading text-[2.45rem] leading-[0.92] tracking-[-0.06em] text-slate-950 sm:mt-6 sm:text-6xl sm:leading-[0.94] sm:tracking-[-0.055em] lg:text-7xl">
                   Morongo Basin Ambulance, rebuilt with clearer structure and stronger trust signals.
                 </h1>
 
-                <div className="relative mt-6 max-w-3xl space-y-5 text-base leading-8 text-slate-600">
-                  <p>
+                <div className="relative mt-4 max-w-3xl space-y-4 text-[0.97rem] leading-7 text-slate-600 sm:mt-6 sm:space-y-5 sm:text-base sm:leading-8">
+                  <p className="sm:hidden">
+                    Morongo Basin Ambulance provides 9-1-1 emergency and
+                    non-emergency medical transportation across multiple desert
+                    communities in San Bernardino County.
+                  </p>
+                  <p className="hidden sm:block">
                     Morongo Basin Ambulance provides 9-1-1 emergency and
                     non-emergency medical transportation across multiple
                     communities in San Bernardino County.
                   </p>
-                  <p>
+                  <p className="hidden sm:block">
                     Founded in 1948 as a non-tax based, non-profit corporation,
                     MBA is the sole provider of 9-1-1 emergency ambulance services
                     to much of the Morongo Basin, including Joshua Tree National Park.
                   </p>
-                  <p>
+                  <p className="hidden sm:block">
                     Revenue above operating costs is put back into the company and
                     the communities it serves, with care centered on service rather
                     than maximizing profit.
                   </p>
                 </div>
 
-                <div className="relative mt-8 flex flex-wrap gap-3">
+                <div className="relative mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap">
                   <a
-                    className="inline-flex min-h-12 items-center justify-center rounded-full bg-mba-blue px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-mba-blue-deep"
+                    className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-mba-blue px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-mba-blue-deep sm:w-auto"
                     href="#services"
                   >
                     View Ambulance Services
                   </a>
                   <a
-                    className="inline-flex min-h-12 items-center justify-center rounded-full border border-mba-red/30 bg-white px-6 py-3 text-sm font-semibold text-mba-red transition hover:-translate-y-0.5 hover:border-mba-red hover:bg-mba-red hover:text-white"
+                    className="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-mba-red/30 bg-white px-6 py-3 text-sm font-semibold text-mba-red transition hover:-translate-y-0.5 hover:border-mba-red hover:bg-mba-red hover:text-white sm:w-auto"
                     href="#support"
                   >
                     Support MBA
                   </a>
                 </div>
 
-                <div className="relative mt-10 grid gap-3 sm:grid-cols-3">
+                <div className="relative mt-6 grid gap-3 sm:mt-10 sm:grid-cols-3">
                   <div className="rounded-2xl border border-mba-blue/10 bg-mba-blue/5 px-4 py-4">
                     <p className="text-sm font-semibold text-slate-900">Founded in 1948</p>
                     <p className="mt-1 text-sm text-slate-500">Longstanding local service</p>
@@ -264,11 +269,11 @@ function App() {
               </div>
 
               <aside className="grid gap-4 self-end">
-                <div className="overflow-hidden rounded-[30px] border border-mba-blue/10 bg-white shadow-[0_16px_50px_-32px_rgba(27,44,92,0.22)]">
+                <div className="overflow-hidden rounded-[26px] border border-mba-blue/10 bg-white shadow-[0_16px_50px_-32px_rgba(27,44,92,0.22)] sm:rounded-[30px]">
                   <img
                     src="/mba-community.jpg"
                     alt="MBA in the Community"
-                    className="aspect-square w-full object-cover"
+                    className="aspect-[4/3] w-full object-cover sm:aspect-square"
                   />
                   <div className="p-6">
                     <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-mba-red">
