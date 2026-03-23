@@ -81,6 +81,7 @@ const boardMembers = [
   {
     name: 'Donna Munoz',
     role: 'Vice Chair and Board Member',
+    image: '/board-donna-munoz.jpg',
     bio: 'Donna Munoz Aldana is a long-term resident of the Morongo Basin, having lived in Yucca Valley and Morongo Valley for the past 40 years. She has been politically and privately active in a number of community organizations with a focus on strengthening the basin and enriching the lives of local residents.',
     highlights: [
       '16 years as an elected member of the Morongo Unified School District Board of Education',
@@ -93,6 +94,7 @@ const boardMembers = [
   {
     name: 'Richard Middlebrough',
     role: 'Board Member',
+    image: '/board-richard-middlebrough.jpg',
     bio: 'As a retired Fire Captain and EMT for the City of Newport Beach, Richard brings more than 30 years of experience in fire suppression, emergency scene management, extrication, and basic and advanced life support systems. He also managed facilities for six fire stations, the main lifeguard headquarters, and the construction of a temporary seventh station.',
     highlights: [
       'Former President of the Newport Beach Firefighters Association for 10 years',
@@ -103,6 +105,7 @@ const boardMembers = [
   {
     name: 'Steve Reyes',
     role: 'Board Member',
+    image: '/board-steve-reyes.jpg',
     bio: 'Steve Reyes is a full-time Morongo Basin resident and retired law enforcement professional with a 29-year career across patrol, fugitive warrants, and federal task forces. In the basin, he has served on several volunteer councils and advisory boards in both county and education settings.',
     highlights: [
       'Served on the San Bernardino County Municipal Advisory Council',
@@ -113,6 +116,7 @@ const boardMembers = [
   {
     name: 'Dave Behrens',
     role: 'Board Member',
+    image: '/board-dave-behrens.jpg',
     bio: 'Dave and his family have deep roots in the Morongo Basin, with a history in the region going back to the 1960s. He retired from various local public works positions, operated his own metal fabrication business, and taught adult education at College of the Desert.',
     highlights: [
       'Longtime full-time resident of the Morongo Basin',
@@ -123,11 +127,23 @@ const boardMembers = [
   {
     name: 'Chris Claire',
     role: 'Treasurer of the Morongo Basin Ambulance Association',
+    image: '/board-chris-claire.jpg',
     bio: 'Christopher Claire has strong ties to the Morongo Basin as a former student, small business owner, youth sports volunteer, nonprofit treasurer, and education leader. His local background and service roles reflect a long-term commitment to supporting students, families, and community growth.',
     highlights: [
       'Local upbringing and continued business leadership in the basin',
       'Volunteer and nonprofit service experience',
       'Focused on stronger opportunity and support for local families',
+    ],
+  },
+  {
+    name: 'Craig Bell',
+    role: 'Operations Chief, EMS Coordinator',
+    image: '/board-craig-bell.jpg',
+    bio: 'Craig Bell is featured on the staging leadership page as MBA’s Operations Chief and EMS Coordinator, connecting board leadership with day-to-day service operations.',
+    highlights: [
+      'Operations Chief and EMS Coordinator for Morongo Basin Ambulance',
+      'Included on the staging leadership page alongside the board members',
+      'Supports the link between governance, operations, and field service delivery',
     ],
   },
 ]
@@ -618,19 +634,33 @@ function BoardPage() {
             key={member.name}
             className="rounded-[32px] border border-white/70 bg-white/90 px-6 py-8 shadow-[0_16px_50px_-32px_rgba(27,44,92,0.25)] md:px-8"
           >
-            <div className="grid gap-6 lg:grid-cols-[0.34fr_0.66fr]">
-              <div>
-                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-mba-red">
-                  Leadership
-                </p>
-                <h2 className="mt-3 font-heading text-3xl leading-tight tracking-[-0.04em] text-slate-950">
-                  {member.name}
-                </h2>
-                <p className="mt-2 text-sm font-semibold text-mba-blue">{member.role}</p>
+            <div className="grid gap-6 lg:grid-cols-[0.34fr_0.66fr] lg:gap-8">
+              <div className="space-y-5">
+                <div className="overflow-hidden rounded-[28px] border border-mba-blue/10 bg-mba-tan/40 shadow-[0_18px_45px_-32px_rgba(27,44,92,0.35)]">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="h-[320px] w-full object-cover object-top sm:h-[380px] lg:h-[420px]"
+                  />
+                </div>
+                <div>
+                  <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-mba-red">
+                    Leadership
+                  </p>
+                  <h2 className="mt-3 font-heading text-3xl leading-tight tracking-[-0.04em] text-slate-950">
+                    {member.name}
+                  </h2>
+                  <p className="mt-2 text-sm font-semibold text-mba-blue">
+                    {member.role}
+                  </p>
+                </div>
               </div>
 
-              <div>
-                <p className="text-base leading-8 text-slate-600">{member.bio}</p>
+              <div className="flex flex-col justify-center">
+                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-mba-red">
+                  Experience and service
+                </p>
+                <p className="mt-4 text-base leading-8 text-slate-600">{member.bio}</p>
                 <ul className="mt-6 space-y-3">
                   {member.highlights.map((item) => (
                     <li
