@@ -973,13 +973,13 @@ function LifelinePage() {
 
             <div className="relative mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <a
-                href="https://www.paypal.com/donate?token=gRENrGRMhrS615Q5SzMZ3IP6-keGXpNcbFp8lBOvlKbCHmz8LEhjdqV7-sZ6UScSICF1Thl94siu1WIX"
+                href="https://www.paypal.com/donate?token=2aOyhSc5amqiolYe2xfNr8cnIbPDq9dXSNgR986xwirkwU2-FoD5EJsFurV1c2Nx1NpSIfibgRSDsbgW"
                 className="inline-flex min-h-12 items-center justify-center rounded-full bg-mba-blue px-6 py-3 text-sm font-semibold text-white no-underline transition hover:-translate-y-0.5 hover:bg-mba-blue-deep"
               >
                 Become a Member
               </a>
               <a
-                href="https://www.paypal.com/donate?token=RhsvkG7r4B9ykT1-dLFVB2xwGwzlYlXYjEe5L5RNdNQ8FDvH5M23sEcYQ6h9fgNtoC8F88MG51qQC1dp"
+                href="https://www.paypal.com/donate?token=2aOyhSc5amqiolYe2xfNr8cnIbPDq9dXSNgR986xwirkwU2-FoD5EJsFurV1c2Nx1NpSIfibgRSDsbgW"
                 className="inline-flex min-h-12 items-center justify-center rounded-full border border-mba-red/30 bg-white px-6 py-3 text-sm font-semibold text-mba-red no-underline transition hover:-translate-y-0.5 hover:border-mba-red hover:bg-mba-red hover:text-white"
               >
                 Donate Today
@@ -1066,7 +1066,7 @@ function LifelinePage() {
           </div>
           <div className="mt-8">
             <a
-              href="https://www.paypal.com/donate?token=gRENrGRMhrS615Q5SzMZ3IP6-keGXpNcbFp8lBOvlKbCHmz8LEhjdqV7-sZ6UScSICF1Thl94siu1WIX"
+              href="https://www.paypal.com/donate?token=2aOyhSc5amqiolYe2xfNr8cnIbPDq9dXSNgR986xwirkwU2-FoD5EJsFurV1c2Nx1NpSIfibgRSDsbgW"
               className="inline-flex min-h-12 items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-mba-blue no-underline transition hover:-translate-y-0.5"
             >
               Become a Lifeline Member
@@ -1099,7 +1099,7 @@ function LifelinePage() {
           </div>
           <div className="mt-8">
             <a
-              href="https://www.paypal.com/donate?token=RhsvkG7r4B9ykT1-dLFVB2xwGwzlYlXYjEe5L5RNdNQ8FDvH5M23sEcYQ6h9fgNtoC8F88MG51qQC1dp"
+              href="https://www.paypal.com/donate?token=2aOyhSc5amqiolYe2xfNr8cnIbPDq9dXSNgR986xwirkwU2-FoD5EJsFurV1c2Nx1NpSIfibgRSDsbgW"
               className="inline-flex min-h-12 items-center justify-center rounded-full bg-mba-red px-6 py-3 text-sm font-semibold text-white no-underline transition hover:-translate-y-0.5 hover:bg-red-700"
             >
               Pay Securely
