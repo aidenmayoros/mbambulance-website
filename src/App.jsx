@@ -636,7 +636,7 @@ function BoardPage() {
           >
             <div className="grid gap-6 lg:grid-cols-[0.34fr_0.66fr] lg:gap-8">
               <div className="space-y-5">
-                <div className="mx-auto inline-flex max-w-full items-center justify-center overflow-hidden rounded-[28px] border border-mba-blue/10 bg-mba-tan/40 shadow-[0_18px_45px_-32px_rgba(27,44,92,0.35)] lg:flex lg:max-w-none">
+                <div className="mx-auto flex w-fit max-w-full items-center justify-center overflow-hidden rounded-[28px] border border-mba-blue/10 bg-mba-tan/40 shadow-[0_18px_45px_-32px_rgba(27,44,92,0.35)] lg:w-auto lg:max-w-none">
                   <img
                     src={member.image}
                     alt={member.name}
