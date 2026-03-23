@@ -4,42 +4,42 @@ const serviceLinks = [
   {
     number: '01',
     title: 'ALS Emergency',
-    href: 'https://www.mbambulance.org/advanced-life-support-ambulance/',
+    href: '/ambulance-services/als-emergency',
     description:
       'Emergency ambulance response with advanced life support for the communities MBA serves.',
   },
   {
     number: '02',
     title: 'BLS Non-Emergency',
-    href: 'https://www.mbambulance.org/basic-life-support-ambulance/',
+    href: '/ambulance-services/bls-non-emergency',
     description:
       'Non-emergency medical transportation with dependable support for patients who still need care in transit.',
   },
   {
     number: '03',
     title: 'CCT RN Transport',
-    href: 'https://www.mbambulance.org/critical-care-transport-nurse-ambulance/',
+    href: '/ambulance-services/cct-rn-transport',
     description:
       'Critical care transport supported by registered nurses for higher-acuity patient transfers.',
   },
   {
     number: '04',
     title: 'Stand-By Ambulance',
-    href: 'https://www.mbambulance.org/standby-ambulance/',
+    href: '/ambulance-services/stand-by-ambulance',
     description:
       'Stand-by ambulance services for special events and movie production sets.',
   },
   {
     number: '05',
     title: 'AHA Courses',
-    href: 'https://www.mbambulance.org/american-heart-association-courses/',
+    href: '/ambulance-services/aha-courses',
     description:
       'Training and certification courses that support preparedness in the wider community.',
   },
   {
     number: '06',
     title: 'Careers',
-    href: 'https://www.mbambulance.org/emt-paramedic-jobs/',
+    href: '/careers',
     description:
       'Career paths for paramedics, EMTs, nurses, and dispatchers serving the hi-desert.',
   },
