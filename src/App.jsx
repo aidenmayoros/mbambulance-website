@@ -1,34 +1,54 @@
-const services = [
+const serviceLinks = [
   {
+    number: '01',
     title: 'ALS Emergency',
+    href: 'https://www.mbambulance.org/advanced-life-support-ambulance/',
     description:
-      'Advanced life support emergency response for the desert communities MBA serves every day.',
+      'Emergency ambulance response with advanced life support for the communities MBA serves.',
   },
   {
+    number: '02',
     title: 'BLS Non-Emergency',
+    href: 'https://www.mbambulance.org/basic-life-support-ambulance/',
     description:
-      'Scheduled and non-emergency transportation with dependable clinical support and clearer booking paths.',
+      'Non-emergency medical transportation with dependable support for patients who still need care in transit.',
   },
   {
+    number: '03',
     title: 'CCT RN Transport',
+    href: 'https://www.mbambulance.org/critical-care-transport-nurse-ambulance/',
     description:
       'Critical care transport supported by registered nurses for higher-acuity patient transfers.',
   },
   {
+    number: '04',
     title: 'Stand-By Ambulance',
+    href: 'https://www.mbambulance.org/standby-ambulance/',
     description:
-      'On-site event medical coverage for productions, gatherings, and community events that need readiness.',
+      'Stand-by ambulance services for special events and movie production sets.',
   },
   {
+    number: '05',
     title: 'AHA Courses',
+    href: 'https://www.mbambulance.org/american-heart-association-courses/',
     description:
-      'Training and education offerings that help prepare families, organizations, and workplaces.',
+      'Training and certification courses that support preparedness in the wider community.',
   },
   {
+    number: '06',
     title: 'Careers',
+    href: 'https://www.mbambulance.org/emt-paramedic-jobs/',
     description:
-      'Open roles for EMTs, paramedics, nurses, dispatchers, and other mission-driven healthcare professionals.',
+      'Career paths for paramedics, EMTs, nurses, and dispatchers serving the hi-desert.',
   },
+]
+
+const topNav = [
+  { label: 'Ambulance Services', href: '#services' },
+  { label: 'Memberships', href: '#support' },
+  { label: 'Careers with MBA', href: '#careers' },
+  { label: 'MBA in the Community', href: '#community' },
+  { label: 'Donations', href: '#support' },
 ]
 
 const serviceArea = [
@@ -44,8 +64,6 @@ const serviceArea = [
   'Amboy',
   'Joshua Tree National Park',
 ]
-
-const supportLinks = ['Memberships', 'Donations', 'Community Events']
 
 function App() {
   return (
@@ -66,8 +84,8 @@ function App() {
                   Morongo Basin Ambulance
                 </p>
                 <p className="mt-2 max-w-xl text-sm leading-6 text-slate-500">
-                  A more polished homepage direction built from the current site&apos;s
-                  nonprofit mission, service lines, and support pathways.
+                  Non-profit and non-tax based 501(c)(3) ambulance service for the
+                  Morongo Basin and surrounding desert communities.
                 </p>
               </div>
             </div>
@@ -76,62 +94,58 @@ function App() {
               className="flex flex-wrap gap-2 text-sm font-semibold text-slate-700"
               aria-label="Primary"
             >
-              <a
-                className="rounded-full px-4 py-2 transition hover:bg-mba-tan hover:text-mba-blue"
-                href="#services"
-              >
-                Services
-              </a>
-              <a
-                className="rounded-full px-4 py-2 transition hover:bg-mba-tan hover:text-mba-blue"
-                href="#about"
-              >
-                About
-              </a>
-              <a
-                className="rounded-full px-4 py-2 transition hover:bg-mba-tan hover:text-mba-blue"
-                href="#support"
-              >
-                Support
-              </a>
-              <a
-                className="rounded-full px-4 py-2 transition hover:bg-mba-tan hover:text-mba-blue"
-                href="#contact"
-              >
-                Contact
-              </a>
+              {topNav.map((item) => (
+                <a
+                  key={item.label}
+                  className="rounded-full px-4 py-2 transition hover:bg-mba-tan hover:text-mba-blue"
+                  href={item.href}
+                >
+                  {item.label}
+                </a>
+              ))}
             </nav>
           </div>
         </header>
 
         <main className="flex flex-col gap-5">
           <section className="overflow-hidden rounded-[34px] border border-white/70 bg-white/90 shadow-[0_24px_70px_-34px_rgba(27,44,92,0.28)]">
-            <div className="grid gap-8 px-6 py-8 md:px-10 md:py-10 lg:grid-cols-[1.15fr_0.85fr] lg:px-12 lg:py-14">
+            <div className="grid gap-8 px-6 py-8 md:px-10 md:py-10 lg:grid-cols-[1.1fr_0.9fr] lg:px-12 lg:py-14">
               <div className="relative">
                 <div className="absolute -left-8 top-0 h-36 w-36 rounded-full bg-mba-blue/10 blur-3xl" />
                 <div className="absolute left-20 top-28 h-24 w-24 rounded-full bg-mba-red/14 blur-3xl" />
 
                 <p className="relative inline-flex rounded-full border border-mba-blue/15 bg-mba-blue/5 px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-mba-blue">
-                  9-1-1 emergency response and non-emergency transport
+                  9-1-1 emergency and non-emergency medical transportation
                 </p>
 
                 <h1 className="relative mt-6 max-w-4xl font-heading text-5xl leading-[0.94] tracking-[-0.055em] text-slate-950 sm:text-6xl lg:text-7xl">
-                  Desert emergency care with a stronger, clearer online presence.
+                  Morongo Basin Ambulance, rebuilt with clearer structure and stronger trust signals.
                 </h1>
 
-                <p className="relative mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-                  Morongo Basin Ambulance is a non-tax based 501(c)(3) serving
-                  the hi-desert with emergency response, medical transport, and
-                  community support. This rebuild keeps the familiar identity but
-                  gives it a more confident, modern front end.
-                </p>
+                <div className="relative mt-6 max-w-3xl space-y-5 text-base leading-8 text-slate-600">
+                  <p>
+                    Morongo Basin Ambulance provides 9-1-1 emergency and
+                    non-emergency medical transportation across multiple
+                    communities in San Bernardino County.
+                  </p>
+                  <p>
+                    Founded in 1948 as a non-tax based, non-profit corporation,
+                    MBA is the sole provider of 9-1-1 emergency ambulance services
+                    to much of the Morongo Basin, including Joshua Tree National Park.
+                  </p>
+                  <p>
+                    Revenue above operating costs is put back into the company and
+                    the communities it serves, with care centered on service rather
+                    than maximizing profit.
+                  </p>
+                </div>
 
                 <div className="relative mt-8 flex flex-wrap gap-3">
                   <a
                     className="inline-flex min-h-12 items-center justify-center rounded-full bg-mba-blue px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-mba-blue-deep"
                     href="#services"
                   >
-                    View Services
+                    View Ambulance Services
                   </a>
                   <a
                     className="inline-flex min-h-12 items-center justify-center rounded-full border border-mba-red/30 bg-white px-6 py-3 text-sm font-semibold text-mba-red transition hover:-translate-y-0.5 hover:border-mba-red hover:bg-mba-red hover:text-white"
@@ -147,29 +161,32 @@ function App() {
                     <p className="mt-1 text-sm text-slate-500">Longstanding local service</p>
                   </div>
                   <div className="rounded-2xl border border-mba-red/10 bg-mba-red/5 px-4 py-4">
-                    <p className="text-sm font-semibold text-slate-900">Nonprofit Mission</p>
+                    <p className="text-sm font-semibold text-slate-900">501(c)(3) nonprofit</p>
                     <p className="mt-1 text-sm text-slate-500">Revenue reinvested locally</p>
                   </div>
                   <div className="rounded-2xl border border-mba-gold/30 bg-mba-tan px-4 py-4">
-                    <p className="text-sm font-semibold text-slate-900">Community Focus</p>
-                    <p className="mt-1 text-sm text-slate-500">Support beyond transport</p>
+                    <p className="text-sm font-semibold text-slate-900">Desert service area</p>
+                    <p className="mt-1 text-sm text-slate-500">Communities plus the national park</p>
                   </div>
                 </div>
               </div>
 
               <aside className="grid gap-4 self-end">
-                <div className="rounded-[30px] border border-mba-blue/10 bg-slate-950 px-6 py-6 text-white">
-                  <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-mba-gold">
-                    Why this redesign works
-                  </p>
-                  <h2 className="mt-4 font-heading text-3xl leading-tight tracking-[-0.04em] text-white">
-                    Same mission. Cleaner layout. More trust at first glance.
-                  </h2>
-                  <p className="mt-4 text-sm leading-7 text-slate-300">
-                    The live site already has the right ingredients: local trust,
-                    service depth, and community support. This version simply
-                    presents them with better hierarchy and a stronger visual system.
-                  </p>
+                <div className="overflow-hidden rounded-[30px] border border-mba-blue/10 bg-white shadow-[0_16px_50px_-32px_rgba(27,44,92,0.22)]">
+                  <img
+                    src="/mba-community.jpg"
+                    alt="MBA in the Community"
+                    className="aspect-square w-full object-cover"
+                  />
+                  <div className="p-6">
+                    <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-mba-red">
+                      MBA in the Community
+                    </p>
+                    <p className="mt-3 text-sm leading-7 text-slate-600">
+                      The live site highlights toy drives, parades, fairs, and
+                      local events. That community story deserves real visual weight.
+                    </p>
+                  </div>
                 </div>
 
                 <div className="rounded-[30px] border border-mba-gold/40 bg-mba-tan px-6 py-6">
@@ -198,27 +215,28 @@ function App() {
             <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
               <div className="max-w-2xl">
                 <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-mba-blue">
-                  Core services
+                  Ambulance Services
                 </p>
                 <h2 className="mt-3 font-heading text-3xl leading-tight tracking-[-0.04em] text-slate-950 sm:text-4xl">
-                  The existing homepage services, reorganized into a cleaner decision grid.
+                  The live homepage service links, turned into a cleaner decision grid.
                 </h2>
               </div>
               <p className="max-w-xl text-sm leading-7 text-slate-500">
-                Instead of forcing visitors to hunt through smaller links, this
-                version gives each service line enough visual weight to feel clear.
+                MBA already offers a strong set of services. This layout simply
+                makes those options easier to scan and act on.
               </p>
             </div>
 
             <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-              {services.map((service, index) => (
-                <article
+              {serviceLinks.map((service) => (
+                <a
                   key={service.title}
-                  className="group rounded-[28px] border border-slate-200/80 bg-gradient-to-br from-white via-white to-slate-50 p-6 transition hover:-translate-y-1 hover:border-mba-blue/25 hover:shadow-lg"
+                  href={service.href}
+                  className="group rounded-[28px] border border-slate-200/80 bg-gradient-to-br from-white via-white to-slate-50 p-6 no-underline transition hover:-translate-y-1 hover:border-mba-blue/25 hover:shadow-lg"
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-mba-blue/10 text-sm font-bold text-mba-blue">
-                      {String(index + 1).padStart(2, '0')}
+                      {service.number}
                     </div>
                     <span className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-slate-400">
                       MBA
@@ -231,54 +249,74 @@ function App() {
                   <p className="mt-3 text-sm leading-7 text-slate-600">
                     {service.description}
                   </p>
-                </article>
+                </a>
               ))}
             </div>
           </section>
 
-          <section className="grid gap-5 lg:grid-cols-[0.95fr_1.05fr]" id="about">
-            <div className="rounded-[32px] border border-mba-blue/10 bg-mba-blue px-6 py-8 text-white shadow-[0_18px_50px_-30px_rgba(27,44,92,0.38)] md:px-8">
+          <section className="grid gap-5 lg:grid-cols-[0.95fr_1.05fr]">
+            <div
+              className="rounded-[32px] border border-mba-blue/10 bg-mba-blue px-6 py-8 text-white shadow-[0_18px_50px_-30px_rgba(27,44,92,0.38)] md:px-8"
+              id="support"
+            >
               <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-mba-gold">
-                About MBA
+                Memberships and Donations
               </p>
               <h2 className="mt-4 max-w-xl font-heading text-3xl leading-tight tracking-[-0.04em] text-white sm:text-4xl">
-                A non-tax based nonprofit built to serve, reinvest, and stay local.
+                Support pathways should feel just as visible as service pathways.
               </h2>
               <p className="mt-5 max-w-xl text-base leading-8 text-blue-50/90">
-                The current site says it plainly: as a 501(c)(3), MBA reinvests
-                money back into the organization and the communities it serves.
-                This version gives that message the visual emphasis it deserves.
+                The live site gives memberships and donations top-level navigation.
+                This rebuild keeps that intent and gives those calls to action more
+                room to earn trust and attention.
               </p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <a
+                  href="https://www.mbambulance.org/mba-memberships/"
+                  className="inline-flex min-h-12 items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-mba-blue no-underline transition hover:-translate-y-0.5"
+                >
+                  Explore Memberships
+                </a>
+                <a
+                  href="https://www.mbambulance.org/donations/"
+                  className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/30 px-5 py-3 text-sm font-semibold text-white no-underline transition hover:-translate-y-0.5 hover:bg-white/10"
+                >
+                  Make a Donation
+                </a>
+              </div>
             </div>
 
             <div
               className="rounded-[32px] border border-white/70 bg-white/90 px-6 py-8 shadow-[0_16px_50px_-32px_rgba(27,44,92,0.25)] md:px-8"
-              id="support"
+              id="community"
             >
               <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-mba-red">
-                Support and community
+                MBA in the Community
               </p>
               <h2 className="mt-3 max-w-2xl font-heading text-3xl leading-tight tracking-[-0.04em] text-slate-950 sm:text-4xl">
-                Memberships, donations, and community involvement should feel central to the homepage.
+                Giving back to our communities should feel like a real homepage feature.
               </h2>
               <p className="mt-5 text-base leading-8 text-slate-600">
-                The live site already highlights donations, memberships, toy drives,
-                and local events. This layout makes those support paths easier to find
-                and more inviting to engage with.
+                MBA supports an annual Holiday Toy Drive, community parades, fairs,
+                and other local events throughout the hi-desert. That story builds
+                trust and should stay front and center in the redesign.
               </p>
-
-              <div className="mt-8 grid gap-4 sm:grid-cols-3">
-                {supportLinks.map((item) => (
-                  <div
-                    key={item}
-                    className="rounded-3xl border border-mba-red/10 bg-mba-red/5 p-5"
-                  >
-                    <p className="text-sm font-semibold text-slate-950">{item}</p>
-                    <p className="mt-2 text-sm leading-7 text-slate-600">
-                      Clearer navigation and stronger calls to action can make this section much more effective.
-                    </p>
-                  </div>
-                ))}
+              <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                <div className="rounded-3xl border border-mba-red/10 bg-mba-red/5 p-5">
+                  <p className="text-sm font-semibold text-slate-950">Community support</p>
+                  <p className="mt-2 text-sm leading-7 text-slate-600">
+                    The homepage can link directly into the full community page and highlight recent events.
+                  </p>
+                </div>
+                <div
+                  className="rounded-3xl border border-slate-200 bg-white p-5"
+                  id="careers"
+                >
+                  <p className="text-sm font-semibold text-slate-950">Careers with MBA</p>
+                  <p className="mt-2 text-sm leading-7 text-slate-600">
+                    The site already positions MBA as an employer of paramedics, EMTs, nurses, and dispatchers.
+                  </p>
+                </div>
               </div>
             </div>
           </section>
@@ -300,7 +338,7 @@ function App() {
                   Contact
                 </p>
                 <h2 className="mt-2 font-heading text-3xl leading-tight tracking-[-0.04em] text-white">
-                  Ready for the next pass: real CTAs, real forms, and final content cleanup.
+                  A cleaner contact block with the real location and phone details.
                 </h2>
               </div>
             </div>
@@ -308,7 +346,7 @@ function App() {
             <div className="space-y-3 text-sm leading-7 text-slate-300">
               <p>6335 Park Blvd (mailing to PO Box 460), Joshua Tree, CA 92252</p>
               <p>760-366-8474</p>
-              <p>Facebook and Instagram links can be added back into this footer next.</p>
+              <p>Facebook and Instagram links can be restored here in the next pass.</p>
             </div>
           </div>
         </footer>
