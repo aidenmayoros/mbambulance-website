@@ -4,35 +4,35 @@ const serviceLinks = [
   {
     number: '01',
     title: 'ALS Emergency',
-    href: '/ambulance-services/als-emergency',
+    href: '/about#als-emergency',
     description:
       'Emergency ambulance response with advanced life support for the communities MBA serves.',
   },
   {
     number: '02',
     title: 'BLS Non-Emergency',
-    href: '/ambulance-services/bls-non-emergency',
+    href: '/about#bls-non-emergency',
     description:
       'Non-emergency medical transportation with dependable support for patients who still need care in transit.',
   },
   {
     number: '03',
     title: 'CCT RN Transport',
-    href: '/ambulance-services/cct-rn-transport',
+    href: '/about#cct-rn-transport',
     description:
       'Critical care transport supported by registered nurses for higher-acuity patient transfers.',
   },
   {
     number: '04',
     title: 'Stand-By Ambulance',
-    href: '/ambulance-services/stand-by-ambulance',
+    href: '/about#stand-by-ambulance',
     description:
       'Stand-by ambulance services for special events and movie production sets.',
   },
   {
     number: '05',
     title: 'AHA Courses',
-    href: '/ambulance-services/aha-courses',
+    href: '/about#aha-courses',
     description:
       'Training and certification courses that support preparedness in the wider community.',
   },
@@ -46,9 +46,9 @@ const serviceLinks = [
 ]
 
 const topNav = [
+  { label: 'About MBA', href: '/about' },
   { label: 'Board of Directors', href: '/board-of-directors' },
   { label: 'Careers with MBA', href: '/careers' },
-  { label: 'MBA in the Community', href: '/community' },
   { label: 'Lifeline', href: '/lifeline' },
 ]
 
@@ -230,6 +230,77 @@ const lifelineImpact = [
   },
 ]
 
+const aboutServices = [
+  {
+    id: 'als-emergency',
+    eyebrow: 'ALS Emergency',
+    title: 'Advanced Life Support Ambulance',
+    description:
+      'MBA has provided Advanced Life Support and paramedic-level care for surrounding communities since the early 1980s, with emergency coverage available day and night in challenging desert conditions.',
+    details: [
+      'Five ALS ambulances staffed with highly skilled paramedics and EMTs',
+      'Coverage includes Morongo Valley, Joshua Tree, Twentynine Palms, Wonder Valley, Joshua Tree National Park, and other hi-desert communities',
+      'Mutual aid support for the City of Yucca Valley and the Twentynine Palms Marine Corps Base',
+      'ALS interfacility transport available for hospitals, nursing facilities, dialysis, psychiatric facilities, and long-distance transfers',
+    ],
+  },
+  {
+    id: 'bls-non-emergency',
+    eyebrow: 'BLS Non-Emergency',
+    title: 'Basic Life Support Ambulance',
+    description:
+      'The dedicated BLS page in staging is currently very thin, but the staged site still positions BLS as part of MBA’s core ambulance offering for dependable non-emergency medical transportation across the Morongo Basin.',
+    details: [
+      'Supports non-emergency medical transportation needs',
+      'Part of MBA’s broader ambulance service lineup alongside ALS and CCT',
+      'Built for patients who still need trained medical transport while in transit',
+    ],
+  },
+  {
+    id: 'cct-rn-transport',
+    eyebrow: 'Critical Care',
+    title: 'Critical Care Transport Ambulance',
+    description:
+      'MBA’s critical care transport nurses and critical care paramedics provide direct patient care during transfers between facilities when a standard paramedic-level transport is not enough.',
+    details: [
+      'Designed for higher-acuity patients moving between hospitals or facilities',
+      'CCT RNs and CCPs can provide a higher level of care than a standard paramedic unit',
+      'CCT nurses work closely with paramedics and EMTs to support the sickest patients',
+      'Staged copy highlights RNs with emergency room backgrounds and multiple years of experience',
+    ],
+  },
+  {
+    id: 'stand-by-ambulance',
+    eyebrow: 'Special Events',
+    title: 'Stand-By Ambulance',
+    description:
+      'Beyond emergency, non-emergency, and CCT transports, MBA also offers ALS and BLS stand-by services for one-day and multi-day events.',
+    details: [
+      'Available for transport and non-transport event support',
+      'Used for movie sets, off-road motor racing events, corporate events, and extreme sports events',
+      'Fleet includes off-road vehicles designed to treat and transport patients in remote areas',
+      'Staging asks event organizers to complete the request form or call 760-366-8474 and select option 5',
+    ],
+  },
+  {
+    id: 'aha-courses',
+    eyebrow: 'Training',
+    title: 'American Heart Association Courses',
+    description:
+      'MBA provides AHA course scheduling, registration support, and on-site training information directly from its Joshua Tree location.',
+    details: [
+      'Students can view the current class schedule online',
+      'Registration is handled through 760-366-8474 option 5 or cbell@mbambulance.org',
+      'Payments accepted are cash or check, and classes are free for MBA employees',
+      'Course location is 6335 Park Blvd, Joshua Tree, CA 92252, with additional group and on-site rate options available',
+    ],
+    cta: {
+      label: 'View Class Schedule',
+      href: 'https://www.cognitoforms.com/MorongoBasinAmbulance1/ClassInformation',
+    },
+  },
+]
+
 function Header({ isMenuOpen, toggleMenu, closeMenu }) {
   return (
     <header className="rounded-[30px] border border-white/70 bg-white/85 px-5 py-4 shadow-[0_18px_50px_-28px_rgba(27,44,92,0.28)] backdrop-blur md:px-7">
@@ -393,10 +464,10 @@ function Footer() {
                 Lifeline
               </a>
               <a
-                href="/community"
+                href="/about"
                 className="text-sm font-semibold text-white no-underline transition hover:text-mba-gold"
               >
-                MBA in the Community
+                About and Services
               </a>
             </div>
           </div>
@@ -684,6 +755,194 @@ function HomePage() {
                 The site already positions MBA as an employer of paramedics, EMTs, nurses, and dispatchers, which is worth surfacing prominently.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  )
+}
+
+function AboutPage() {
+  return (
+    <main className="flex flex-col gap-5">
+      <section className="overflow-hidden rounded-[32px] border border-white/70 bg-white/90 shadow-[0_24px_70px_-34px_rgba(27,44,92,0.28)]">
+        <div className="grid gap-6 px-6 py-8 md:px-10 md:py-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-10">
+          <div className="relative">
+            <div className="absolute -left-10 top-0 h-28 w-28 rounded-full bg-mba-blue/10 blur-3xl" />
+            <div className="absolute left-16 top-24 h-20 w-20 rounded-full bg-mba-red/12 blur-3xl" />
+
+            <p className="relative text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-mba-blue">
+              About MBA
+            </p>
+            <h1 className="relative mt-4 max-w-4xl font-heading text-5xl leading-[0.94] tracking-[-0.055em] text-slate-950 sm:text-6xl">
+              About Morongo Basin Ambulance
+            </h1>
+            <p className="relative mt-6 max-w-3xl text-base leading-8 text-slate-600 sm:text-lg">
+              Morongo Basin Ambulance is a 501(c)(3) community-based,
+              non-profit, non-tax based corporation founded in 1948 by seven
+              resident volunteers in Joshua Tree. MBA now responds to more than
+              6,500 calls per year and covers over 2,700 square miles.
+            </p>
+
+            <div className="relative mt-8 rounded-[28px] border border-mba-blue/10 bg-mba-blue px-6 py-6 text-white shadow-[0_18px_50px_-30px_rgba(27,44,92,0.38)]">
+              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.24em] text-mba-gold">
+                Our mission
+              </p>
+              <p className="mt-4 text-sm leading-8 text-blue-50/90">
+                “Our responsibility is to the members of the communities that
+                we serve. We strive to be a model of excellence within the EMS
+                system, through outstanding performance and commitment.”
+              </p>
+            </div>
+          </div>
+
+          <aside className="grid gap-4 self-end">
+            <div className="overflow-hidden rounded-[30px] border border-mba-blue/10 bg-white shadow-[0_16px_50px_-32px_rgba(27,44,92,0.22)]">
+              <img
+                src="/mba-crew.jpg"
+                alt="Morongo Basin Ambulance team"
+                className="aspect-[4/3] w-full object-cover"
+              />
+              <div className="p-6">
+                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-mba-red">
+                  Serving the hi-desert
+                </p>
+                <p className="mt-3 text-sm leading-7 text-slate-600">
+                  MBA grew with the needs of the community, added EMT staffing
+                  in the early 1970s, and progressed into Advanced Life Support
+                  services by the early 1980s.
+                </p>
+              </div>
+            </div>
+
+            <div className="rounded-[30px] border border-mba-gold/40 bg-mba-tan px-6 py-6">
+              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.24em] text-mba-red">
+                Coverage
+              </p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {serviceArea.map((place) => (
+                  <span
+                    key={place}
+                    className="rounded-full border border-mba-gold/50 bg-white/80 px-3 py-1.5 text-sm font-medium text-slate-700"
+                  >
+                    {place}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section className="rounded-[32px] border border-white/70 bg-white/90 px-6 py-8 shadow-[0_16px_50px_-32px_rgba(27,44,92,0.25)] md:px-8">
+        <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-mba-red">
+          MBA in the Community
+        </p>
+        <h2 className="mt-3 max-w-3xl font-heading text-3xl leading-tight tracking-[-0.04em] text-slate-950 sm:text-4xl">
+          Community support belongs inside the broader MBA story.
+        </h2>
+        <div className="mt-5 grid gap-5 lg:grid-cols-[1fr_0.9fr]">
+          <div className="space-y-4 text-base leading-8 text-slate-600">
+            <p>
+              Morongo Basin Ambulance gives back to the community whenever, and
+              however it can. Serving the hi-desert communities of the Morongo
+              Basin, MBA proudly supports an annual Holiday Toy Drive,
+              community parades, fairs, events, and more.
+            </p>
+            <p>
+              Folding this staged community content into the About page keeps
+              the site structure tighter while still preserving what the current
+              staging site says about local involvement.
+            </p>
+          </div>
+          <div className="rounded-[28px] border border-slate-200/80 bg-slate-50 p-6">
+            <p className="text-sm font-semibold text-slate-950">Community highlights</p>
+            <ul className="mt-4 space-y-3 text-sm leading-7 text-slate-600">
+              <li>Annual Holiday Toy Drive support</li>
+              <li>Participation in community parades and fairs</li>
+              <li>Visible presence at local events across the Morongo Basin</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="services"
+        className="rounded-[32px] border border-white/70 bg-white/90 px-6 py-8 shadow-[0_16px_50px_-32px_rgba(27,44,92,0.25)] md:px-8"
+      >
+        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div className="max-w-2xl">
+            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-mba-blue">
+              Services and training
+            </p>
+            <h2 className="mt-3 font-heading text-3xl leading-tight tracking-[-0.04em] text-slate-950 sm:text-4xl">
+              Thin staged service pages, combined into one clearer reference page.
+            </h2>
+          </div>
+          <p className="max-w-xl text-sm leading-7 text-slate-500">
+            This page keeps the staged service information, but gives it a
+            better structure than several short standalone pages.
+          </p>
+        </div>
+
+        <div className="mt-8 grid gap-5">
+          {aboutServices.map((service) => (
+            <article
+              key={service.id}
+              id={service.id}
+              className="scroll-mt-28 rounded-[30px] border border-slate-200/80 bg-gradient-to-br from-white via-white to-slate-50 p-6 shadow-[0_12px_35px_-28px_rgba(27,44,92,0.18)]"
+            >
+              <div className="grid gap-5 lg:grid-cols-[0.42fr_0.58fr] lg:gap-8">
+                <div>
+                  <p className="text-[0.72rem] font-semibold uppercase tracking-[0.24em] text-mba-red">
+                    {service.eyebrow}
+                  </p>
+                  <h3 className="mt-3 font-heading text-3xl leading-tight tracking-[-0.04em] text-slate-950">
+                    {service.title}
+                  </h3>
+                  <p className="mt-4 text-base leading-8 text-slate-600">
+                    {service.description}
+                  </p>
+                  {service.cta ? (
+                    <a
+                      href={service.cta.href}
+                      className="mt-6 inline-flex min-h-11 items-center justify-center rounded-full bg-mba-blue px-5 py-3 text-sm font-semibold text-white no-underline transition hover:-translate-y-0.5 hover:bg-mba-blue-deep"
+                    >
+                      {service.cta.label}
+                    </a>
+                  ) : null}
+                </div>
+
+                <ul className="space-y-3">
+                  {service.details.map((item) => (
+                    <li
+                      key={item}
+                      className="rounded-2xl border border-slate-200/80 bg-white px-4 py-3 text-sm leading-7 text-slate-600"
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="rounded-[32px] border border-mba-blue/10 bg-mba-blue px-6 py-8 text-white shadow-[0_18px_50px_-30px_rgba(27,44,92,0.38)] md:px-8">
+        <div className="grid gap-5 md:grid-cols-[1.1fr_0.9fr] md:items-end">
+          <div>
+            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-mba-gold">
+              Contact
+            </p>
+            <h2 className="mt-3 font-heading text-3xl leading-tight tracking-[-0.04em] text-white sm:text-4xl">
+              Questions about services, training, or transport?
+            </h2>
+          </div>
+          <div className="space-y-3 text-sm leading-7 text-blue-50/90">
+            <p>6335 Park Blvd (mailing to PO Box 460), Joshua Tree, CA 92252</p>
+            <p>760-366-8474</p>
+            <p>AHA registration contact: cbell@mbambulance.org</p>
           </div>
         </div>
       </section>
@@ -1147,6 +1406,7 @@ function App() {
     setIsMenuOpen(false)
   }
 
+  const isAboutPage = pathname === '/about'
   const isBoardPage = pathname === '/board-of-directors'
   const isCareersPage = pathname === '/careers'
   const isLifelinePage = pathname === '/lifeline'
@@ -1159,7 +1419,9 @@ function App() {
           toggleMenu={toggleMenu}
           closeMenu={closeMenu}
         />
-        {isBoardPage ? (
+        {isAboutPage ? (
+          <AboutPage />
+        ) : isBoardPage ? (
           <BoardPage />
         ) : isCareersPage ? (
           <CareersPage />
