@@ -1,0 +1,26 @@
+# macOS
+.DS_Store
+
+# Editors
+.idea/
+.vscode/
+
+# Environment and secrets
+.env
+.env.*
+wp-config.php
+
+# Dependencies
+node_modules/
+vendor/
+
+# WordPress generated content
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/backup*/
+
+# Logs and temp files
+*.log
+*.tmp
+*.swp
