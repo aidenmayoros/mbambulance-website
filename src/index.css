@@ -1,83 +1,26 @@
-:root {
-  --text: #314356;
-  --text-h: #102235;
-  --text-muted: #607282;
-  --bg: #edf3f6;
-  --panel: rgba(255, 255, 255, 0.84);
-  --panel-strong: rgba(245, 250, 252, 0.96);
-  --border: rgba(16, 34, 53, 0.12);
-  --border-strong: rgba(16, 34, 53, 0.22);
-  --accent: #0f7c90;
-  --accent-strong: #0b5c6d;
-  --shadow:
-    rgba(20, 41, 61, 0.08) 0 16px 40px -24px,
-    rgba(20, 41, 61, 0.08) 0 12px 20px -18px;
-  --sans:
-    'Avenir Next', Avenir, Montserrat, 'Segoe UI', Helvetica, Arial, sans-serif;
-  --heading:
-    'Avenir Next Condensed', 'Avenir Next', Montserrat, 'Segoe UI', sans-serif;
+@import "tailwindcss";
 
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@theme {
+  --color-mba-teal: #0f7c90;
+  --color-mba-teal-dark: #0b5c6d;
+  --color-mba-red: #c95d52;
+  --color-mba-sand: #f4ece4;
+  --font-sans: "Avenir Next", Avenir, Montserrat, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-heading: "Avenir Next Condensed", "Avenir Next", Montserrat, "Segoe UI", sans-serif;
 }
 
-* {
-  box-sizing: border-box;
-}
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
 
-html {
-  scroll-behavior: smooth;
-}
+  html {
+    scroll-behavior: smooth;
+  }
 
-body {
-  margin: 0;
-  min-width: 320px;
-  background:
-    radial-gradient(circle at top left, rgba(15, 124, 144, 0.18), transparent 30%),
-    linear-gradient(180deg, #f7fbfc 0%, var(--bg) 100%);
-}
-
-#root {
-  min-height: 100svh;
-}
-
-h1,
-h2,
-p,
-ul {
-  margin-top: 0;
-}
-
-h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 700;
-  color: var(--text-h);
-}
-
-h1 {
-  font-size: clamp(2.9rem, 7vw, 5.4rem);
-  line-height: 0.96;
-  letter-spacing: -0.05em;
-  margin-bottom: 18px;
-}
-
-h2 {
-  font-size: clamp(1.4rem, 3vw, 2.2rem);
-  line-height: 1.05;
-  letter-spacing: -0.03em;
-  margin-bottom: 12px;
-}
-
-p,
-li,
-a {
-  font-size: 1rem;
-  line-height: 1.65;
+  body {
+    margin: 0;
+    min-width: 320px;
+    font-family: var(--font-sans);
+  }
 }

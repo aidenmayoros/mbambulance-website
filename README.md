@@ -7,7 +7,7 @@ Custom React + Vite rebuild for the Morongo Basin Ambulance website.
 - React
 - Vite
 - JavaScript
-- CSS
+- Tailwind CSS
 
 ## Scripts
 
@@ -21,3 +21,4 @@ Custom React + Vite rebuild for the Morongo Basin Ambulance website.
 - Keep the current brand colors
 - Redesign the site to feel more modern and cleaner
 - Rebuild the existing pages and content structure in a custom frontend
+- Start by rebuilding the homepage in React with Tailwind utilities
