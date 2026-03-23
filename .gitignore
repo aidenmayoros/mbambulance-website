@@ -13,6 +13,8 @@ wp-config.php
 # Dependencies
 node_modules/
 vendor/
+dist/
+.vite/
 
 # WordPress generated content
 wp-content/uploads/

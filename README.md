@@ -1,15 +1,23 @@
 # MB Ambulance Website
 
-Starter repository for the MB Ambulance WordPress website rebuild.
+Custom React + Vite rebuild for the Morongo Basin Ambulance website.
 
-## Notes
+## Stack
 
-- GitHub repo: `mbambulance-website`
-- Local path: `/Users/aidenmayoros/Desktop/Coding/mbambulance-website`
-- Created on: 2026-03-23
+- React
+- Vite
+- JavaScript
+- CSS
 
-## Next Steps
+## Scripts
 
-- Decide whether to build a custom theme or child theme.
-- Set up a local WordPress development environment.
-- Commit changes in small steps as work progresses.
+- `npm install`
+- `npm run dev`
+- `npm run build`
+- `npm run preview`
+
+## Current Direction
+
+- Keep the current brand colors
+- Redesign the site to feel more modern and cleaner
+- Rebuild the existing pages and content structure in a custom frontend
