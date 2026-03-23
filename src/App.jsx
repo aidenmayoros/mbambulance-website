@@ -46,7 +46,6 @@ const serviceLinks = [
 ]
 
 const topNav = [
-  { label: 'About MBA', href: '/about-mba' },
   { label: 'Board of Directors', href: '/board-of-directors' },
   { label: 'Careers with MBA', href: '/careers' },
   { label: 'MBA in the Community', href: '/community' },
@@ -272,6 +271,17 @@ function App() {
                     <p className="mt-1 text-sm text-slate-500">Communities plus the national park</p>
                   </div>
                 </div>
+
+                <div className="relative mt-6 rounded-[26px] border border-slate-200/80 bg-white/80 p-5 shadow-[0_16px_40px_-30px_rgba(27,44,92,0.18)] sm:mt-8">
+                  <p className="text-[0.72rem] font-semibold uppercase tracking-[0.24em] text-mba-blue">
+                    About MBA
+                  </p>
+                  <p className="mt-3 text-sm leading-7 text-slate-600 sm:text-[0.96rem] sm:leading-8">
+                    Morongo Basin Ambulance is a non-tax based nonprofit focused on
+                    emergency response, non-emergency transport, community support,
+                    and reinvesting back into the hi-desert communities it serves.
+                  </p>
+                </div>
               </div>
 
               <aside className="grid gap-4 self-end">
@@ -294,7 +304,12 @@ function App() {
 
                 <div className="rounded-[30px] border border-mba-gold/40 bg-mba-tan px-6 py-6">
                   <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-mba-red">
-                    Service area
+                    About and service area
+                  </p>
+                  <p className="mt-3 text-sm leading-7 text-slate-600">
+                    MBA serves communities across the Morongo Basin and Joshua Tree
+                    National Park while operating as a nonprofit built around care,
+                    local trust, and service rather than profit maximization.
                   </p>
                   <div className="mt-4 flex flex-wrap gap-2">
                     {serviceArea.map((place) => (
