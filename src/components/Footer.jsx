@@ -1,4 +1,4 @@
-import { socialLinks } from '../data/siteContent'
+import { socialLinks } from "../data/siteContent";
 
 function Footer() {
   return (
@@ -18,10 +18,12 @@ function Footer() {
               Contact
             </p>
             <h2 className="mt-2 font-heading text-3xl leading-tight tracking-[-0.04em] text-white">
-              A cleaner footer with the real contact details and social links from the live site.
+              Get in Touch with us
             </h2>
             <div className="mt-5 space-y-2 text-sm leading-7 text-slate-300">
-              <p>6335 Park Blvd (mailing to PO Box 460), Joshua Tree, CA 92252</p>
+              <p>
+                6335 Park Blvd (mailing to PO Box 460), Joshua Tree, CA 92252
+              </p>
               <p>760-366-8474</p>
             </div>
           </div>
@@ -33,12 +35,6 @@ function Footer() {
               Support
             </p>
             <div className="mt-4 flex flex-col gap-3">
-              <a
-                href="/memberships"
-                className="text-sm font-semibold text-white no-underline transition hover:text-mba-gold"
-              >
-                Memberships
-              </a>
               <a
                 href="/lifeline"
                 className="text-sm font-semibold text-white no-underline transition hover:text-mba-gold"
@@ -73,7 +69,7 @@ function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;
