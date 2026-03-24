@@ -1,10 +1,10 @@
-import SectionHeader from '../components/SectionHeader'
-import { aboutServices, serviceArea } from '../data/siteContent'
+import SectionHeader from "../components/SectionHeader";
+import { aboutServices, serviceArea } from "../data/siteContent";
 
 function AboutPage() {
   return (
     <main className="flex flex-col gap-5">
-      <section className="overflow-hidden rounded-[32px] border border-white/70 bg-white/90 shadow-[0_24px_70px_-34px_rgba(27,44,92,0.28)]">
+      <section className="overflow-hidden rounded-4xl border border-white/70 bg-white/90 shadow-[0_24px_70px_-34px_rgba(27,44,92,0.28)]">
         <div className="grid gap-6 px-6 py-8 md:px-10 md:py-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-10">
           <div className="relative">
             <div className="absolute -left-10 top-0 h-28 w-28 rounded-full bg-mba-blue/10 blur-3xl" />
@@ -28,8 +28,8 @@ function AboutPage() {
                 Our mission
               </p>
               <p className="mt-4 text-sm leading-8 text-blue-50/90">
-                “Our responsibility is to the members of the communities that
-                we serve. We strive to be a model of excellence within the EMS
+                “Our responsibility is to the members of the communities that we
+                serve. We strive to be a model of excellence within the EMS
                 system, through outstanding performance and commitment.”
               </p>
             </div>
@@ -40,7 +40,7 @@ function AboutPage() {
               <img
                 src="/mba-crew.jpg"
                 alt="Morongo Basin Ambulance team"
-                className="aspect-[4/3] w-full object-cover"
+                className="aspect-4/3 w-full object-cover"
               />
               <div className="p-6">
                 <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-mba-red">
@@ -73,7 +73,7 @@ function AboutPage() {
         </div>
       </section>
 
-      <section className="rounded-[32px] border border-white/70 bg-white/90 px-6 py-8 shadow-[0_16px_50px_-32px_rgba(27,44,92,0.25)] md:px-8">
+      <section className="rounded-4xl border border-white/70 bg-white/90 px-6 py-8 shadow-[0_16px_50px_-32px_rgba(27,44,92,0.25)] md:px-8">
         <SectionHeader
           eyebrow="MBA in the Community"
           title="Community support belongs inside the broader MBA story."
@@ -84,8 +84,8 @@ function AboutPage() {
             <p>
               Morongo Basin Ambulance gives back to the community whenever, and
               however it can. Serving the hi-desert communities of the Morongo
-              Basin, MBA proudly supports an annual Holiday Toy Drive,
-              community parades, fairs, events, and more.
+              Basin, MBA proudly supports an annual Holiday Toy Drive, community
+              parades, fairs, events, and more.
             </p>
             <p>
               Folding this staged community content into the About page keeps
@@ -97,14 +97,18 @@ function AboutPage() {
             <img
               src="/about-community.jpg"
               alt="MBA in the Community"
-              className="aspect-[4/3] w-full object-cover"
+              className="aspect-4/3 w-full object-cover"
             />
             <div className="p-6">
-              <p className="text-sm font-semibold text-slate-950">Community highlights</p>
+              <p className="text-sm font-semibold text-slate-950">
+                Community highlights
+              </p>
               <ul className="mt-4 space-y-3 text-sm leading-7 text-slate-600">
                 <li>Annual Holiday Toy Drive support</li>
                 <li>Participation in community parades and fairs</li>
-                <li>Visible presence at local events across the Morongo Basin</li>
+                <li>
+                  Visible presence at local events across the Morongo Basin
+                </li>
               </ul>
             </div>
           </div>
@@ -113,18 +117,13 @@ function AboutPage() {
 
       <section
         id="services"
-        className="rounded-[32px] border border-white/70 bg-white/90 px-6 py-8 shadow-[0_16px_50px_-32px_rgba(27,44,92,0.25)] md:px-8"
+        className="rounded-4xl border border-white/70 bg-white/90 px-6 py-8 shadow-[0_16px_50px_-32px_rgba(27,44,92,0.25)] md:px-8"
       >
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <SectionHeader
             eyebrow="Services and training"
-            title="Thin staged service pages, combined into one clearer reference page."
             className="max-w-2xl"
           />
-          <p className="max-w-xl text-sm leading-7 text-slate-500">
-            This page keeps the staged service information, but gives it a
-            better structure than several short standalone pages.
-          </p>
         </div>
 
         <div className="mt-8 grid gap-5">
@@ -132,14 +131,14 @@ function AboutPage() {
             <article
               key={service.id}
               id={service.id}
-              className="scroll-mt-28 rounded-[30px] border border-slate-200/80 bg-gradient-to-br from-white via-white to-slate-50 p-6 shadow-[0_12px_35px_-28px_rgba(27,44,92,0.18)]"
+              className="scroll-mt-28 rounded-[30px] border border-slate-200/80 bg-linear-to-br from-white via-white to-slate-50 p-6 shadow-[0_12px_35px_-28px_rgba(27,44,92,0.18)]"
             >
-              <div className="grid gap-5 lg:grid-cols-[0.3fr_0.3fr_0.4fr] lg:gap-8">
-                <div className="overflow-hidden rounded-[26px] border border-slate-200/80 bg-white shadow-[0_12px_35px_-28px_rgba(27,44,92,0.18)]">
+              <div className="grid gap-5 lg:grid-cols-[minmax(240px,280px)_minmax(0,1fr)_minmax(0,1.1fr)] lg:items-start lg:gap-8">
+                <div className="overflow-hidden rounded-[26px] border border-slate-200/80 bg-white shadow-[0_12px_35px_-28px_rgba(27,44,92,0.18)] lg:h-52.5">
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="aspect-[4/3] w-full object-cover"
+                    className="aspect-4/3 w-full object-cover lg:h-full lg:aspect-auto"
                   />
                 </div>
 
@@ -179,7 +178,7 @@ function AboutPage() {
         </div>
       </section>
 
-      <section className="rounded-[32px] border border-mba-blue/10 bg-mba-blue px-6 py-8 text-white shadow-[0_18px_50px_-30px_rgba(27,44,92,0.38)] md:px-8">
+      <section className="rounded-4xl border border-mba-blue/10 bg-mba-blue px-6 py-8 text-white shadow-[0_18px_50px_-30px_rgba(27,44,92,0.38)] md:px-8">
         <div className="grid gap-5 md:grid-cols-[1.1fr_0.9fr] md:items-end">
           <div>
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-mba-gold">
@@ -197,7 +196,7 @@ function AboutPage() {
         </div>
       </section>
     </main>
-  )
+  );
 }
 
-export default AboutPage
+export default AboutPage;
