@@ -1,6 +1,6 @@
 import { topNav } from '../data/siteContent'
 
-function Header({ isMenuOpen, toggleMenu, closeMenu }) {
+function Header({ isMenuOpen, toggleMenu, closeMenu, pathname }) {
   return (
     <header className="rounded-[30px] border border-white/70 bg-white/85 px-5 py-4 shadow-[0_18px_50px_-28px_rgba(27,44,92,0.28)] backdrop-blur md:px-7">
       <div className="flex items-start justify-between gap-4 lg:items-center">
@@ -71,15 +71,21 @@ function Header({ isMenuOpen, toggleMenu, closeMenu }) {
         className="mt-5 hidden flex-wrap gap-2 text-sm font-semibold text-slate-700 lg:flex"
         aria-label="Primary"
       >
-        {topNav.map((item) => (
-          <a
-            key={item.label}
-            className="rounded-full px-4 py-2 transition hover:bg-mba-tan hover:text-mba-blue"
-            href={item.href}
-          >
-            {item.label}
-          </a>
-        ))}
+        {topNav.map((item) => {
+          const isActive = pathname === item.href
+
+          return (
+            <a
+              key={item.label}
+              className={`rounded-full px-4 py-2 transition hover:bg-mba-tan hover:text-mba-blue ${
+                isActive ? 'bg-mba-tan text-mba-blue' : ''
+              }`}
+              href={item.href}
+            >
+              {item.label}
+            </a>
+          )
+        })}
       </nav>
 
       <div
@@ -93,18 +99,28 @@ function Header({ isMenuOpen, toggleMenu, closeMenu }) {
             className="flex flex-col gap-2 rounded-[26px] border border-mba-blue/10 bg-white/80 p-3 shadow-[0_16px_30px_-24px_rgba(27,44,92,0.25)]"
             aria-label="Mobile Primary"
           >
-            {topNav.map((item) => (
-              <a
-                key={item.label}
-                className="rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-mba-tan hover:text-mba-blue"
-                href={item.href}
-                onClick={closeMenu}
-              >
-                {item.label}
-              </a>
-            ))}
+            {topNav.map((item) => {
+              const isActive = pathname === item.href
+
+              return (
+                <a
+                  key={item.label}
+                  className={`rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-mba-tan hover:text-mba-blue ${
+                    isActive ? 'bg-mba-tan text-mba-blue' : ''
+                  }`}
+                  href={item.href}
+                  onClick={closeMenu}
+                >
+                  {item.label}
+                </a>
+              )
+            })}
             <a
-              className="mt-2 inline-flex min-h-11 items-center justify-center rounded-2xl bg-mba-blue px-4 py-3 text-sm font-semibold text-white no-underline transition hover:bg-mba-blue-deep"
+              className={`mt-2 inline-flex min-h-11 items-center justify-center rounded-2xl px-4 py-3 text-sm font-semibold no-underline transition ${
+                pathname === '/lifeline'
+                  ? 'bg-mba-blue-deep text-white'
+                  : 'bg-mba-blue text-white hover:bg-mba-blue-deep'
+              }`}
               href="/lifeline"
               onClick={closeMenu}
             >

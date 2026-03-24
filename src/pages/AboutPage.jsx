@@ -38,7 +38,7 @@ function AboutPage() {
           <aside className="grid gap-4 self-end">
             <div className="overflow-hidden rounded-[30px] border border-mba-blue/10 bg-white shadow-[0_16px_50px_-32px_rgba(27,44,92,0.22)]">
               <img
-                src="/mba-crew.jpg"
+                src="/about-mba.jpg"
                 alt="Morongo Basin Ambulance team"
                 className="aspect-4/3 w-full object-cover"
               />

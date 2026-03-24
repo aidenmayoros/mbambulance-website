@@ -71,6 +71,7 @@ function App() {
           isMenuOpen={isMenuOpen}
           toggleMenu={toggleMenu}
           closeMenu={closeMenu}
+          pathname={pathname}
         />
         {renderPage()}
         <Footer />
