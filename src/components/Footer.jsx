@@ -1,4 +1,4 @@
-import { socialLinks } from "../data/siteContent";
+import { socialLinks } from '../data/siteContent'
 
 function Footer() {
   return (
@@ -69,7 +69,7 @@ function Footer() {
         </div>
       </div>
     </footer>
-  );
+  )
 }
 
-export default Footer;
+export default Footer

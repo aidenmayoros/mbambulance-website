@@ -1,5 +1,39 @@
 import { topNav } from '../data/siteContent'
 
+function isCurrentPage(currentPath, linkPath) {
+  return currentPath === linkPath
+}
+
+function getDesktopNavLinkClasses(isActive) {
+  const baseClasses =
+    'rounded-full px-4 py-2 transition hover:bg-mba-tan hover:text-mba-blue'
+
+  if (isActive) {
+    return `${baseClasses} bg-mba-tan text-mba-blue`
+  }
+
+  return baseClasses
+}
+
+function getMobileNavLinkClasses(isActive) {
+  const baseClasses =
+    'rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-mba-tan hover:text-mba-blue'
+
+  if (isActive) {
+    return `${baseClasses} bg-mba-tan text-mba-blue`
+  }
+
+  return baseClasses
+}
+
+function getSupportButtonClasses(pathname) {
+  if (pathname === '/lifeline') {
+    return 'mt-2 inline-flex min-h-11 items-center justify-center rounded-2xl bg-mba-blue-deep px-4 py-3 text-sm font-semibold text-white no-underline transition'
+  }
+
+  return 'mt-2 inline-flex min-h-11 items-center justify-center rounded-2xl bg-mba-blue px-4 py-3 text-sm font-semibold text-white no-underline transition hover:bg-mba-blue-deep'
+}
+
 function Header({ isMenuOpen, toggleMenu, closeMenu, pathname }) {
   return (
     <header className="rounded-[30px] border border-white/70 bg-white/85 px-5 py-4 shadow-[0_18px_50px_-28px_rgba(27,44,92,0.28)] backdrop-blur md:px-7">
@@ -72,14 +106,12 @@ function Header({ isMenuOpen, toggleMenu, closeMenu, pathname }) {
         aria-label="Primary"
       >
         {topNav.map((item) => {
-          const isActive = pathname === item.href
+          const isActive = isCurrentPage(pathname, item.href)
 
           return (
             <a
               key={item.label}
-              className={`rounded-full px-4 py-2 transition hover:bg-mba-tan hover:text-mba-blue ${
-                isActive ? 'bg-mba-tan text-mba-blue' : ''
-              }`}
+              className={getDesktopNavLinkClasses(isActive)}
               href={item.href}
             >
               {item.label}
@@ -100,14 +132,12 @@ function Header({ isMenuOpen, toggleMenu, closeMenu, pathname }) {
             aria-label="Mobile Primary"
           >
             {topNav.map((item) => {
-              const isActive = pathname === item.href
+              const isActive = isCurrentPage(pathname, item.href)
 
               return (
                 <a
                   key={item.label}
-                  className={`rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-mba-tan hover:text-mba-blue ${
-                    isActive ? 'bg-mba-tan text-mba-blue' : ''
-                  }`}
+                  className={getMobileNavLinkClasses(isActive)}
                   href={item.href}
                   onClick={closeMenu}
                 >
@@ -116,11 +146,7 @@ function Header({ isMenuOpen, toggleMenu, closeMenu, pathname }) {
               )
             })}
             <a
-              className={`mt-2 inline-flex min-h-11 items-center justify-center rounded-2xl px-4 py-3 text-sm font-semibold no-underline transition ${
-                pathname === '/lifeline'
-                  ? 'bg-mba-blue-deep text-white'
-                  : 'bg-mba-blue text-white hover:bg-mba-blue-deep'
-              }`}
+              className={getSupportButtonClasses(pathname)}
               href="/lifeline"
               onClick={closeMenu}
             >

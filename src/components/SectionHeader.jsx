@@ -1,4 +1,10 @@
-function SectionHeader({ eyebrow, title, description, className = '', titleClassName = '' }) {
+function SectionHeader({
+  eyebrow,
+  title,
+  description,
+  className = '',
+  titleClassName = '',
+}) {
   return (
     <div className={className}>
       <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-mba-blue">

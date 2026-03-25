@@ -1,6 +1,18 @@
 import SectionHeader from '../components/SectionHeader'
 import { careersRoles } from '../data/siteContent'
 
+function getRoleColorClass(tone) {
+  if (tone === 'red') {
+    return 'text-mba-red'
+  }
+
+  if (tone === 'gold') {
+    return 'text-amber-700'
+  }
+
+  return 'text-mba-blue'
+}
+
 function CareersPage() {
   return (
     <main className="flex flex-col gap-5">
@@ -89,13 +101,7 @@ function CareersPage() {
               className="rounded-[28px] border border-slate-200/80 bg-gradient-to-br from-white via-white to-slate-50 p-6 shadow-[0_12px_35px_-28px_rgba(27,44,92,0.2)]"
             >
               <p
-                className={`text-[0.72rem] font-semibold uppercase tracking-[0.24em] ${
-                  role.tone === 'red'
-                    ? 'text-mba-red'
-                    : role.tone === 'gold'
-                      ? 'text-amber-700'
-                      : 'text-mba-blue'
-                }`}
+                className={`text-[0.72rem] font-semibold uppercase tracking-[0.24em] ${getRoleColorClass(role.tone)}`}
               >
                 Career path
               </p>
