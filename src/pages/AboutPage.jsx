@@ -74,13 +74,13 @@ function AboutPage() {
       </section>
 
       <section className="rounded-4xl border border-white/70 bg-white/90 px-6 py-8 shadow-[0_16px_50px_-32px_rgba(27,44,92,0.25)] md:px-8">
-        <SectionHeader
-          eyebrow="MBA in the Community"
-          title="Community support belongs inside the broader MBA story."
-          className="max-w-3xl"
-        />
         <div className="mt-5 grid gap-5 lg:grid-cols-[1fr_0.9fr]">
           <div className="space-y-4 text-base leading-8 text-slate-600">
+            <SectionHeader
+              eyebrow="MBA in the Community"
+              title="Community support belongs inside the broader MBA story."
+              className="max-w-3xl"
+            />
             <p>
               Morongo Basin Ambulance gives back to the community whenever, and
               however it can. Serving the hi-desert communities of the Morongo

@@ -1,9 +1,9 @@
-import { boardMembers } from '../data/siteContent'
+import { boardMembers } from "../data/siteContent";
 
 function BoardPage() {
   return (
     <main className="flex flex-col gap-5">
-      <section className="rounded-[32px] border border-white/70 bg-white/90 px-6 py-8 shadow-[0_24px_70px_-34px_rgba(27,44,92,0.28)] md:px-10 md:py-12">
+      <section className="rounded-4xl border border-white/70 bg-white/90 px-6 py-8 shadow-[0_24px_70px_-34px_rgba(27,44,92,0.28)] md:px-10 md:py-12">
         <div className="max-w-4xl">
           <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-mba-blue">
             Board of Directors
@@ -13,8 +13,8 @@ function BoardPage() {
           </h1>
           <p className="mt-6 max-w-3xl text-base leading-8 text-slate-600 sm:text-lg">
             Here are the dedicated leaders guiding Morongo Basin Ambulance’s
-            services in our mission to provide exceptional emergency medical care
-            to our community.
+            services in our mission to provide exceptional emergency medical
+            care to our community.
           </p>
         </div>
       </section>
@@ -23,7 +23,7 @@ function BoardPage() {
         {boardMembers.map((member) => (
           <article
             key={member.name}
-            className="rounded-[32px] border border-white/70 bg-white/90 px-6 py-8 shadow-[0_16px_50px_-32px_rgba(27,44,92,0.25)] md:px-8"
+            className="rounded-4xl border border-white/70 bg-white/90 px-6 py-8 shadow-[0_16px_50px_-32px_rgba(27,44,92,0.25)] md:px-8"
           >
             <div className="grid gap-6 lg:grid-cols-[0.34fr_0.66fr] lg:gap-8">
               <div className="space-y-5">
@@ -31,13 +31,10 @@ function BoardPage() {
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="block h-auto max-h-[320px] w-auto max-w-full object-contain object-center sm:max-h-[360px] md:max-h-[420px] lg:h-[420px] lg:w-full lg:max-w-none lg:object-cover lg:object-[50%_18%]"
+                    className="block h-auto max-h-80 w-auto max-w-full object-contain object-center sm:max-h-90 md:max-h-105 lg:h-105 lg:w-full lg:max-w-none lg:object-cover lg:object-[50%_18%]"
                   />
                 </div>
                 <div className="text-center lg:text-left">
-                  <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-mba-red">
-                    Leadership
-                  </p>
                   <h2 className="mt-3 font-heading text-3xl leading-tight tracking-[-0.04em] text-slate-950">
                     {member.name}
                   </h2>
@@ -51,7 +48,9 @@ function BoardPage() {
                 <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-mba-red">
                   Experience and service
                 </p>
-                <p className="mt-4 text-base leading-8 text-slate-600">{member.bio}</p>
+                <p className="mt-4 text-base leading-8 text-slate-600">
+                  {member.bio}
+                </p>
                 <ul className="mt-6 space-y-3">
                   {member.highlights.map((item) => (
                     <li
@@ -68,7 +67,7 @@ function BoardPage() {
         ))}
       </section>
 
-      <section className="rounded-[32px] border border-mba-blue/10 bg-mba-blue px-6 py-8 text-white shadow-[0_18px_50px_-30px_rgba(27,44,92,0.38)] md:px-8">
+      <section className="rounded-4xl border border-mba-blue/10 bg-mba-blue px-6 py-8 text-white shadow-[0_18px_50px_-30px_rgba(27,44,92,0.38)] md:px-8">
         <div className="grid gap-5 md:grid-cols-[1.1fr_0.9fr] md:items-end">
           <div>
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-mba-gold">
@@ -86,7 +85,7 @@ function BoardPage() {
         </div>
       </section>
     </main>
-  )
+  );
 }
 
-export default BoardPage
+export default BoardPage;

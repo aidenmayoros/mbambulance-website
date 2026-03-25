@@ -132,11 +132,11 @@ export const boardMembers = [
     name: "Craig Bell",
     role: "Operations Chief, EMS Coordinator",
     image: "/board-craig-bell.jpg",
-    bio: "Craig Bell is featured on the staging leadership page as MBA’s Operations Chief and EMS Coordinator, connecting board leadership with day-to-day service operations.",
+    bio: "Bio needed...",
     highlights: [
       "Operations Chief and EMS Coordinator for Morongo Basin Ambulance",
-      "Included on the staging leadership page alongside the board members",
       "Supports the link between governance, operations, and field service delivery",
+      "More highlights needed...",
     ],
   },
 ];
@@ -159,7 +159,7 @@ export const careersRoles = [
   },
   {
     title: "Part-Time EMT-B",
-    tone: "red",
+    tone: "blue",
     description:
       "EMT-B positions support frontline ambulance response and patient care for one of the few nonprofit ambulance services in California.",
     requirements: [
@@ -173,13 +173,12 @@ export const careersRoles = [
   },
   {
     title: "Part-Time Communications Operator",
-    tone: "gold",
+    tone: "red",
     description:
-      "MBA’s Communication Operators are the literal lifeline between ambulances and the citizens who need help, making this a critical support role in the system.",
+      "MBA's Communication Operators are the literal lifeline between ambulances and the citizens who need help, making this a critical support role in the system.",
     requirements: [
-      "MBA is not currently hiring for this position",
-      "Applications are still accepted from qualified candidates",
       "Strong communication and dispatch support mindset is essential",
+      "MBA's Communication Operators are the literal lifeline between our ambulances and the citizens that need our help. If you think you have what it takes, apply today!",
     ],
   },
   {
@@ -247,10 +246,10 @@ export const aboutServices = [
     title: "Basic Life Support Ambulance",
     image: "/about-bls.jpg",
     description:
-      "The dedicated BLS page in staging is currently very thin, but the staged site still positions BLS as part of MBA’s core ambulance offering for dependable non-emergency medical transportation across the Morongo Basin.",
+      "MBA's BLS medical transport units are staffed with highly skilled EMTs who also work as a team with our paramedics on ALS ambulances. This unique exposure to true emergencies provides our EMTs with a higher skill level than most BLS companies can offer.",
     details: [
       "Supports non-emergency medical transportation needs",
-      "Part of MBA’s broader ambulance service lineup alongside ALS and CCT",
+      "Part of MBA's broader ambulance service lineup alongside ALS and CCT",
       "Built for patients who still need trained medical transport while in transit",
     ],
   },
@@ -260,7 +259,7 @@ export const aboutServices = [
     title: "Critical Care Transport Ambulance",
     image: "/about-cct.jpg",
     description:
-      "MBA’s critical care transport nurses and critical care paramedics provide direct patient care during transfers between facilities when a standard paramedic-level transport is not enough.",
+      "MBA's critical care transport nurses and critical care paramedics provide direct patient care during transfers between facilities when a standard paramedic-level transport is not enough.",
     details: [
       "Designed for higher-acuity patients moving between hospitals or facilities",
       "CCT RNs and CCPs can provide a higher level of care than a standard paramedic unit",
