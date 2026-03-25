@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import Footer from './components/Footer'
 import Header from './components/Header'
+import { useTheme } from './hooks/useTheme'
 import AboutPage from './pages/AboutPage'
 import BoardPage from './pages/BoardPage'
 import CareersPage from './pages/CareersPage'
@@ -41,6 +42,7 @@ function getPageForPath(pathname) {
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const pathname = getCurrentPath()
+  const { theme, toggleTheme } = useTheme()
 
   useEffect(() => {
     if (typeof window === 'undefined') {
@@ -79,13 +81,15 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(circle_at_top_left,rgba(43,74,182,0.16),transparent_28%),linear-gradient(180deg,#f9fbff_0%,#eef3ff_44%,#f7f4ef_100%)] text-slate-700">
+    <div className="min-h-screen bg-[radial-gradient(circle_at_top_left,rgba(43,74,182,0.16),transparent_28%),linear-gradient(180deg,#f9fbff_0%,#eef3ff_44%,#f7f4ef_100%)] text-slate-700 dark:bg-none dark:bg-slate-950 dark:text-slate-300">
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-5 px-4 py-4 sm:px-6 lg:px-8 lg:py-6">
         <Header
           isMenuOpen={isMenuOpen}
           toggleMenu={toggleMenu}
           closeMenu={closeMenu}
           pathname={pathname}
+          theme={theme}
+          toggleTheme={toggleTheme}
         />
         {getPageForPath(pathname)}
         <Footer />

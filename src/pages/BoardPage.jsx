@@ -1,61 +1,83 @@
-import { boardMembers } from "../data/siteContent";
+import { IconMapPin, IconPhone } from '@tabler/icons-react'
+
+import { Badge } from '@/components/ui/badge'
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardTitle,
+} from '@/components/ui/card'
+import { Separator } from '@/components/ui/separator'
+import { boardMembers } from '../data/siteContent'
 
 function BoardPage() {
   return (
     <main className="flex flex-col gap-5">
-      <section className="rounded-4xl border border-white/70 bg-white/90 px-6 py-8 shadow-[0_24px_70px_-34px_rgba(27,44,92,0.28)] md:px-10 md:py-12">
-        <div className="max-w-4xl">
-          <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-mba-blue">
-            Board of Directors
-          </p>
-          <h1 className="mt-4 font-heading text-5xl leading-[0.94] tracking-[-0.055em] text-slate-950 sm:text-6xl">
-            Meet Our Leadership!
-          </h1>
-          <p className="mt-6 max-w-3xl text-base leading-8 text-slate-600 sm:text-lg">
-            Here are the dedicated leaders guiding Morongo Basin Ambulance’s
-            services in our mission to provide exceptional emergency medical
-            care to our community.
-          </p>
-        </div>
-      </section>
+      <Card className="overflow-hidden rounded-2xl border-slate-200/80 bg-white ring-0 ring-transparent dark:border-slate-700 dark:bg-slate-900">
+        <CardContent className="px-5 py-6 sm:px-8 sm:py-8 md:px-10 md:py-10 lg:px-12 lg:py-12">
+          <div className="max-w-4xl">
+            <Badge
+              variant="outline"
+              className="w-fit border-slate-200 bg-white text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue sm:text-[0.65rem] dark:border-slate-700 dark:bg-slate-800"
+            >
+              Board of Directors
+            </Badge>
+            <h1 className="mt-5 font-heading text-[2.4rem] leading-[0.93] tracking-[-0.05em] text-slate-950 sm:mt-6 sm:text-5xl sm:leading-[0.94] lg:text-6xl dark:text-slate-50">
+              Meet Our Leadership
+            </h1>
+            <p className="mt-5 max-w-3xl text-base leading-8 text-slate-600 sm:mt-6 sm:text-lg dark:text-slate-400">
+              Here are the dedicated leaders guiding Morongo Basin Ambulance's
+              services in our mission to provide exceptional emergency medical
+              care to our community.
+            </p>
+          </div>
+        </CardContent>
+      </Card>
 
-      <section className="grid gap-5">
+      <div className="grid gap-4">
         {boardMembers.map((member) => (
-          <article
+          <Card
             key={member.name}
-            className="rounded-4xl border border-white/70 bg-white/90 px-6 py-8 shadow-[0_16px_50px_-32px_rgba(27,44,92,0.25)] md:px-8"
+            className="overflow-hidden rounded-2xl border-slate-200/80 bg-white p-0 py-0 ring-0 dark:border-slate-700 dark:bg-slate-900"
           >
-            <div className="grid gap-6 lg:grid-cols-[0.34fr_0.66fr] lg:gap-8">
-              <div className="space-y-5">
-                <div className="mx-auto flex w-fit max-w-full items-center justify-center overflow-hidden rounded-[28px] border border-mba-blue/10 bg-mba-tan/40 shadow-[0_18px_45px_-32px_rgba(27,44,92,0.35)] lg:w-auto lg:max-w-none">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="block h-auto max-h-80 w-auto max-w-full object-contain object-center sm:max-h-90 md:max-h-105 lg:h-105 lg:w-full lg:max-w-none lg:object-cover lg:object-[50%_18%]"
-                  />
-                </div>
-                <div className="text-center lg:text-left">
-                  <h2 className="mt-3 font-heading text-3xl leading-tight tracking-[-0.04em] text-slate-950">
-                    {member.name}
-                  </h2>
-                  <p className="mt-2 text-sm font-semibold text-mba-blue">
-                    {member.role}
-                  </p>
-                </div>
+            <div className="grid gap-0 lg:grid-cols-[minmax(220px,280px)_1fr]">
+              <div className="overflow-hidden bg-slate-50 dark:bg-slate-800">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="block aspect-4/3 w-full object-cover object-[50%_18%] lg:h-full lg:aspect-auto"
+                />
               </div>
 
-              <div className="flex flex-col justify-center">
-                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-mba-red">
-                  Experience and service
-                </p>
-                <p className="mt-4 text-base leading-8 text-slate-600">
-                  {member.bio}
-                </p>
-                <ul className="mt-6 space-y-3">
+              <div className="flex flex-col gap-5 p-5 sm:p-6 lg:p-8">
+                <div>
+                  <CardTitle className="font-heading text-2xl leading-tight tracking-[-0.03em] text-slate-950 sm:text-3xl dark:text-slate-50">
+                    {member.name}
+                  </CardTitle>
+                  <CardDescription className="mt-1.5 text-sm font-medium text-mba-blue">
+                    {member.role}
+                  </CardDescription>
+                </div>
+
+                <Separator className="bg-slate-100 dark:bg-slate-700" />
+
+                <div>
+                  <Badge
+                    variant="outline"
+                    className="w-fit border-mba-red/20 dark:border-mba-red/30 bg-white text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-red dark:bg-slate-800"
+                  >
+                    Experience &amp; Service
+                  </Badge>
+                  <p className="mt-3 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8 dark:text-slate-400">
+                    {member.bio}
+                  </p>
+                </div>
+
+                <ul className="grid gap-2 sm:grid-cols-2">
                   {member.highlights.map((item) => (
                     <li
                       key={item}
-                      className="rounded-2xl border border-slate-200/80 bg-slate-50 px-4 py-3 text-sm leading-7 text-slate-600"
+                      className="rounded-lg border border-slate-200/80 bg-slate-50/80 px-4 py-3 text-sm leading-6 text-slate-600 dark:border-slate-700 dark:bg-slate-800/50 dark:text-slate-400"
                     >
                       {item}
                     </li>
@@ -63,29 +85,42 @@ function BoardPage() {
                 </ul>
               </div>
             </div>
-          </article>
+          </Card>
         ))}
-      </section>
+      </div>
 
-      <section className="rounded-4xl border border-mba-blue/10 bg-mba-blue px-6 py-8 text-white shadow-[0_18px_50px_-30px_rgba(27,44,92,0.38)] md:px-8">
-        <div className="grid gap-5 md:grid-cols-[1.1fr_0.9fr] md:items-end">
-          <div>
-            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-mba-gold">
-              Leadership and operations
-            </p>
-            <h2 className="mt-3 font-heading text-3xl leading-tight tracking-[-0.04em] text-white sm:text-4xl">
-              Governance and operations stay connected at MBA.
-            </h2>
+      <Card className="overflow-hidden rounded-2xl border-slate-800 bg-slate-950 ring-0 ring-transparent">
+        <CardContent className="px-5 py-8 sm:px-8 md:px-10">
+          <div className="grid gap-6 md:grid-cols-[1.1fr_0.9fr] md:items-end">
+            <div>
+              <Badge
+                variant="outline"
+                className="w-fit border-white/15 bg-white/10 text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-gold"
+              >
+                Leadership &amp; Operations
+              </Badge>
+              <h2 className="mt-3 font-heading text-2xl leading-tight tracking-[-0.03em] text-white sm:text-3xl lg:text-4xl">
+                Governance and operations stay connected at MBA.
+              </h2>
+            </div>
+            <div className="space-y-2.5 text-sm text-slate-400">
+              <p className="font-medium text-slate-300">
+                Operations Chief, EMS Coordinator
+              </p>
+              <p className="flex items-start gap-2">
+                <IconMapPin className="mt-0.5 size-4 shrink-0 text-slate-500" aria-hidden />
+                6335 Park Blvd (PO Box 460), Joshua Tree, CA 92252
+              </p>
+              <p className="flex items-center gap-2">
+                <IconPhone className="size-4 shrink-0 text-slate-500" aria-hidden />
+                760-366-8474
+              </p>
+            </div>
           </div>
-          <div className="space-y-3 text-sm leading-7 text-blue-50/90">
-            <p>Operations Chief, EMS Coordinator</p>
-            <p>6335 Park Blvd (mailing to PO Box 460), Joshua Tree, CA 92252</p>
-            <p>760-366-8474</p>
-          </div>
-        </div>
-      </section>
+        </CardContent>
+      </Card>
     </main>
-  );
+  )
 }
 
-export default BoardPage;
+export default BoardPage

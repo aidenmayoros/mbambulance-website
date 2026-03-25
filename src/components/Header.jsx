@@ -1,158 +1,204 @@
+import { IconHeart, IconMenu2, IconMoon, IconSun } from '@tabler/icons-react'
+
+import { Button } from '@/components/ui/button'
+import {
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+} from '@/components/ui/navigation-menu'
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetTrigger,
+} from '@/components/ui/sheet'
+import { cn } from '@/lib/utils'
 import { topNav } from '../data/siteContent'
 
 function isCurrentPage(currentPath, linkPath) {
   return currentPath === linkPath
 }
 
-function getDesktopNavLinkClasses(isActive) {
-  const baseClasses =
-    'rounded-full px-4 py-2 transition hover:bg-mba-tan hover:text-mba-blue'
-
-  if (isActive) {
-    return `${baseClasses} bg-mba-tan text-mba-blue`
+function Header({ isMenuOpen, toggleMenu, closeMenu, pathname, theme, toggleTheme }) {
+  const onSheetOpenChange = (open) => {
+    if (open !== isMenuOpen) {
+      if (open) {
+        toggleMenu()
+      } else {
+        closeMenu()
+      }
+    }
   }
 
-  return baseClasses
-}
-
-function getMobileNavLinkClasses(isActive) {
-  const baseClasses =
-    'rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-mba-tan hover:text-mba-blue'
-
-  if (isActive) {
-    return `${baseClasses} bg-mba-tan text-mba-blue`
-  }
-
-  return baseClasses
-}
-
-function getSupportButtonClasses(pathname) {
-  if (pathname === '/lifeline') {
-    return 'mt-2 inline-flex min-h-11 items-center justify-center rounded-2xl bg-mba-blue-deep px-4 py-3 text-sm font-semibold text-white no-underline transition'
-  }
-
-  return 'mt-2 inline-flex min-h-11 items-center justify-center rounded-2xl bg-mba-blue px-4 py-3 text-sm font-semibold text-white no-underline transition hover:bg-mba-blue-deep'
-}
-
-function Header({ isMenuOpen, toggleMenu, closeMenu, pathname }) {
   return (
-    <header className="rounded-[30px] border border-white/70 bg-white/85 px-5 py-4 shadow-[0_18px_50px_-28px_rgba(27,44,92,0.28)] backdrop-blur md:px-7">
-      <div className="flex items-start justify-between gap-4 lg:items-center">
-        <div className="flex min-w-0 items-center gap-4">
-          <a
-            href="/"
-            className="contents"
-            aria-label="Go to the Morongo Basin Ambulance homepage"
-          >
-            <div className="shrink-0 rounded-2xl bg-white p-3 shadow-[0_12px_30px_-20px_rgba(27,44,92,0.3)]">
-              <img
-                src="/mba-logo.png"
-                alt="Morongo Basin Ambulance EMS logo"
-                className="h-14 w-auto sm:h-20"
-              />
-            </div>
-            <div className="min-w-0">
-              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.3em] text-mba-blue">
-                Morongo Basin Ambulance
-              </p>
-              <p className="mt-2 hidden max-w-xl text-sm leading-6 text-slate-500 sm:block">
-                Non-profit and non-tax based 501(c)(3) ambulance service for the
-                Morongo Basin and surrounding desert communities.
-              </p>
-            </div>
-          </a>
-        </div>
-
-        <button
-          type="button"
-          className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-mba-blue/10 bg-white text-mba-blue shadow-[0_12px_30px_-20px_rgba(27,44,92,0.25)] transition hover:bg-mba-tan lg:hidden"
-          onClick={toggleMenu}
-          aria-expanded={isMenuOpen}
-          aria-controls="mobile-navigation"
-          aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+    <header className="overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-900">
+      <div className="flex items-center gap-3 px-4 py-3 sm:px-6 lg:gap-4 lg:px-6 xl:gap-6 xl:px-8">
+        <a
+          href="/"
+          className="flex shrink-0 items-center gap-3"
+          aria-label="Go to the Morongo Basin Ambulance homepage"
         >
-          <span className="sr-only">
-            {isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+          <img
+            src="/mba-logo.png"
+            alt="Morongo Basin Ambulance EMS logo"
+            className="h-10 w-auto sm:h-12"
+          />
+          <span className="hidden whitespace-nowrap text-sm font-semibold tracking-tight text-slate-900 xl:inline dark:text-slate-100">
+            Morongo Basin Ambulance
           </span>
-          <span className="flex w-5 flex-col gap-1.5">
-            <span
-              className={`h-0.5 rounded-full bg-current transition ${
-                isMenuOpen ? 'translate-y-2 rotate-45' : ''
-              }`}
-            />
-            <span
-              className={`h-0.5 rounded-full bg-current transition ${
-                isMenuOpen ? 'opacity-0' : ''
-              }`}
-            />
-            <span
-              className={`h-0.5 rounded-full bg-current transition ${
-                isMenuOpen ? '-translate-y-2 -rotate-45' : ''
-              }`}
-            />
-          </span>
-        </button>
-      </div>
+        </a>
 
-      <div className="mt-4 sm:hidden">
-        <p className="max-w-xl text-sm leading-6 text-slate-500">
-          Non-profit and non-tax based 501(c)(3) ambulance service for the
-          Morongo Basin and surrounding desert communities.
-        </p>
-      </div>
-
-      <nav
-        className="mt-5 hidden flex-wrap gap-2 text-sm font-semibold text-slate-700 lg:flex"
-        aria-label="Primary"
-      >
-        {topNav.map((item) => {
-          const isActive = isCurrentPage(pathname, item.href)
-
-          return (
-            <a
-              key={item.label}
-              className={getDesktopNavLinkClasses(isActive)}
-              href={item.href}
-            >
-              {item.label}
-            </a>
-          )
-        })}
-      </nav>
-
-      <div
-        id="mobile-navigation"
-        className={`grid overflow-hidden transition-all duration-300 ease-out lg:hidden ${
-          isMenuOpen ? 'mt-5 grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
-        }`}
-      >
-        <div className="min-h-0">
-          <nav
-            className="flex flex-col gap-2 rounded-[26px] border border-mba-blue/10 bg-white/80 p-3 shadow-[0_16px_30px_-24px_rgba(27,44,92,0.25)]"
-            aria-label="Mobile Primary"
-          >
+        <NavigationMenu viewport={false} className="hidden max-w-none flex-1 lg:flex">
+          <NavigationMenuList className="flex gap-0 xl:gap-1">
             {topNav.map((item) => {
-              const isActive = isCurrentPage(pathname, item.href)
+              const active = isCurrentPage(pathname, item.href)
 
               return (
-                <a
-                  key={item.label}
-                  className={getMobileNavLinkClasses(isActive)}
-                  href={item.href}
-                  onClick={closeMenu}
-                >
-                  {item.label}
-                </a>
+                <NavigationMenuItem key={item.href}>
+                  <NavigationMenuLink
+                    asChild
+                    active={active}
+                    className={cn(
+                      'whitespace-nowrap rounded-md px-2 py-1.5 text-[0.8125rem] font-medium text-slate-600 transition-colors xl:px-3 xl:text-sm dark:text-slate-400',
+                      'hover:bg-slate-100 hover:text-slate-900 dark:hover:bg-slate-800 dark:hover:text-slate-100',
+                      active && 'bg-slate-100 text-slate-900 dark:bg-slate-800 dark:text-slate-100'
+                    )}
+                  >
+                    <a href={item.href}>{item.label}</a>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
               )
             })}
-            <a
-              className={getSupportButtonClasses(pathname)}
-              href="/lifeline"
-              onClick={closeMenu}
-            >
-              Support MBA
+          </NavigationMenuList>
+        </NavigationMenu>
+
+        <div className="ml-auto flex items-center gap-2">
+          <Button
+            asChild
+            size="sm"
+            className={cn(
+              'hidden whitespace-nowrap rounded-md bg-mba-blue px-3.5 text-sm font-medium text-white lg:inline-flex',
+              'hover:bg-mba-blue-deep',
+              pathname === '/lifeline' && 'bg-mba-blue-deep'
+            )}
+          >
+            <a href="/lifeline" className="inline-flex items-center gap-1.5">
+              <IconHeart className="size-3.5" aria-hidden />
+              Support
             </a>
-          </nav>
+          </Button>
+
+          <Button
+            type="button"
+            variant="ghost"
+            size="icon"
+            onClick={toggleTheme}
+            className="text-slate-600 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-100"
+            aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+          >
+            {theme === 'dark' ? (
+              <IconSun className="size-[1.125rem]" aria-hidden />
+            ) : (
+              <IconMoon className="size-[1.125rem]" aria-hidden />
+            )}
+          </Button>
+
+          <Sheet open={isMenuOpen} onOpenChange={onSheetOpenChange}>
+            <SheetTrigger asChild>
+              <Button
+                type="button"
+                variant="ghost"
+                size="icon"
+                className="text-slate-600 hover:bg-slate-100 hover:text-slate-900 lg:hidden dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-100"
+                aria-expanded={isMenuOpen}
+                aria-controls="site-navigation-sheet"
+                aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+              >
+                <IconMenu2 className="size-5" aria-hidden />
+              </Button>
+            </SheetTrigger>
+
+            <SheetContent
+              id="site-navigation-sheet"
+              side="right"
+              showCloseButton
+              className="flex w-[280px] flex-col gap-0 bg-white p-0 sm:w-[320px] dark:bg-slate-900"
+            >
+              <div className="flex items-center gap-3 border-b border-slate-100 px-5 py-4 dark:border-slate-800">
+                <img src="/mba-logo.png" alt="" className="h-8 w-auto" />
+                <span className="text-sm font-semibold text-slate-900 dark:text-slate-100">
+                  Morongo Basin Ambulance
+                </span>
+              </div>
+
+              <nav className="flex-1 px-3 py-3" aria-label="Primary">
+                <ul className="flex flex-col gap-0.5">
+                  {topNav.map((item) => {
+                    const active = isCurrentPage(pathname, item.href)
+
+                    return (
+                      <li key={item.href}>
+                        <SheetClose asChild>
+                          <a
+                            href={item.href}
+                            onClick={closeMenu}
+                            className={cn(
+                              'block rounded-md px-3 py-2.5 text-sm font-medium text-slate-600 transition-colors dark:text-slate-400',
+                              'hover:bg-slate-100 hover:text-slate-900 dark:hover:bg-slate-800 dark:hover:text-slate-100',
+                              active && 'bg-slate-100 text-slate-900 dark:bg-slate-800 dark:text-slate-100'
+                            )}
+                          >
+                            {item.label}
+                          </a>
+                        </SheetClose>
+                      </li>
+                    )
+                  })}
+                </ul>
+              </nav>
+
+              <div className="border-t border-slate-100 p-4 dark:border-slate-800">
+                <div className="mb-3 flex items-center justify-between rounded-md border border-slate-200/80 px-3 py-2 dark:border-slate-700">
+                  <span className="text-sm font-medium text-slate-600 dark:text-slate-300">
+                    {theme === 'dark' ? 'Dark mode' : 'Light mode'}
+                  </span>
+                  <Button
+                    type="button"
+                    variant="ghost"
+                    size="icon-sm"
+                    onClick={toggleTheme}
+                    className="text-slate-600 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-100"
+                    aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+                  >
+                    {theme === 'dark' ? (
+                      <IconSun className="size-4" aria-hidden />
+                    ) : (
+                      <IconMoon className="size-4" aria-hidden />
+                    )}
+                  </Button>
+                </div>
+                <SheetClose asChild>
+                  <Button
+                    asChild
+                    className={cn(
+                      'w-full rounded-md bg-mba-blue text-sm font-medium text-white',
+                      'hover:bg-mba-blue-deep'
+                    )}
+                  >
+                    <a
+                      href="/lifeline"
+                      onClick={closeMenu}
+                      className="inline-flex items-center justify-center gap-1.5"
+                    >
+                      <IconHeart className="size-3.5" aria-hidden />
+                      Support MBA
+                    </a>
+                  </Button>
+                </SheetClose>
+              </div>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </header>
