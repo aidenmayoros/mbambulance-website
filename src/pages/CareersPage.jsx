@@ -1,17 +1,17 @@
-import { IconArrowRight, IconMapPin, IconPhone } from '@tabler/icons-react'
+import { IconArrowRight, IconMapPin, IconPhone } from "@tabler/icons-react";
 
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card'
-import { Separator } from '@/components/ui/separator'
-import SectionHeader from '../components/SectionHeader'
-import { careersRoles } from '../data/siteContent'
+} from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import SectionHeader from "../components/SectionHeader";
+import { careersRoles } from "../data/siteContent";
 
 function CareersPage() {
   return (
@@ -37,24 +37,6 @@ function CareersPage() {
               plus early experience opportunities for local high school students
               through the Explorer program.
             </p>
-
-            <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
-              <Button
-                asChild
-                className="rounded-full bg-mba-blue px-6 font-semibold text-white hover:bg-mba-blue-deep hover:text-mba-gold"
-              >
-                <a href="https://www.cognitoforms.com/MorongoBasinAmbulance1/EmploymentApplication">
-                  Apply Now
-                </a>
-              </Button>
-              <Button
-                asChild
-                variant="outline"
-                className="rounded-full border-mba-blue-soft/45 px-6 font-semibold text-mba-blue-deep hover:bg-mba-blue-deep hover:text-mba-gold dark:border-mba-blue-soft/25 dark:text-slate-300 dark:hover:bg-mba-blue-deep"
-              >
-                <a href="#open-roles">View Open Roles</a>
-              </Button>
-            </div>
           </div>
 
           <aside className="grid gap-4 self-end">
@@ -67,29 +49,41 @@ function CareersPage() {
               </Badge>
               <ul className="mt-4 space-y-3 text-sm leading-7 text-slate-300">
                 <li>Nonprofit mission and local community impact</li>
-                <li>Emergency response, transport, and critical care opportunities</li>
-                <li>Pathways for field staff, communications, reserve, and youth exploration</li>
+                <li>
+                  Emergency response, transport, and critical care opportunities
+                </li>
+                <li>
+                  Pathways for field staff, communications, reserve, and youth
+                  exploration
+                </li>
               </ul>
             </Card>
 
-            <Card className="gap-0 rounded-xl border-mba-blue-soft/40 bg-white p-6 py-6 ring-0 dark:border-mba-blue-soft/25 dark:bg-slate-900">
+            <Card className="gap-0 rounded-xl border-mba-blue-soft/40 bg-mba-periwinkle p-6 py-6 ring-0 dark:border-mba-blue-soft/25 dark:bg-slate-900">
               <Badge
                 variant="outline"
                 className="w-fit border-mba-gold/35 bg-white text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue-deep dark:border-mba-gold/25 dark:bg-slate-800 dark:text-slate-50"
               >
                 Contact
               </Badge>
-              <div className="mt-4 space-y-2.5 text-sm text-slate-600 dark:text-slate-400">
+              <div className="mt-4 space-y-2.5 text-sm text-slate-50 dark:text-slate-400">
                 <p className="flex items-start gap-2">
-                  <IconMapPin className="mt-0.5 size-4 shrink-0 text-slate-400 dark:text-slate-500" aria-hidden />
+                  <IconMapPin
+                    className="mt-0.5 size-4 shrink-0 text-slate-50 dark:text-slate-500"
+                    aria-hidden
+                  />
                   6335 Park Blvd (PO Box 460), Joshua Tree, CA 92252
                 </p>
                 <p className="flex items-center gap-2">
-                  <IconPhone className="size-4 shrink-0 text-slate-400 dark:text-slate-500" aria-hidden />
+                  <IconPhone
+                    className="size-4 shrink-0 text-slate-50 dark:text-slate-500"
+                    aria-hidden
+                  />
                   760-366-8474
                 </p>
-                <p className="text-slate-500 dark:text-slate-400">
-                  Use the online application to submit for current and future openings.
+                <p className="text-slate-50 dark:text-slate-400">
+                  Use the online application to submit for current and future
+                  openings.
                 </p>
               </div>
             </Card>
@@ -99,18 +93,20 @@ function CareersPage() {
 
       <Card
         id="open-roles"
-        className="overflow-hidden rounded-2xl border-mba-blue-soft/40 bg-white ring-0 ring-transparent dark:border-mba-blue-soft/25 dark:bg-slate-900"
+        className="overflow-hidden rounded-2xl border-mba-blue-soft/40 bg-mba-tan ring-0 ring-transparent dark:border-mba-blue-soft/25 dark:bg-slate-900"
       >
         <CardHeader className="px-5 pt-6 pb-0 sm:px-8 sm:pt-8 md:px-10">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <SectionHeader
               eyebrow="Open Roles"
+              eyebrowClassName="bg-slate-50"
               title="Current job categories"
+              titleClassName="text-mba-blue-deep! dark:text-slate-50!"
               className="max-w-2xl"
             />
-            <p className="max-w-xl text-sm leading-7 text-slate-500 md:text-right dark:text-slate-400">
-              Take a look at our current job openings and see where you could make
-              an impact with Morongo Basin Ambulance.
+            <p className="max-w-xl text-sm leading-7 text-mba-blue-deep md:text-right dark:text-slate-400">
+              Take a look at our current job openings and see where you could
+              make an impact with Morongo Basin Ambulance.
             </p>
           </div>
         </CardHeader>
@@ -120,10 +116,10 @@ function CareersPage() {
             {careersRoles.map((role) => (
               <Card
                 key={role.title}
-                className="gap-0 overflow-hidden rounded-xl border-mba-blue-soft/40 bg-white p-0 py-0 ring-0 transition hover:border-mba-gold hover:bg-linear-to-br hover:from-mba-blue-deep hover:to-mba-blue hover:shadow-lg dark:border-mba-blue-soft/25 dark:bg-slate-900 dark:hover:border-mba-gold"
+                className="gap-0 overflow-hidden rounded-xl border-mba-blue-soft/40 bg-white p-0 py-0 ring-0 transition hover:shadow-lg dark:border-mba-blue-soft/25 dark:bg-slate-900"
               >
                 <CardHeader className="p-5 pb-0 sm:p-6 sm:pb-0">
-                  {role.tone === 'red' ? (
+                  {role.tone === "red" ? (
                     <Badge
                       variant="outline"
                       className="w-fit border-mba-red/25 bg-mba-red/8 text-[0.6rem] font-semibold uppercase tracking-[0.18em] text-mba-red dark:border-mba-red/30 dark:bg-mba-red/10"
@@ -135,7 +131,7 @@ function CareersPage() {
                       variant="outline"
                       className="w-fit border-mba-blue-soft/50 bg-mba-tan/50 text-[0.6rem] font-semibold uppercase tracking-[0.18em] text-mba-blue-deep dark:border-mba-blue-soft/30 dark:bg-slate-800 dark:text-slate-50"
                     >
-                      Career Path
+                      Hiring
                     </Badge>
                   )}
                   <CardTitle className="mt-3 font-heading text-2xl leading-tight tracking-[-0.03em] text-mba-blue-deep sm:text-3xl dark:text-slate-50">
@@ -161,70 +157,24 @@ function CareersPage() {
                       </li>
                     ))}
                   </ul>
+                  <div className="mt-5">
+                    <Button
+                      asChild
+                      className="rounded-full bg-mba-blue px-6 font-semibold text-white hover:bg-mba-blue-deep! hover:text-mba-gold!"
+                    >
+                      <a href="https://www.cognitoforms.com/MorongoBasinAmbulance1/EmploymentApplication">
+                        Apply Today
+                      </a>
+                    </Button>
+                  </div>
                 </CardContent>
               </Card>
             ))}
           </div>
         </CardContent>
       </Card>
-
-      <div className="grid gap-4 lg:grid-cols-2">
-        <Card className="gap-0 rounded-2xl border-mba-blue-soft/40 bg-mba-blue-soft/12 p-6 py-6 ring-0 sm:p-8 dark:border-mba-blue-soft/25 dark:bg-mba-blue-soft/10">
-          <Badge
-            variant="outline"
-            className="w-fit border-mba-gold/35 bg-white text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue-deep dark:border-mba-gold/25 dark:bg-slate-800 dark:text-slate-50"
-          >
-            Reserve &amp; Explorer
-          </Badge>
-          <h2 className="mt-4 font-heading text-2xl leading-tight tracking-[-0.03em] text-mba-blue-deep sm:text-3xl dark:text-slate-50">
-            MBA also creates ways to build experience before a full-time role.
-          </h2>
-          <div className="mt-4 space-y-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8 dark:text-slate-400">
-            <p>
-              The current careers page mentions a limited number of positions in
-              the Reserve program for people who want to gain experience in the
-              field.
-            </p>
-            <p>
-              Local high school youth can also get involved through the Explorer
-              program, which makes this page feel bigger than just a job board.
-            </p>
-          </div>
-        </Card>
-
-        <Card className="gap-0 rounded-2xl border-mba-blue-deep bg-mba-blue-deep p-6 py-6 ring-0 sm:p-8">
-          <Badge
-            variant="outline"
-            className="w-fit border-white/15 bg-white/10 text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-gold"
-          >
-            Apply
-          </Badge>
-          <h2 className="mt-4 font-heading text-2xl leading-tight tracking-[-0.03em] text-white sm:text-3xl">
-            Submit an application for current openings or future consideration.
-          </h2>
-          <p className="mt-4 text-sm leading-7 text-slate-400 sm:text-base sm:leading-8">
-            MBA's current careers page uses a Cognito Forms application. Keeping
-            that as the first CTA is the easiest way to make this page useful
-            right away while we continue rebuilding the rest of the site.
-          </p>
-          <div className="mt-6">
-            <Button
-              asChild
-              className="rounded-full bg-white px-6 font-semibold text-mba-blue-deep hover:bg-mba-blue-deep hover:text-mba-gold"
-            >
-              <a
-                href="https://www.cognitoforms.com/MorongoBasinAmbulance1/EmploymentApplication"
-                className="inline-flex items-center gap-1.5"
-              >
-                Open Employment Application
-                <IconArrowRight className="size-4" aria-hidden />
-              </a>
-            </Button>
-          </div>
-        </Card>
-      </div>
     </main>
-  )
+  );
 }
 
-export default CareersPage
+export default CareersPage;
