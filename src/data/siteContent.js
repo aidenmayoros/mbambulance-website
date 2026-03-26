@@ -285,7 +285,7 @@ export const aboutServices = [
     id: "aha-courses",
     eyebrow: "Training",
     title: "American Heart Association Courses",
-    image: "/about-aha.jpg",
+    image: "/about-cpr.jpg",
     description:
       "MBA provides AHA course scheduling, registration support, and on-site training information directly from its Joshua Tree location.",
     details: [

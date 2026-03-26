@@ -16,17 +16,17 @@ import { careersRoles } from '../data/siteContent'
 function CareersPage() {
   return (
     <main className="flex flex-col gap-5">
-      <Card className="overflow-hidden rounded-2xl border-slate-200/80 bg-white ring-0 ring-transparent dark:border-slate-700 dark:bg-slate-900">
+      <Card className="overflow-hidden rounded-2xl border-mba-blue-soft/40 bg-white ring-0 ring-transparent dark:border-mba-blue-soft/25 dark:bg-slate-900">
         <div className="grid gap-6 px-5 py-6 sm:gap-8 sm:px-8 sm:py-8 md:px-10 md:py-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-10 lg:px-12 lg:py-12">
           <div className="flex flex-col">
             <Badge
               variant="outline"
-              className="w-fit border-slate-200 bg-white text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue sm:text-[0.65rem] dark:border-slate-700 dark:bg-slate-800"
+              className="w-fit border-mba-blue-soft/50 bg-mba-tan/50 text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue-deep sm:text-[0.65rem] dark:border-mba-blue-soft/30 dark:bg-slate-800 dark:text-slate-50"
             >
               Careers with MBA
             </Badge>
 
-            <h1 className="mt-5 font-heading text-[2.4rem] leading-[0.93] tracking-[-0.05em] text-slate-950 sm:mt-6 sm:text-5xl sm:leading-[0.94] lg:text-6xl dark:text-slate-50">
+            <h1 className="mt-5 font-heading text-[2.4rem] leading-[0.93] tracking-[-0.05em] text-mba-blue-deep sm:mt-6 sm:text-5xl sm:leading-[0.94] lg:text-6xl dark:text-slate-50">
               Careers at Morongo Basin Ambulance
             </h1>
 
@@ -41,7 +41,7 @@ function CareersPage() {
             <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
               <Button
                 asChild
-                className="rounded-full bg-mba-blue px-6 font-semibold text-white hover:bg-mba-blue-deep"
+                className="rounded-full bg-mba-blue px-6 font-semibold text-white hover:bg-mba-blue-deep hover:text-mba-gold"
               >
                 <a href="https://www.cognitoforms.com/MorongoBasinAmbulance1/EmploymentApplication">
                   Apply Now
@@ -50,7 +50,7 @@ function CareersPage() {
               <Button
                 asChild
                 variant="outline"
-                className="rounded-full border-slate-200 px-6 font-semibold text-slate-700 hover:bg-slate-100 dark:border-slate-700 dark:text-slate-300 dark:hover:bg-slate-800"
+                className="rounded-full border-mba-blue-soft/45 px-6 font-semibold text-mba-blue-deep hover:bg-mba-blue-deep hover:text-mba-gold dark:border-mba-blue-soft/25 dark:text-slate-300 dark:hover:bg-mba-blue-deep"
               >
                 <a href="#open-roles">View Open Roles</a>
               </Button>
@@ -58,7 +58,7 @@ function CareersPage() {
           </div>
 
           <aside className="grid gap-4 self-end">
-            <Card className="gap-0 rounded-xl border-slate-800 bg-slate-950 p-6 py-6 ring-0">
+            <Card className="gap-0 rounded-xl border-mba-blue-deep bg-mba-blue-deep p-6 py-6 ring-0">
               <Badge
                 variant="outline"
                 className="w-fit border-white/15 bg-white/10 text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-gold"
@@ -72,10 +72,10 @@ function CareersPage() {
               </ul>
             </Card>
 
-            <Card className="gap-0 rounded-xl border-slate-200/80 bg-white p-6 py-6 ring-0 dark:border-slate-700 dark:bg-slate-900">
+            <Card className="gap-0 rounded-xl border-mba-blue-soft/40 bg-white p-6 py-6 ring-0 dark:border-mba-blue-soft/25 dark:bg-slate-900">
               <Badge
                 variant="outline"
-                className="w-fit border-mba-red/20 dark:border-mba-red/30 bg-white text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-red dark:bg-slate-800"
+                className="w-fit border-mba-gold/35 bg-white text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue-deep dark:border-mba-gold/25 dark:bg-slate-800 dark:text-slate-50"
               >
                 Contact
               </Badge>
@@ -99,7 +99,7 @@ function CareersPage() {
 
       <Card
         id="open-roles"
-        className="overflow-hidden rounded-2xl border-slate-200/80 bg-white ring-0 ring-transparent dark:border-slate-700 dark:bg-slate-900"
+        className="overflow-hidden rounded-2xl border-mba-blue-soft/40 bg-white ring-0 ring-transparent dark:border-mba-blue-soft/25 dark:bg-slate-900"
       >
         <CardHeader className="px-5 pt-6 pb-0 sm:px-8 sm:pt-8 md:px-10">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
@@ -120,25 +120,25 @@ function CareersPage() {
             {careersRoles.map((role) => (
               <Card
                 key={role.title}
-                className="gap-0 overflow-hidden rounded-xl border-slate-200/80 bg-white p-0 py-0 ring-0 dark:border-slate-700 dark:bg-slate-900"
+                className="gap-0 overflow-hidden rounded-xl border-mba-blue-soft/40 bg-white p-0 py-0 ring-0 transition hover:border-mba-gold hover:bg-linear-to-br hover:from-mba-blue-deep hover:to-mba-blue hover:shadow-lg dark:border-mba-blue-soft/25 dark:bg-slate-900 dark:hover:border-mba-gold"
               >
                 <CardHeader className="p-5 pb-0 sm:p-6 sm:pb-0">
                   {role.tone === 'red' ? (
                     <Badge
                       variant="outline"
-                      className="w-fit border-mba-red/20 dark:border-mba-red/30 bg-mba-red/5 text-[0.6rem] font-semibold uppercase tracking-[0.18em] text-mba-red dark:bg-mba-red/10"
+                      className="w-fit border-mba-red/25 bg-mba-red/8 text-[0.6rem] font-semibold uppercase tracking-[0.18em] text-mba-red dark:border-mba-red/30 dark:bg-mba-red/10"
                     >
                       Not Currently Hiring — Applications Accepted
                     </Badge>
                   ) : (
                     <Badge
                       variant="outline"
-                      className="w-fit border-slate-200 bg-white text-[0.6rem] font-semibold uppercase tracking-[0.18em] text-mba-blue dark:border-slate-700 dark:bg-slate-800"
+                      className="w-fit border-mba-blue-soft/50 bg-mba-tan/50 text-[0.6rem] font-semibold uppercase tracking-[0.18em] text-mba-blue-deep dark:border-mba-blue-soft/30 dark:bg-slate-800 dark:text-slate-50"
                     >
                       Career Path
                     </Badge>
                   )}
-                  <CardTitle className="mt-3 font-heading text-2xl leading-tight tracking-[-0.03em] text-slate-950 sm:text-3xl dark:text-slate-50">
+                  <CardTitle className="mt-3 font-heading text-2xl leading-tight tracking-[-0.03em] text-mba-blue-deep sm:text-3xl dark:text-slate-50">
                     {role.title}
                   </CardTitle>
                   <CardDescription className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-400">
@@ -147,7 +147,7 @@ function CareersPage() {
                 </CardHeader>
 
                 <CardContent className="p-5 pt-4 sm:p-6 sm:pt-4">
-                  <Separator className="mb-4 bg-slate-100 dark:bg-slate-700" />
+                  <Separator className="mb-4 bg-mba-blue-soft/25 dark:bg-slate-700" />
                   <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 dark:text-slate-500">
                     Basic Requirements
                   </p>
@@ -155,7 +155,7 @@ function CareersPage() {
                     {role.requirements.map((item) => (
                       <li
                         key={item}
-                        className="rounded-lg border border-slate-200/80 bg-slate-50/80 px-4 py-3 text-sm leading-6 text-slate-600 dark:border-slate-700 dark:bg-slate-800/50 dark:text-slate-400"
+                        className="rounded-lg border border-mba-blue-soft/35 bg-mba-blue-soft/12 px-4 py-3 text-sm leading-6 text-slate-600 dark:border-mba-blue-soft/20 dark:bg-slate-800/50 dark:text-slate-400"
                       >
                         {item}
                       </li>
@@ -169,14 +169,14 @@ function CareersPage() {
       </Card>
 
       <div className="grid gap-4 lg:grid-cols-2">
-        <Card className="gap-0 rounded-2xl border-slate-200/80 bg-slate-50/80 p-6 py-6 ring-0 sm:p-8 dark:border-slate-700 dark:bg-slate-800/50">
+        <Card className="gap-0 rounded-2xl border-mba-blue-soft/40 bg-mba-blue-soft/12 p-6 py-6 ring-0 sm:p-8 dark:border-mba-blue-soft/25 dark:bg-mba-blue-soft/10">
           <Badge
             variant="outline"
-            className="w-fit border-mba-red/20 dark:border-mba-red/30 bg-white text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-red dark:bg-slate-800"
+            className="w-fit border-mba-gold/35 bg-white text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue-deep dark:border-mba-gold/25 dark:bg-slate-800 dark:text-slate-50"
           >
             Reserve &amp; Explorer
           </Badge>
-          <h2 className="mt-4 font-heading text-2xl leading-tight tracking-[-0.03em] text-slate-950 sm:text-3xl dark:text-slate-50">
+          <h2 className="mt-4 font-heading text-2xl leading-tight tracking-[-0.03em] text-mba-blue-deep sm:text-3xl dark:text-slate-50">
             MBA also creates ways to build experience before a full-time role.
           </h2>
           <div className="mt-4 space-y-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8 dark:text-slate-400">
@@ -192,7 +192,7 @@ function CareersPage() {
           </div>
         </Card>
 
-        <Card className="gap-0 rounded-2xl border-slate-800 bg-slate-950 p-6 py-6 ring-0 sm:p-8">
+        <Card className="gap-0 rounded-2xl border-mba-blue-deep bg-mba-blue-deep p-6 py-6 ring-0 sm:p-8">
           <Badge
             variant="outline"
             className="w-fit border-white/15 bg-white/10 text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-gold"
@@ -210,7 +210,7 @@ function CareersPage() {
           <div className="mt-6">
             <Button
               asChild
-              className="rounded-full bg-white px-6 font-semibold text-slate-900 hover:bg-slate-100"
+              className="rounded-full bg-white px-6 font-semibold text-mba-blue-deep hover:bg-mba-blue-deep hover:text-mba-gold"
             >
               <a
                 href="https://www.cognitoforms.com/MorongoBasinAmbulance1/EmploymentApplication"
