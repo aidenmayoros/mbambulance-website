@@ -20,7 +20,7 @@ function HomePage() {
           <div className="flex flex-col">
             <Badge
               variant="outline"
-              className="w-fit border-mba-blue-soft/50 bg-mba-tan/50 text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue-deep dark:border-mba-blue-soft/30 dark:bg-slate-800 sm:text-[0.65rem]"
+              className="w-fit border-mba-blue-soft/50 bg-mba-tan/50 text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue-deep dark:border-mba-blue-soft/30 dark:bg-slate-800 dark:text-slate-50 sm:text-[0.65rem]"
             >
               9-1-1 Emergency &amp; Non-Emergency Medical Transport
             </Badge>
@@ -92,7 +92,7 @@ function HomePage() {
             <Card className="mt-6 gap-0 rounded-xl border-mba-blue-soft/40 bg-white p-5 py-5 ring-0 dark:border-mba-blue-soft/25 dark:bg-slate-900 sm:mt-8">
               <Badge
                 variant="outline"
-                className="w-fit border-mba-blue-soft/50 bg-mba-tan/50 text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue-deep dark:border-mba-blue-soft/30 dark:bg-slate-800"
+                className="w-fit border-mba-blue-soft/50 bg-mba-tan/50 text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue-deep dark:border-mba-blue-soft/30 dark:bg-slate-800 dark:text-slate-50"
               >
                 About MBA
               </Badge>
@@ -116,7 +116,7 @@ function HomePage() {
             <Card className="gap-0 rounded-xl border-mba-gold/30 bg-mba-blue-soft/50 dark:bg-mba-tan/10 p-6 py-6 ring-0">
               <Badge
                 variant="outline"
-                className="w-fit border-mba-blue-soft bg-white text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue-deep dark:border-mba-gold/25 dark:bg-slate-800"
+                className="w-fit border-mba-blue-soft bg-white text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue-deep dark:border-mba-gold/25 dark:bg-slate-800 dark:text-slate-50"
               >
                 Service Area
               </Badge>
@@ -146,7 +146,12 @@ function HomePage() {
         id="services"
       >
         <CardHeader className="px-6 pt-8 pb-0 md:px-8">
-          <SectionHeader eyebrow="Ambulance Services" className="max-w-2xl" />
+          <Badge
+            variant="outline"
+            className="w-fit border-mba-blue-soft/50 bg-mba-tan/50 text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue-deep dark:border-mba-blue-soft/30 dark:bg-slate-800/80 dark:text-slate-300 sm:text-[0.65rem]"
+          >
+            Ambulance Services
+          </Badge>
         </CardHeader>
 
         <CardContent className="px-6 pt-6 pb-8 md:px-8 md:pb-10">
@@ -159,12 +164,6 @@ function HomePage() {
               >
                 <Card className="h-full gap-0 rounded-xl border-mba-blue-soft/40 bg-white p-0 py-0 ring-0 transition hover:border-mba-gold hover:bg-linear-to-br hover:from-mba-blue-deep hover:to-mba-blue hover:shadow-lg dark:border-mba-blue-soft/25 dark:bg-slate-900 dark:hover:border-mba-gold">
                   <CardHeader className="p-5 pb-0">
-                    <Badge
-                      variant="secondary"
-                      className="w-fit bg-mba-tan text-[0.6rem] font-semibold uppercase tracking-[0.18em] text-mba-blue-deep transition-colors group-hover:bg-mba-gold group-hover:text-mba-blue-deep dark:bg-slate-800 dark:text-slate-300"
-                    >
-                      MBA
-                    </Badge>
                     <CardTitle className="mt-4 font-heading text-xl leading-tight tracking-[-0.02em] text-mba-blue-deep transition-colors group-hover:text-white dark:text-slate-50 sm:text-2xl">
                       {service.title}
                     </CardTitle>

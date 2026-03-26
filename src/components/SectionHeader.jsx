@@ -1,18 +1,19 @@
-import { Badge } from '@/components/ui/badge'
+import { Badge } from "@/components/ui/badge";
 
 function SectionHeader({
   eyebrow,
   title,
   description,
-  className = '',
-  titleClassName = '',
+  className = "",
+  eyebrowClassName = "",
+  titleClassName = "",
 }) {
   return (
     <div className={className}>
       {eyebrow ? (
         <Badge
           variant="outline"
-          className="mb-3 w-fit border-mba-blue-soft/50 bg-mba-tan/50 text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue-deep dark:border-mba-blue-soft/30 dark:bg-slate-800 sm:text-[0.65rem]"
+          className={`mb-3 w-fit border-mba-blue-soft/50 bg-mba-tan/50 text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue-deep dark:border-mba-blue-soft/30 dark:bg-slate-800 sm:text-[0.65rem] ${eyebrowClassName}`}
         >
           {eyebrow}
         </Badge>
@@ -25,10 +26,12 @@ function SectionHeader({
         </h2>
       ) : null}
       {description ? (
-        <p className="mt-4 max-w-xl text-sm leading-7 text-slate-500 dark:text-slate-400">{description}</p>
+        <p className="mt-4 max-w-xl text-sm leading-7 text-slate-500 dark:text-slate-400">
+          {description}
+        </p>
       ) : null}
     </div>
-  )
+  );
 }
 
-export default SectionHeader
+export default SectionHeader;
