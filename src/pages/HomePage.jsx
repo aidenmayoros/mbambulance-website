@@ -1,31 +1,31 @@
-import { IconArrowRight, IconHeartFilled } from '@tabler/icons-react'
+import { IconArrowRight, IconHeartFilled } from "@tabler/icons-react";
 
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card'
-import SectionHeader from '../components/SectionHeader'
-import { serviceArea, serviceLinks } from '../data/siteContent'
+} from "@/components/ui/card";
+import SectionHeader from "../components/SectionHeader";
+import { serviceArea, serviceLinks } from "../data/siteContent";
 
 function HomePage() {
   return (
     <main className="flex flex-col gap-5">
-      <Card className="overflow-hidden rounded-2xl border-slate-200/80 dark:border-slate-700 bg-white dark:bg-slate-900 ring-0 ring-transparent">
+      <Card className="overflow-hidden rounded-2xl border-mba-blue-soft/40 bg-white ring-0 ring-transparent dark:border-mba-blue-soft/25 dark:bg-slate-900">
         <div className="grid gap-6 px-5 py-6 sm:gap-8 sm:px-8 sm:py-8 md:px-10 md:py-10 lg:grid-cols-[1fr_1fr] lg:gap-10 lg:px-12 lg:py-12">
           <div className="flex flex-col">
             <Badge
               variant="outline"
-              className="w-fit border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue sm:text-[0.65rem]"
+              className="w-fit border-mba-blue-soft/50 bg-mba-tan/50 text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue-deep dark:border-mba-blue-soft/30 dark:bg-slate-800 sm:text-[0.65rem]"
             >
               9-1-1 Emergency &amp; Non-Emergency Medical Transport
             </Badge>
 
-            <h1 className="mt-5 font-heading text-[2.4rem] leading-[0.93] tracking-[-0.05em] text-slate-950 dark:text-slate-50 sm:mt-6 sm:text-6xl sm:leading-[0.94] lg:text-7xl">
+            <h1 className="mt-5 font-heading text-[2.4rem] leading-[0.93] tracking-[-0.05em] text-mba-blue-deep dark:text-slate-50 sm:mt-6 sm:text-6xl sm:leading-[0.94] lg:text-7xl">
               Morongo Basin Ambulance
             </h1>
 
@@ -56,23 +56,23 @@ function HomePage() {
               <Button
                 asChild
                 size="lg"
-                className="rounded-full bg-mba-blue px-6 font-semibold text-white hover:bg-mba-blue-deep"
+                className="rounded-full bg-mba-blue px-6 font-semibold text-white hover:bg-mba-blue-deep! hover:text-mba-gold"
               >
                 <a href="#services">View Ambulance Services</a>
               </Button>
             </div>
 
             <div className="mt-6 grid gap-3 sm:mt-8 sm:grid-cols-3">
-              <Card className="gap-0 rounded-xl border-slate-200/80 dark:border-slate-700 bg-slate-50/80 dark:bg-slate-800/50 p-4 py-4 ring-0">
-                <CardTitle className="text-sm font-semibold text-slate-900 dark:text-slate-50">
+              <Card className="gap-0 rounded-xl border-mba-blue-soft/45 bg-mba-blue-soft/12 p-4 py-4 ring-0 dark:border-mba-blue-soft/25 dark:bg-mba-blue-soft/10">
+                <CardTitle className="text-sm font-semibold text-mba-blue-deep dark:text-slate-50">
                   Founded in 1948
                 </CardTitle>
                 <CardDescription className="mt-1 text-sm text-slate-500 dark:text-slate-400">
                   Longstanding local service
                 </CardDescription>
               </Card>
-              <Card className="gap-0 rounded-xl border-mba-red/10 bg-mba-red/[0.03] dark:bg-mba-red/10 p-4 py-4 ring-0">
-                <CardTitle className="text-sm font-semibold text-slate-900 dark:text-slate-50">
+              <Card className="gap-0 rounded-xl border-mba-red/10 bg-mba-red/3 dark:bg-mba-red/10 p-4 py-4 ring-0">
+                <CardTitle className="text-sm font-semibold text-mba-blue-deep dark:text-slate-50">
                   501(c)(3) nonprofit
                 </CardTitle>
                 <CardDescription className="mt-1 text-sm text-slate-500 dark:text-slate-400">
@@ -80,7 +80,7 @@ function HomePage() {
                 </CardDescription>
               </Card>
               <Card className="gap-0 rounded-xl border-mba-gold/30 bg-mba-tan/50 dark:bg-mba-tan/10 p-4 py-4 ring-0">
-                <CardTitle className="text-sm font-semibold text-slate-900 dark:text-slate-50">
+                <CardTitle className="text-sm font-semibold text-mba-blue-deep dark:text-slate-50">
                   Desert service area
                 </CardTitle>
                 <CardDescription className="mt-1 text-sm text-slate-500 dark:text-slate-400">
@@ -89,12 +89,12 @@ function HomePage() {
               </Card>
             </div>
 
-            <Card className="mt-6 gap-0 rounded-xl border-slate-200/80 dark:border-slate-700 bg-white dark:bg-slate-900 p-5 py-5 ring-0 sm:mt-8">
+            <Card className="mt-6 gap-0 rounded-xl border-mba-blue-soft/40 bg-white p-5 py-5 ring-0 dark:border-mba-blue-soft/25 dark:bg-slate-900 sm:mt-8">
               <Badge
                 variant="outline"
-              className="w-fit border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue"
-            >
-              About MBA
+                className="w-fit border-mba-blue-soft/50 bg-mba-tan/50 text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue-deep dark:border-mba-blue-soft/30 dark:bg-slate-800"
+              >
+                About MBA
               </Badge>
               <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-400 sm:text-[0.95rem] sm:leading-8">
                 Morongo Basin Ambulance is a non-tax based nonprofit focused on
@@ -105,18 +105,18 @@ function HomePage() {
           </div>
 
           <aside className="grid gap-4 self-end">
-            <Card className="gap-0 overflow-hidden rounded-xl border-slate-200/80 dark:border-slate-700 p-0 py-0 ring-0">
+            <Card className="gap-0 overflow-hidden rounded-xl border-mba-blue-soft/40 p-0 py-0 ring-0 dark:border-mba-blue-soft/25">
               <img
                 src="/mba-crew.jpg"
                 alt="Morongo Basin Ambulance crew"
-                className="w-full object-cover object-center sm:aspect-square"
+                className="w-full object-center sm:aspect-square"
               />
             </Card>
 
-            <Card className="gap-0 rounded-xl border-mba-gold/30 bg-mba-tan/50 dark:bg-mba-tan/10 p-6 py-6 ring-0">
+            <Card className="gap-0 rounded-xl border-mba-gold/30 bg-mba-blue-soft/50 dark:bg-mba-tan/10 p-6 py-6 ring-0">
               <Badge
                 variant="outline"
-                className="w-fit border-mba-red/20 dark:border-mba-red/30 bg-white dark:bg-slate-800 text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-red"
+                className="w-fit border-mba-blue-soft bg-white text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue-deep dark:border-mba-gold/25 dark:bg-slate-800"
               >
                 Service Area
               </Badge>
@@ -130,7 +130,7 @@ function HomePage() {
                   <Badge
                     key={place}
                     variant="outline"
-                    className="border-mba-gold/50 dark:border-mba-gold/30 bg-white/80 dark:bg-slate-800/80 text-xs font-medium text-slate-700 dark:text-slate-300"
+                    className="border-mba-blue-soft/45 bg-white/85 text-xs font-medium text-mba-blue-deep dark:border-mba-blue-soft/30 dark:bg-slate-800/80 dark:text-slate-300"
                   >
                     {place}
                   </Badge>
@@ -142,7 +142,7 @@ function HomePage() {
       </Card>
 
       <Card
-        className="overflow-hidden rounded-2xl border-slate-200/80 dark:border-slate-700 bg-white dark:bg-slate-900 ring-0 ring-transparent"
+        className="overflow-hidden rounded-2xl border-mba-blue-soft/40 bg-white ring-0 ring-transparent dark:border-mba-blue-soft/25 dark:bg-slate-900"
         id="services"
       >
         <CardHeader className="px-6 pt-8 pb-0 md:px-8">
@@ -157,25 +157,28 @@ function HomePage() {
                 href={service.href}
                 className="group block no-underline"
               >
-                <Card className="h-full gap-0 rounded-xl border-slate-200/80 dark:border-slate-700 bg-white dark:bg-slate-900 p-0 py-0 ring-0 transition hover:border-slate-300 dark:hover:border-slate-600 hover:shadow-md">
+                <Card className="h-full gap-0 rounded-xl border-mba-blue-soft/40 bg-white p-0 py-0 ring-0 transition hover:border-mba-gold hover:bg-linear-to-br hover:from-mba-blue-deep hover:to-mba-blue hover:shadow-lg dark:border-mba-blue-soft/25 dark:bg-slate-900 dark:hover:border-mba-gold">
                   <CardHeader className="p-5 pb-0">
                     <Badge
                       variant="secondary"
-                      className="w-fit bg-slate-100 dark:bg-slate-800 text-[0.6rem] font-semibold uppercase tracking-[0.18em] text-slate-400"
+                      className="w-fit bg-mba-tan text-[0.6rem] font-semibold uppercase tracking-[0.18em] text-mba-blue-deep transition-colors group-hover:bg-mba-gold group-hover:text-mba-blue-deep dark:bg-slate-800 dark:text-slate-300"
                     >
                       MBA
                     </Badge>
-                    <CardTitle className="mt-4 font-heading text-xl leading-tight tracking-[-0.02em] text-slate-950 dark:text-slate-50 sm:text-2xl">
+                    <CardTitle className="mt-4 font-heading text-xl leading-tight tracking-[-0.02em] text-mba-blue-deep transition-colors group-hover:text-white dark:text-slate-50 sm:text-2xl">
                       {service.title}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="flex flex-1 flex-col justify-between gap-4 p-5 pt-3">
-                    <CardDescription className="text-sm leading-7 text-slate-600 dark:text-slate-400">
+                    <CardDescription className="text-sm leading-7 text-slate-600 transition-colors group-hover:text-slate-100 dark:text-slate-400 dark:group-hover:text-slate-100">
                       {service.description}
                     </CardDescription>
-                    <span className="inline-flex items-center gap-1 text-sm font-medium text-mba-blue transition-colors group-hover:text-mba-blue-deep">
+                    <span className="inline-flex w-fit items-center gap-1 rounded-full border border-mba-blue-soft/45 bg-white/80 px-3 py-1.5 text-sm font-medium text-mba-blue transition-colors group-hover:border-mba-gold group-hover:bg-mba-blue-deep/20 group-hover:text-mba-gold dark:border-mba-blue-soft/25 dark:bg-slate-900/60">
                       Learn more
-                      <IconArrowRight className="size-3.5 transition-transform group-hover:translate-x-0.5" aria-hidden />
+                      <IconArrowRight
+                        className="size-3.5 transition-transform group-hover:translate-x-0.5"
+                        aria-hidden
+                      />
                     </span>
                   </CardContent>
                 </Card>
@@ -185,7 +188,7 @@ function HomePage() {
         </CardContent>
       </Card>
     </main>
-  )
+  );
 }
 
-export default HomePage
+export default HomePage;

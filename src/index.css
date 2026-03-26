@@ -8,11 +8,15 @@
 @theme {
   --color-mba-blue: #2b4ab6;
   --color-mba-blue-deep: #20398e;
+  --color-mba-blue-soft: #b7c8d6;
+  --color-mba-periwinkle: #98a7df;
   --color-mba-red: #ff313f;
   --color-mba-gold: #e4c37b;
   --color-mba-tan: #f7efe4;
-  --font-sans: "Avenir Next", Avenir, Montserrat, "Segoe UI", Helvetica, Arial, sans-serif;
-  --font-heading: "Avenir Next Condensed", "Avenir Next", Montserrat, "Segoe UI", sans-serif;
+  --font-sans:
+    "Avenir Next", Avenir, Montserrat, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-heading:
+    "Avenir Next Condensed", "Avenir Next", Montserrat, "Segoe UI", sans-serif;
 }
 
 @layer base {
@@ -36,7 +40,7 @@
 
 @theme inline {
   --font-heading: var(--font-sans);
-  --font-sans: 'Geist Variable', sans-serif;
+  --font-sans: "Geist Variable", sans-serif;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
