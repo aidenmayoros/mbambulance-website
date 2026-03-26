@@ -102,7 +102,7 @@ function AboutPage() {
         </div>
       </Card>
 
-      <Card className="overflow-hidden rounded-2xl border-mba-blue-soft/40 bg-white ring-0 ring-transparent dark:border-mba-blue-soft/25 dark:bg-slate-900">
+      <Card className="overflow-hidden rounded-2xl border-mba-blue-soft/40 bg-mba-periwinkle ring-0 ring-transparent dark:border-mba-blue-soft/25 dark:bg-slate-900">
         <CardContent className="px-5 py-6 sm:px-8 sm:py-8 md:px-10 md:py-10">
           <div className="grid gap-6 lg:grid-cols-[1fr_0.9fr] lg:gap-10">
             <div>
@@ -113,7 +113,7 @@ function AboutPage() {
                 className="max-w-3xl"
               />
 
-              <div className="mt-5 space-y-4 text-base leading-8 text-slate-600 dark:text-slate-400">
+              <div className="mt-5 space-y-4 text-base leading-8 text-slate-50 dark:text-slate-400">
                 <p>
                   Morongo Basin Ambulance gives back to the community whenever,
                   and however it can. Serving the hi-desert communities of the
@@ -161,7 +161,7 @@ function AboutPage() {
 
       <Card
         id="services"
-        className="overflow-hidden rounded-2xl border-mba-blue-soft/40 bg-white ring-0 ring-transparent dark:border-mba-blue-soft/25 dark:bg-slate-900"
+        className="overflow-hidden rounded-2xl border-mba-blue-soft/40 bg-mba-tan ring-0 ring-transparent dark:border-mba-blue-soft/25 dark:bg-slate-900"
       >
         <CardContent className="px-5 pt-6 sm:px-8 sm:pb-8 md:px-10 md:pb-10">
           <div className="grid gap-4">
@@ -169,7 +169,7 @@ function AboutPage() {
               <Card
                 key={service.id}
                 id={service.id}
-                className="scroll-mt-28 overflow-hidden rounded-2xl border-mba-blue-soft/40 bg-white ring-0 ring-transparent dark:border-mba-blue-soft/25 dark:bg-slate-900"
+                className="scroll-mt-28 overflow-hidden rounded-2xl border-mba-blue-soft/40 bg-mba-tan ring-0 ring-transparent dark:border-mba-blue-soft/25 dark:bg-slate-900"
               >
                 <CardContent className="px-5 py-6 sm:px-8 sm:py-8 md:px-10 md:py-10">
                   <div className="grid items-stretch gap-6 lg:grid-cols-[minmax(320px,360px)_minmax(0,1fr)] lg:gap-10">
@@ -177,7 +177,7 @@ function AboutPage() {
                       <img
                         src={service.image}
                         alt={service.title}
-                        className="h-full min-h-[280px] w-full object-cover sm:min-h-[320px]"
+                        className="h-full min-h-70 w-full object-cover sm:min-h-80"
                       />
                     </Card>
 
@@ -185,7 +185,7 @@ function AboutPage() {
                       <SectionHeader
                         eyebrow={service.eyebrow}
                         title={service.title}
-                        titleClassName="text-mba-blue-deep dark:text-slate-50"
+                        titleClassName="text-mba-blue-deep! dark:text-slate-50!"
                         className="max-w-3xl"
                       />
 
@@ -197,7 +197,7 @@ function AboutPage() {
                         <div className="mt-5">
                           <Button
                             asChild
-                            className="rounded-full bg-mba-blue font-semibold text-white hover:bg-mba-blue-deep hover:text-mba-gold"
+                            className="rounded-full bg-mba-blue font-semibold text-white hover:bg-mba-blue-deep! hover:text-mba-gold"
                           >
                             <a
                               href={service.cta.href}
