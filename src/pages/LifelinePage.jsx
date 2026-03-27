@@ -19,7 +19,7 @@ import SectionHeader from "../components/SectionHeader";
 import { lifelineImpact } from "../data/siteContent";
 
 const donationHref =
-  "https://www.paypal.com/donate?token=rEQOS90AtzhYVdsjyz_nHpcNnBj9NjrI_IPlZkmgoVHXcfWr-NSeqDeKe7tdmxzo-jh_49Ss8kB2619z";
+  "https://www.paypal.com/donate?token=_FoF-RRRvCH1cDK37L7Kz2j3Z3psHoYxBqmHOq99rZgVXL4RGHvvEJUEEz0nfb_RszXSNB910tbayG5k";
 
 function LifelinePage() {
   return (
@@ -49,10 +49,12 @@ function LifelinePage() {
               <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
                 <Button
                   asChild
-                  className="rounded-full bg-mba-blue px-6 font-semibold text-white hover:bg-mba-blue-deep hover:text-mba-gold"
+                  className="rounded-full bg-mba-blue px-6 font-semibold text-white hover:bg-mba-blue-deep! hover:text-mba-gold"
                 >
                   <a
                     href={donationHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5"
                   >
                     <IconHeart className="size-4" aria-hidden />
@@ -163,10 +165,12 @@ function LifelinePage() {
               <div className="mt-6">
                 <Button
                   asChild
-                  className="rounded-full bg-white px-6 font-semibold text-mba-blue-deep hover:bg-mba-blue-deep hover:text-mba-gold"
+                  className="rounded-full bg-mba-blue px-6 font-semibold text-white hover:bg-mba-blue-deep! hover:text-mba-gold"
                 >
                   <a
                     href={donationHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5"
                   >
                     Become a Lifeline Member
@@ -207,10 +211,12 @@ function LifelinePage() {
               <div className="mt-6">
                 <Button
                   asChild
-                  className="rounded-full bg-mba-blue px-6 font-semibold text-white hover:bg-mba-blue-deep hover:text-mba-gold"
+                  className="rounded-full bg-mba-blue px-6 font-semibold text-white hover:bg-mba-blue-deep! hover:text-mba-gold"
                 >
                   <a
                     href={donationHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5"
                   >
                     Pay Securely

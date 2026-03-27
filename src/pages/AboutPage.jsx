@@ -125,11 +125,6 @@ function AboutPage() {
                   Morongo Basin, MBA proudly supports an annual Holiday Toy
                   Drive, community parades, fairs, events, and more.
                 </p>
-                <p>
-                  Folding this staged community content into the About page
-                  keeps the site structure tighter while still preserving what
-                  the current staging site says about local involvement.
-                </p>
               </div>
             </div>
 
@@ -196,7 +191,7 @@ function AboutPage() {
                       />
 
                       <div className="mt-5 space-y-4 text-base leading-8 text-slate-600 dark:text-slate-400">
-                        <p>{service.description}</p>
+                        <p dangerouslySetInnerHTML={{ __html: service.description }} />
                       </div>
 
                       {service.cta ? (

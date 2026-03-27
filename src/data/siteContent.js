@@ -227,7 +227,7 @@ export const aboutServices = [
     title: "Critical Care Transport Ambulance",
     image: "/about-cct.jpg",
     description:
-      "MBA's critical care transport nurses and critical care paramedics provide direct patient care during transfers between facilities when a standard paramedic-level transport is not enough.",
+      "MBA's critical care transport nurses and critical care paramedics provide direct patient care during transfers between facilities when a standard paramedic-level transport is not enough. <strong>This project is being supported, in whole or in part, by federal award number SLFRP0154 awarded to San Bernardino County by the United States Department of Treasury.</strong>",
     details: [
       "Designed for higher-acuity patients moving between hospitals or facilities",
       "CCT RNs and CCPs can provide a higher level of care than a standard paramedic unit",
@@ -241,13 +241,16 @@ export const aboutServices = [
     title: "Stand-By Ambulance",
     image: "/about-standby.jpg",
     description:
-      "Beyond emergency, non-emergency, and CCT transports, MBA also offers ALS and BLS stand-by services for one-day and multi-day events.",
+      "Beyond emergency, non-emergency, and CCT transports, MBA also offers ALS and BLS stand-by services for one-day and multi-day events. To inquire about, or request stand-by ambulance services at your next event, please complete this form and submit it to us. We will get back to you promptly. Or, you can call us at 760-366-8474 and then select option 5.",
     details: [
       "Available for transport and non-transport event support",
       "Used for movie sets, off-road motor racing events, corporate events, and extreme sports events",
       "Fleet includes off-road vehicles designed to treat and transport patients in remote areas",
-      "Staging asks event organizers to complete the request form or call 760-366-8474 and select option 5",
     ],
+    cta: {
+      label: "Request Stand-By Service",
+      href: "https://www.cognitoforms.com/MorongoBasinAmbulance1/MorongoBasinAmbulanceSpecialEventRequestForm",
+    },
   },
   {
     id: "aha-courses",
