@@ -48,7 +48,7 @@ function LifelinePage() {
             <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
               <Button
                 asChild
-                className="rounded-full bg-mba-blue px-6 font-semibold text-white hover:bg-mba-blue-deep hover:text-mba-gold"
+                className="rounded-full bg-mba-blue px-6 font-semibold text-white hover:bg-mba-blue-deep! hover:text-mba-gold"
               >
                 <a
                   href={donationHref}
@@ -107,9 +107,9 @@ function LifelinePage() {
             {lifelineImpact.map((item) => (
               <Card
                 key={item.amount}
-                className="group gap-0 overflow-hidden rounded-xl border-mba-blue-soft/40 bg-white p-0 py-0 ring-0 transition hover:border-mba-gold hover:bg-linear-to-br hover:from-mba-blue-deep hover:to-mba-blue hover:shadow-lg dark:border-mba-blue-soft/25 dark:bg-slate-900 dark:hover:border-mba-gold"
+                className="group gap-0 overflow-hidden rounded-xl border-mba-blue-soft/40 bg-white p-0 py-0 ring-0 transition  hover:shadow-lg dark:border-mba-blue-soft/25 dark:bg-slate-900"
               >
-                <div className="flex items-center justify-center bg-mba-tan/40 p-6 transition-colors group-hover:bg-white/10 dark:bg-mba-tan/10">
+                <div className="flex items-center justify-center bg-mba-tan/40 p-6 transition-colors  dark:bg-mba-tan/10">
                   <img
                     src={item.image}
                     alt=""
@@ -119,14 +119,14 @@ function LifelinePage() {
                 <CardContent className="p-5">
                   <Badge
                     variant="outline"
-                    className="w-fit border-mba-gold/35 bg-white text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue-deep transition-colors group-hover:bg-mba-gold group-hover:text-mba-blue-deep dark:border-mba-gold/25 dark:bg-slate-800 dark:text-slate-50"
+                    className="w-fit border-mba-gold/35 bg-white text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue-deep transition-colors dark:border-mba-gold/25 dark:bg-slate-800 dark:text-slate-50"
                   >
                     {item.amount}
                   </Badge>
-                  <CardTitle className="mt-3 font-heading text-xl leading-tight tracking-[-0.02em] text-mba-blue-deep transition-colors group-hover:text-white sm:text-2xl dark:text-slate-50">
+                  <CardTitle className="mt-3 font-heading text-xl leading-tight tracking-[-0.02em] text-mba-blue-deep transition-colors  sm:text-2xl dark:text-slate-50">
                     {item.title}
                   </CardTitle>
-                  <CardDescription className="mt-2 text-sm leading-7 text-slate-600 transition-colors group-hover:text-slate-100 dark:text-slate-400 dark:group-hover:text-slate-100">
+                  <CardDescription className="mt-2 text-sm leading-7 text-slate-600 transition-colors dark:text-slate-400">
                     {item.description}
                   </CardDescription>
                 </CardContent>
@@ -158,7 +158,7 @@ function LifelinePage() {
           <div className="mt-6">
             <Button
               asChild
-              className="rounded-full bg-white px-6 font-semibold text-mba-blue-deep hover:bg-mba-blue-deep hover:text-mba-gold"
+              className="rounded-full bg-mba-blue px-6 font-semibold text-white hover:bg-mba-blue-deep! hover:text-mba-gold"
             >
               <a
                 href={donationHref}
@@ -183,18 +183,9 @@ function LifelinePage() {
             depends on.
           </h2>
           <div className="mt-4 space-y-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8 dark:text-slate-400">
-            <p>
-              The staging page explains that rising costs in supplies,
-              communications, maintenance, and operations make donor support
-              directly meaningful.
-            </p>
-            <p>
+            <p className="font-semibold text-slate-950 dark:text-slate-50">
               Donations are tax deductible, and the nonprofit EIN listed on the
-              staged page is{" "}
-              <span className="font-semibold text-slate-950 dark:text-slate-50">
-                95-6100536
-              </span>
-              .
+              staged page is 95-6100536 .
             </p>
             <p>
               Every dollar received from individuals and organizations in the
@@ -206,7 +197,7 @@ function LifelinePage() {
           <div className="mt-6">
             <Button
               asChild
-              className="rounded-full bg-mba-blue px-6 font-semibold text-white hover:bg-mba-blue-deep hover:text-mba-gold"
+              className="rounded-full bg-mba-blue px-6 font-semibold text-white hover:bg-mba-blue-deep! hover:text-mba-gold"
             >
               <a
                 href={donationHref}
@@ -220,43 +211,7 @@ function LifelinePage() {
         </Card>
       </div>
 
-      <Card className="overflow-hidden rounded-2xl border-mba-blue-soft/40 bg-white ring-0 ring-transparent dark:border-mba-blue-soft/25 dark:bg-slate-900">
-        <CardContent className="px-5 py-8 sm:px-8 md:px-10">
-          <div className="grid gap-6 md:grid-cols-[1.1fr_0.9fr] md:items-end">
-            <div>
-              <Badge
-                variant="outline"
-                className="w-fit border-mba-blue-soft/50 bg-mba-tan/50 text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue-deep dark:border-mba-blue-soft/30 dark:bg-slate-800 dark:text-slate-50"
-              >
-                Contact MBA
-              </Badge>
-              <h2 className="mt-3 font-heading text-2xl leading-tight tracking-[-0.03em] text-slate-950 sm:text-3xl lg:text-4xl dark:text-slate-50">
-                Questions about giving or monthly support?
-              </h2>
-              <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8 dark:text-slate-400">
-                The staged page closes by thanking supporters and directing
-                visitors to contact MBA for more information.
-              </p>
-            </div>
-            <div className="space-y-2.5 text-sm text-slate-600 dark:text-slate-400">
-              <p className="flex items-start gap-2">
-                <IconMapPin
-                  className="mt-0.5 size-4 shrink-0 text-slate-400 dark:text-slate-500"
-                  aria-hidden
-                />
-                6335 Park Blvd (PO Box 460), Joshua Tree, CA 92252
-              </p>
-              <p className="flex items-center gap-2">
-                <IconPhone
-                  className="size-4 shrink-0 text-slate-400 dark:text-slate-500"
-                  aria-hidden
-                />
-                760-366-8474
-              </p>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
+      <Card className="overflow-hidden rounded-2xl border-mba-blue-soft/40 bg-white ring-0 ring-transparent dark:border-mba-blue-soft/25 dark:bg-slate-900"></Card>
     </main>
   );
 }
