@@ -40,7 +40,7 @@ function Header({
   };
 
   return (
-    <header className="w-full border-b border-slate-200/80 bg-white pt-4 dark:border-slate-800 dark:bg-slate-900 sm:pt-6">
+    <header className="w-full border-b border-slate-200/80 bg-white dark:border-slate-800 dark:bg-slate-900">
       <div
         className={cn(
           PAGE_CONTAINER,
