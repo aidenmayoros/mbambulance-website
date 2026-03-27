@@ -5,11 +5,10 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Brand blues: primary (interactive, headings on light) + deep (panels, hover, dark UI) */
 @theme {
   --color-mba-blue: #2b4ab6;
   --color-mba-blue-deep: #20398e;
-  --color-mba-blue-soft: #b7c8d6;
-  --color-mba-periwinkle: #98a7df;
   --color-mba-red: #ff313f;
   --color-mba-gold: #e4c37b;
   --color-mba-tan: #f7efe4;

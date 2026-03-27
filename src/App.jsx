@@ -81,19 +81,17 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(circle_at_top_left,rgba(228,195,123,0.12),transparent_18%),linear-gradient(180deg,#0a1842_0%,#10265e_38%,#060f2d_100%)] text-slate-700 dark:bg-none dark:bg-slate-950 dark:text-slate-300">
-      <div className="mx-auto flex w-full max-w-7xl flex-col gap-5 px-4 py-4 sm:px-6 lg:px-8 lg:py-6">
-        <Header
-          isMenuOpen={isMenuOpen}
-          toggleMenu={toggleMenu}
-          closeMenu={closeMenu}
-          pathname={pathname}
-          theme={theme}
-          toggleTheme={toggleTheme}
-        />
-        {getPageForPath(pathname)}
-        <Footer />
-      </div>
+    <div className="min-h-screen bg-[radial-gradient(circle_at_top_left,rgba(228,195,123,0.12),transparent_18%),linear-gradient(180deg,#20398e_0%,#2b4ab6_42%,#20398e_100%)] text-slate-700 dark:bg-none dark:bg-slate-950 dark:text-slate-300">
+      <Header
+        isMenuOpen={isMenuOpen}
+        toggleMenu={toggleMenu}
+        closeMenu={closeMenu}
+        pathname={pathname}
+        theme={theme}
+        toggleTheme={toggleTheme}
+      />
+      {getPageForPath(pathname)}
+      <Footer />
     </div>
   );
 }

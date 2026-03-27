@@ -10,6 +10,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import { PAGE_CONTAINER } from "@/lib/pageLayout";
+import { cn } from "@/lib/utils";
 import { boardMembers } from "../data/siteContent";
 
 const BIO_PREVIEW_LENGTH = 280;
@@ -33,13 +35,13 @@ function BoardPage() {
   };
 
   return (
-    <main className="flex flex-col gap-5">
-      <Card className="overflow-hidden rounded-2xl border-mba-blue-soft/40 bg-white ring-0 ring-transparent dark:border-mba-blue-soft/25 dark:bg-slate-900">
-        <CardContent className="px-5 py-6 sm:px-8 sm:py-8 md:px-10 md:py-10 lg:px-12 lg:py-12">
+    <main className="flex flex-col">
+      <section className="w-full border-b border-mba-blue/20 bg-white dark:border-mba-blue/10 dark:bg-slate-900">
+        <div className={cn(PAGE_CONTAINER, "py-8 sm:py-10 md:py-12 lg:py-14")}>
           <div className="max-w-4xl">
             <Badge
               variant="outline"
-              className="w-fit border-mba-blue-soft/50 bg-mba-tan/50 text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue-deep sm:text-[0.65rem] dark:border-mba-blue-soft/30 dark:bg-slate-800 dark:text-slate-50"
+              className="w-fit border-mba-blue/35 bg-mba-tan/50 text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue-deep sm:text-[0.65rem] dark:border-mba-blue/25 dark:bg-slate-800 dark:text-slate-50"
             >
               Board of Directors
             </Badge>
@@ -52,10 +54,11 @@ function BoardPage() {
               care to our community.
             </p>
           </div>
-        </CardContent>
-      </Card>
+        </div>
+      </section>
 
-      <div className="grid gap-4">
+      <section className="w-full border-b border-mba-gold/30 bg-mba-tan dark:border-mba-blue/10 dark:bg-slate-900">
+        <div className={cn(PAGE_CONTAINER, "grid gap-4 py-6 sm:py-8 md:py-10")}>
         {boardMembers.map((member) =>
           (() => {
             const isExpanded = Boolean(expandedMembers[member.name]);
@@ -67,10 +70,10 @@ function BoardPage() {
             return (
               <Card
                 key={member.name}
-                className="overflow-hidden rounded-2xl border-mba-blue-soft/40 bg-white p-0 py-0 ring-0 dark:border-mba-blue-soft/25 dark:bg-slate-900"
+                className="overflow-hidden rounded-xl border-mba-blue/25 bg-white p-0 py-0 ring-0 dark:border-mba-blue/20 dark:bg-slate-900"
               >
                 <div className="grid gap-0 lg:grid-cols-[minmax(220px,280px)_1fr]">
-                  <div className="self-start overflow-hidden bg-mba-blue-soft/12 dark:bg-slate-800">
+                  <div className="self-start overflow-hidden bg-mba-blue/10 dark:bg-slate-800">
                     <img
                       src={member.image}
                       alt={member.name}
@@ -83,12 +86,12 @@ function BoardPage() {
                       <CardTitle className="font-heading text-2xl leading-tight tracking-[-0.03em] text-mba-blue-deep sm:text-3xl dark:text-slate-50">
                         {member.name}
                       </CardTitle>
-                      <CardDescription className="mt-1.5 text-sm font-medium text-mba-blue dark:text-mba-gold">
+                      <CardDescription className="mt-1.5 text-sm font-medium text-mba-blue-deep dark:text-mba-gold">
                         {member.role}
                       </CardDescription>
                     </div>
 
-                    <Separator className="bg-mba-blue-soft/25 dark:bg-slate-700" />
+                    <Separator className="bg-mba-blue/20 dark:bg-slate-700" />
 
                     <div>
                       <Badge
@@ -107,7 +110,7 @@ function BoardPage() {
                             variant="outline"
                             size="sm"
                             onClick={() => toggleMemberBio(member.name)}
-                            className="rounded-full border-mba-blue-soft/45 bg-white/90 text-mba-blue-deep cursor-pointer hover:bg-mba-blue-deep! hover:text-mba-gold dark:border-mba-blue-soft/25 dark:bg-slate-800 dark:text-slate-100"
+                            className="rounded-full border-mba-blue/30 bg-white/90 text-mba-blue-deep cursor-pointer hover:bg-mba-blue-deep! hover:text-mba-gold dark:border-mba-blue/20 dark:bg-slate-800 dark:text-slate-100"
                           >
                             {isExpanded ? "Show Less" : "Show More"}
                           </Button>
@@ -120,10 +123,11 @@ function BoardPage() {
             );
           })(),
         )}
-      </div>
+        </div>
+      </section>
 
-      <Card className="overflow-hidden rounded-2xl border-mba-blue-deep bg-mba-blue-deep ring-0 ring-transparent">
-        <CardContent className="px-5 py-8 sm:px-8 md:px-10">
+      <section className="w-full bg-mba-blue-deep">
+        <div className={cn(PAGE_CONTAINER, "py-8 sm:py-10 md:py-12")}>
           <div className="grid gap-6 md:grid-cols-[1.1fr_0.9fr] md:items-end">
             <div>
               <Badge
@@ -156,8 +160,8 @@ function BoardPage() {
               </p>
             </div>
           </div>
-        </CardContent>
-      </Card>
+        </div>
+      </section>
     </main>
   );
 }

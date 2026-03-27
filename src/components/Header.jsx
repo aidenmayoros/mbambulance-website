@@ -13,6 +13,7 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { PAGE_CONTAINER } from "@/lib/pageLayout";
 import { cn } from "@/lib/utils";
 import { topNav } from "../data/siteContent";
 
@@ -39,8 +40,13 @@ function Header({
   };
 
   return (
-    <header className="overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-900">
-      <div className="flex items-center gap-3 px-4 py-3 sm:px-6 lg:gap-4 lg:px-6 xl:gap-6 xl:px-8">
+    <header className="w-full border-b border-slate-200/80 bg-white pt-4 dark:border-slate-800 dark:bg-slate-900 sm:pt-6">
+      <div
+        className={cn(
+          PAGE_CONTAINER,
+          "flex items-center gap-3 py-3 lg:gap-4 xl:gap-6",
+        )}
+      >
         <a
           href="/"
           className="flex shrink-0 items-center gap-3"
@@ -70,9 +76,9 @@ function Header({
                     asChild
                     className={cn(
                       "whitespace-nowrap rounded-md px-2 py-1.5 text-[0.8125rem] font-medium text-slate-600 transition-colors xl:px-3 xl:text-sm dark:text-slate-400",
-                      "hover:bg-mba-blue-deep hover:text-mba-gold dark:hover:bg-slate-800 dark:hover:text-slate-100",
+                      "hover:bg-mba-blue-deep hover:text-white dark:hover:bg-slate-800 dark:hover:text-white",
                       active &&
-                        "bg-mba-blue-deep text-mba-gold dark:bg-slate-800 dark:text-slate-100",
+                        "bg-mba-blue-deep text-white dark:bg-slate-800 dark:text-white",
                     )}
                   >
                     <a href={item.href}>{item.label}</a>
@@ -89,7 +95,7 @@ function Header({
             size="sm"
             className={cn(
               "hidden whitespace-nowrap rounded-md bg-mba-blue px-3.5 text-sm font-medium text-white lg:inline-flex",
-              "hover:bg-mba-blue-deep! hover:text-mba-gold",
+              "hover:bg-mba-blue-deep! hover:text-white",
               pathname === "/lifeline" && "bg-mba-blue-deep",
             )}
           >
@@ -159,9 +165,9 @@ function Header({
                             onClick={closeMenu}
                             className={cn(
                               "block rounded-md px-3 py-2.5 text-sm font-medium text-slate-600 transition-colors dark:text-slate-400",
-                              "hover:bg-mba-blue-deep hover:text-mba-gold dark:hover:bg-slate-800 dark:hover:text-slate-100",
+                              "hover:bg-mba-blue-deep hover:text-white dark:hover:bg-slate-800 dark:hover:text-white",
                               active &&
-                                "bg-mba-blue-deep text-mba-gold dark:bg-slate-800 dark:text-slate-100",
+                                "bg-mba-blue-deep text-white dark:bg-slate-800 dark:text-white",
                             )}
                           >
                             {item.label}
@@ -179,7 +185,7 @@ function Header({
                     asChild
                     className={cn(
                       "w-full rounded-md bg-mba-blue text-sm font-medium text-white",
-                      "hover:bg-mba-blue-deep! hover:text-mba-gold",
+                      "hover:bg-mba-blue-deep! hover:text-white",
                     )}
                   >
                     <a

@@ -15,18 +15,26 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import { PAGE_CONTAINER } from "@/lib/pageLayout";
+import { cn } from "@/lib/utils";
 import SectionHeader from "../components/SectionHeader";
 import { aboutServices, serviceArea } from "../data/siteContent";
 
 function AboutPage() {
   return (
-    <main className="flex flex-col gap-5">
-      <Card className="overflow-hidden rounded-2xl border-mba-blue-soft/40 bg-white ring-0 ring-transparent dark:border-mba-blue-soft/25 dark:bg-slate-900">
-        <div className="grid gap-6 px-5 py-6 sm:gap-8 sm:px-8 sm:py-8 md:px-10 md:py-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-10 lg:px-12 lg:py-12">
+    <main className="flex flex-col">
+      <section className="w-full border-b border-mba-blue/20 bg-white dark:border-mba-blue/10 dark:bg-slate-900">
+        <div
+          className={cn(
+            PAGE_CONTAINER,
+            "py-8 sm:py-10 md:py-12 lg:py-14",
+          )}
+        >
+        <div className="grid gap-6 sm:gap-8 md:gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-10">
           <div className="flex flex-col">
             <Badge
               variant="outline"
-              className="w-fit border-mba-blue-soft/50 bg-mba-tan/50 text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue-deep dark:border-mba-blue-soft/30 dark:bg-slate-800 dark:text-slate-50 sm:text-[0.65rem]"
+              className="w-fit border-mba-blue/35 bg-mba-tan/50 text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue-deep dark:border-mba-blue/25 dark:bg-slate-800 dark:text-slate-50 sm:text-[0.65rem]"
             >
               About MBA
             </Badge>
@@ -58,7 +66,7 @@ function AboutPage() {
           </div>
 
           <aside className="grid gap-4 self-end">
-            <Card className="gap-0 overflow-hidden rounded-xl border-mba-blue-soft/40 p-0 py-0 ring-0 dark:border-mba-blue-soft/25">
+            <Card className="gap-0 overflow-hidden rounded-xl border-mba-blue/25 p-0 py-0 ring-0 dark:border-mba-blue/20">
               <img
                 src="/about-mba.jpg"
                 alt="Morongo Basin Ambulance team"
@@ -91,7 +99,7 @@ function AboutPage() {
                   <Badge
                     key={place}
                     variant="outline"
-                    className="border-mba-blue-soft/45 bg-white/85 text-xs font-medium text-mba-blue-deep dark:border-mba-blue-soft/30 dark:bg-slate-800/80 dark:text-slate-300"
+                    className="border-mba-blue/30 bg-white/85 text-xs font-medium text-mba-blue-deep dark:border-mba-blue/25 dark:bg-slate-800/80 dark:text-slate-300"
                   >
                     {place}
                   </Badge>
@@ -100,16 +108,17 @@ function AboutPage() {
             </Card>
           </aside>
         </div>
-      </Card>
+        </div>
+      </section>
 
-      <Card className="overflow-hidden rounded-2xl border-mba-blue-soft/40 bg-mba-periwinkle ring-0 ring-transparent dark:border-mba-blue-soft/25 dark:bg-slate-900">
-        <CardContent className="px-5 py-6 sm:px-8 sm:py-8 md:px-10 md:py-10">
+      <section className="w-full border-b border-mba-blue/20 bg-mba-blue/12 dark:border-mba-blue/10 dark:bg-slate-900">
+        <div className={cn(PAGE_CONTAINER, "py-8 sm:py-10 md:py-12")}>
           <div className="grid gap-6 lg:grid-cols-[1fr_0.9fr] lg:gap-10">
             <div>
               <SectionHeader
                 eyebrow="MBA in the Community"
                 title="Community support belongs inside the broader MBA story."
-                titleClassName="text-mba-blue-deep! dark:text-slate-50!"
+                titleClassName="text-white dark:text-slate-50!"
                 className="max-w-3xl"
               />
 
@@ -128,7 +137,7 @@ function AboutPage() {
               </div>
             </div>
 
-            <Card className="gap-0 overflow-hidden rounded-xl border-mba-blue-soft/40 p-0 py-0 ring-0 dark:border-mba-blue-soft/25">
+            <Card className="gap-0 overflow-hidden rounded-xl border-mba-blue/25 p-0 py-0 ring-0 dark:border-mba-blue/20">
               <img
                 src="/about-community.jpg"
                 alt="MBA in the Community"
@@ -147,7 +156,7 @@ function AboutPage() {
                     <Badge
                       key={item}
                       variant="outline"
-                      className="border-mba-blue-soft/45 bg-white/85 text-xs font-medium text-mba-blue-deep dark:border-mba-blue-soft/30 dark:bg-slate-800/80 dark:text-slate-300"
+                      className="border-mba-blue/30 bg-white/85 text-xs font-medium text-mba-blue-deep dark:border-mba-blue/25 dark:bg-slate-800/80 dark:text-slate-300"
                     >
                       {item}
                     </Badge>
@@ -156,24 +165,24 @@ function AboutPage() {
               </CardContent>
             </Card>
           </div>
-        </CardContent>
-      </Card>
+        </div>
+      </section>
 
-      <Card
+      <section
         id="services"
-        className="overflow-hidden rounded-2xl border-mba-blue-soft/40 bg-mba-tan ring-0 ring-transparent dark:border-mba-blue-soft/25 dark:bg-slate-900"
+        className="w-full border-b border-mba-blue/20 bg-mba-tan dark:border-mba-blue/10 dark:bg-slate-900"
       >
-        <CardContent className="px-5 pt-6 sm:px-8 sm:pb-8 md:px-10 md:pb-10">
+        <div className={cn(PAGE_CONTAINER, "py-8 sm:py-10 md:py-12")}>
           <div className="grid gap-4">
             {aboutServices.map((service) => (
               <Card
                 key={service.id}
                 id={service.id}
-                className="scroll-mt-28 overflow-hidden rounded-2xl border-mba-blue-soft/40 bg-mba-tan ring-0 ring-transparent dark:border-mba-blue-soft/25 dark:bg-slate-900"
+                className="scroll-mt-28 overflow-hidden rounded-2xl border-mba-blue/25 bg-mba-tan ring-0 ring-transparent dark:border-mba-blue/20 dark:bg-slate-900"
               >
                 <CardContent className="px-5 py-6 sm:px-8 sm:py-8 md:px-10 md:py-10">
                   <div className="grid items-stretch gap-6 lg:grid-cols-[minmax(320px,360px)_minmax(0,1fr)] lg:gap-10">
-                    <Card className="h-full gap-0 overflow-hidden rounded-xl border-mba-blue-soft/40 p-0 py-0 ring-0 dark:border-mba-blue-soft/25">
+                    <Card className="h-full gap-0 overflow-hidden rounded-xl border-mba-blue/25 p-0 py-0 ring-0 dark:border-mba-blue/20">
                       <img
                         src={service.image}
                         alt={service.title}
@@ -210,14 +219,14 @@ function AboutPage() {
                         </div>
                       ) : null}
 
-                      <Separator className="my-5 bg-mba-blue-soft/25 dark:bg-slate-700" />
+                      <Separator className="my-5 bg-mba-blue/20 dark:bg-slate-700" />
 
                       <div className="flex flex-wrap gap-1.5">
                         {service.details.map((item) => (
                           <Badge
                             key={item}
                             variant="outline"
-                            className="h-auto whitespace-normal border-mba-blue-soft/45 bg-white/85 px-2.5 py-1 text-left text-xs leading-5 font-medium text-mba-blue-deep dark:border-mba-blue-soft/30 dark:bg-slate-800/80 dark:text-slate-300"
+                            className="h-auto whitespace-normal border-mba-blue/30 bg-white/85 px-2.5 py-1 text-left text-xs leading-5 font-medium text-mba-blue-deep dark:border-mba-blue/25 dark:bg-slate-800/80 dark:text-slate-300"
                           >
                             {item}
                           </Badge>
@@ -229,11 +238,11 @@ function AboutPage() {
               </Card>
             ))}
           </div>
-        </CardContent>
-      </Card>
+        </div>
+      </section>
 
-      <Card className="overflow-hidden rounded-2xl border-mba-blue-deep bg-mba-blue-deep ring-0 ring-transparent">
-        <CardContent className="px-5 py-8 sm:px-8 md:px-10">
+      <section className="w-full bg-mba-blue-deep">
+        <div className={cn(PAGE_CONTAINER, "py-8 sm:py-10 md:py-12")}>
           <div className="grid gap-6 md:grid-cols-[1.1fr_0.9fr] md:items-end">
             <div>
               <Badge
@@ -270,8 +279,8 @@ function AboutPage() {
               </p>
             </div>
           </div>
-        </CardContent>
-      </Card>
+        </div>
+      </section>
     </main>
   );
 }

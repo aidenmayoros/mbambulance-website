@@ -13,7 +13,7 @@ function SectionHeader({
       {eyebrow ? (
         <Badge
           variant="outline"
-          className={`mb-3 w-fit border-mba-blue-soft/50 bg-mba-tan/50 text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue-deep dark:border-mba-blue-soft/30 dark:bg-slate-800 dark:text-slate-50 sm:text-[0.65rem] ${eyebrowClassName}`}
+          className={`mb-3 w-fit border-mba-blue/35 bg-mba-tan/50 text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue-deep dark:border-mba-blue/25 dark:bg-slate-800 dark:text-slate-50 sm:text-[0.65rem] ${eyebrowClassName}`}
         >
           {eyebrow}
         </Badge>

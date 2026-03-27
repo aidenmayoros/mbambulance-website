@@ -10,18 +10,26 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import { PAGE_CONTAINER } from "@/lib/pageLayout";
+import { cn } from "@/lib/utils";
 import SectionHeader from "../components/SectionHeader";
 import { careersRoles } from "../data/siteContent";
 
 function CareersPage() {
   return (
-    <main className="flex flex-col gap-5">
-      <Card className="overflow-hidden rounded-2xl border-mba-blue-soft/40 bg-white ring-0 ring-transparent dark:border-mba-blue-soft/25 dark:bg-slate-900">
-        <div className="grid gap-6 px-5 py-6 sm:gap-8 sm:px-8 sm:py-8 md:px-10 md:py-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-10 lg:px-12 lg:py-12">
+    <main className="flex flex-col">
+      <section className="w-full border-b border-mba-blue/20 bg-white dark:border-mba-blue/10 dark:bg-slate-900">
+        <div
+          className={cn(
+            PAGE_CONTAINER,
+            "py-8 sm:py-10 md:py-12 lg:py-14",
+          )}
+        >
+        <div className="grid gap-6 sm:gap-8 md:gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-10">
           <div className="flex flex-col">
             <Badge
               variant="outline"
-              className="w-fit border-mba-blue-soft/50 bg-mba-tan/50 text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue-deep sm:text-[0.65rem] dark:border-mba-blue-soft/30 dark:bg-slate-800 dark:text-slate-50"
+              className="w-fit border-mba-blue/35 bg-mba-tan/50 text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue-deep sm:text-[0.65rem] dark:border-mba-blue/25 dark:bg-slate-800 dark:text-slate-50"
             >
               Careers with MBA
             </Badge>
@@ -59,7 +67,7 @@ function CareersPage() {
               </ul>
             </Card>
 
-            <Card className="gap-0 rounded-xl border-mba-blue-soft/40 bg-mba-periwinkle p-6 py-6 ring-0 dark:border-mba-blue-soft/25 dark:bg-slate-900">
+            <Card className="gap-0 rounded-xl border-mba-blue/25 bg-mba-blue/12 p-6 py-6 ring-0 dark:border-mba-blue/20 dark:bg-slate-900">
               <Badge
                 variant="outline"
                 className="w-fit border-mba-gold/35 bg-white text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue-deep dark:border-mba-gold/25 dark:bg-slate-800 dark:text-slate-50"
@@ -89,13 +97,14 @@ function CareersPage() {
             </Card>
           </aside>
         </div>
-      </Card>
+        </div>
+      </section>
 
-      <Card
+      <section
         id="open-roles"
-        className="overflow-hidden rounded-2xl border-mba-blue-soft/40 bg-mba-tan ring-0 ring-transparent dark:border-mba-blue-soft/25 dark:bg-slate-900"
+        className="w-full border-b border-mba-blue/20 bg-mba-tan dark:border-mba-blue/10 dark:bg-slate-900"
       >
-        <CardHeader className="px-5 pt-6 pb-0 sm:px-8 sm:pt-8 md:px-10">
+        <div className={cn(PAGE_CONTAINER, "pb-10 pt-8 sm:pb-12 sm:pt-10 md:pt-12")}>
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <SectionHeader
               eyebrow="Open Roles"
@@ -109,14 +118,12 @@ function CareersPage() {
               make an impact with Morongo Basin Ambulance.
             </p>
           </div>
-        </CardHeader>
 
-        <CardContent className="px-5 pt-6 pb-6 sm:px-8 sm:pb-8 md:px-10 md:pb-10">
-          <div className="grid gap-4 xl:grid-cols-2">
+          <div className="mt-6 grid gap-4 xl:grid-cols-2">
             {careersRoles.map((role) => (
               <Card
                 key={role.title}
-                className="gap-0 overflow-hidden rounded-xl border-mba-blue-soft/40 bg-white p-0 py-0 ring-0 transition hover:shadow-lg dark:border-mba-blue-soft/25 dark:bg-slate-900"
+                className="gap-0 overflow-hidden rounded-xl border-mba-blue/25 bg-white p-0 py-0 ring-0 transition hover:shadow-lg dark:border-mba-blue/20 dark:bg-slate-900"
               >
                 <CardHeader className="p-5 pb-0 sm:p-6 sm:pb-0">
                   {role.tone === "red" ? (
@@ -129,7 +136,7 @@ function CareersPage() {
                   ) : (
                     <Badge
                       variant="outline"
-                      className="w-fit border-mba-blue-soft/50 bg-mba-tan/50 text-[0.6rem] font-semibold uppercase tracking-[0.18em] text-mba-blue-deep dark:border-mba-blue-soft/30 dark:bg-slate-800 dark:text-slate-50"
+                      className="w-fit border-mba-blue/35 bg-mba-tan/50 text-[0.6rem] font-semibold uppercase tracking-[0.18em] text-mba-blue-deep dark:border-mba-blue/25 dark:bg-slate-800 dark:text-slate-50"
                     >
                       Hiring
                     </Badge>
@@ -143,7 +150,7 @@ function CareersPage() {
                 </CardHeader>
 
                 <CardContent className="p-5 pt-4 sm:p-6 sm:pt-4">
-                  <Separator className="mb-4 bg-mba-blue-soft/25 dark:bg-slate-700" />
+                  <Separator className="mb-4 bg-mba-blue/20 dark:bg-slate-700" />
                   <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 dark:text-slate-500">
                     Basic Requirements
                   </p>
@@ -151,7 +158,7 @@ function CareersPage() {
                     {role.requirements.map((item) => (
                       <li
                         key={item}
-                        className="rounded-lg border border-mba-blue-soft/35 bg-mba-blue-soft/12 px-4 py-3 text-sm leading-6 text-slate-600 dark:border-mba-blue-soft/20 dark:bg-slate-800/50 dark:text-slate-400"
+                        className="rounded-lg border border-mba-blue/25 bg-mba-blue/10 px-4 py-3 text-sm leading-6 text-slate-600 dark:border-mba-blue/15 dark:bg-slate-800/50 dark:text-slate-400"
                       >
                         {item}
                       </li>
@@ -171,8 +178,8 @@ function CareersPage() {
               </Card>
             ))}
           </div>
-        </CardContent>
-      </Card>
+        </div>
+      </section>
     </main>
   );
 }

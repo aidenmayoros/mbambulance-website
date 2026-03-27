@@ -3,6 +3,8 @@ import { IconBrandFacebook, IconBrandInstagram, IconPhone, IconMapPin } from '@t
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardTitle } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
+import { PAGE_CONTAINER } from '@/lib/pageLayout'
+import { cn } from '@/lib/utils'
 import { socialLinks } from '../data/siteContent'
 
 const socialIcons = {
@@ -12,9 +14,8 @@ const socialIcons = {
 
 function Footer() {
   return (
-    <footer id="contact">
-      <Card className="overflow-hidden rounded-2xl border-slate-800 bg-slate-950 ring-0 ring-transparent">
-        <CardContent className="flex flex-col gap-8 px-5 py-8 sm:px-8 md:px-10 lg:px-12">
+    <footer id="contact" className="w-full border-t border-slate-800 bg-slate-950">
+      <div className={cn(PAGE_CONTAINER, 'flex flex-col gap-8 py-8 sm:py-10')}>
           <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12">
             <div className="flex items-start gap-4 sm:gap-5">
               <img
@@ -94,8 +95,7 @@ function Footer() {
               Non-profit 501(c)(3) &middot; Non-tax based
             </p>
           </div>
-        </CardContent>
-      </Card>
+      </div>
     </footer>
   )
 }
