@@ -26,7 +26,7 @@ function HomePage() {
             </Badge>
 
             <h1 className="mt-5 font-heading text-[2.4rem] leading-[0.93] tracking-[-0.05em] text-mba-blue-deep dark:text-slate-50 sm:mt-6 sm:text-6xl sm:leading-[0.94] lg:text-7xl">
-              Morongo Basin Ambulance
+              Morongo Basin Ambulance Test
             </h1>
 
             <div className="mt-4 max-w-xl space-y-4 text-[0.95rem] leading-7 text-slate-600 dark:text-slate-400 sm:mt-6 sm:text-base sm:leading-8">
