@@ -112,15 +112,9 @@ function LifelinePage() {
             {lifelineImpact.map((item) => (
               <Card
                 key={item.amount}
-<<<<<<< HEAD
-                className="group gap-0 overflow-hidden rounded-xl border-mba-blue-soft/40 bg-white p-0 py-0 ring-0 transition  hover:shadow-lg dark:border-mba-blue-soft/25 dark:bg-slate-900"
-              >
-                <div className="flex items-center justify-center bg-mba-tan/40 p-6 transition-colors  dark:bg-mba-tan/10">
-=======
                 className="gap-0 overflow-hidden rounded-xl border-mba-gold bg-linear-to-br from-mba-blue-deep to-mba-blue p-0 py-0 shadow-lg ring-0 dark:border-mba-gold"
               >
                 <div className="flex items-center justify-center bg-white/10 p-6">
->>>>>>> 3becf69 (Updated colors and layout)
                   <img
                     src={item.image}
                     alt=""
@@ -130,16 +124,6 @@ function LifelinePage() {
                 <CardContent className="p-5">
                   <Badge
                     variant="outline"
-<<<<<<< HEAD
-                    className="w-fit border-mba-gold/35 bg-white text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue-deep transition-colors dark:border-mba-gold/25 dark:bg-slate-800 dark:text-slate-50"
-                  >
-                    {item.amount}
-                  </Badge>
-                  <CardTitle className="mt-3 font-heading text-xl leading-tight tracking-[-0.02em] text-mba-blue-deep transition-colors  sm:text-2xl dark:text-slate-50">
-                    {item.title}
-                  </CardTitle>
-                  <CardDescription className="mt-2 text-sm leading-7 text-slate-600 transition-colors dark:text-slate-400">
-=======
                     className="w-fit border-mba-gold/50 bg-mba-gold text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue-deep"
                   >
                     {item.amount}
@@ -148,7 +132,6 @@ function LifelinePage() {
                     {item.title}
                   </CardTitle>
                   <CardDescription className="mt-2 text-sm leading-7 text-slate-100">
->>>>>>> 3becf69 (Updated colors and layout)
                     {item.description}
                   </CardDescription>
                 </CardContent>
@@ -158,35 +141,6 @@ function LifelinePage() {
         </div>
       </section>
 
-<<<<<<< HEAD
-      <div className="grid gap-4 lg:grid-cols-2">
-        <Card className="gap-0 rounded-2xl border-mba-blue-deep bg-mba-blue-deep p-6 py-6 ring-0 sm:p-8">
-          <Badge
-            variant="outline"
-            className="w-fit border-white/15 bg-white/10 text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-gold"
-          >
-            Sign Up
-          </Badge>
-          <h2 className="mt-4 font-heading text-2xl leading-tight tracking-[-0.03em] text-white sm:text-3xl">
-            A nonprofit service built with community support from the beginning.
-          </h2>
-          <div className="mt-4 space-y-4 text-sm leading-7 text-slate-400 sm:text-base sm:leading-8">
-            <p>MBA started in 1948 with only volunteers.</p>
-            <p>
-              Today it remains one of only two nonprofit ambulance companies in
-              California, and community support still matters because public tax
-              funding has never been part of the model.
-            </p>
-          </div>
-          <div className="mt-6">
-            <Button
-              asChild
-              className="rounded-full bg-mba-blue px-6 font-semibold text-white hover:bg-mba-blue-deep! hover:text-mba-gold"
-            >
-              <a
-                href={donationHref}
-                className="inline-flex items-center gap-1.5"
-=======
       <section className="w-full border-b border-mba-blue/20 bg-mba-tan/30 dark:border-mba-blue/10 dark:bg-slate-950/50">
         <div className={cn(PAGE_CONTAINER, "py-8 sm:py-10 md:py-12")}>
           <div className="grid gap-4 lg:grid-cols-2">
@@ -194,7 +148,6 @@ function LifelinePage() {
               <Badge
                 variant="outline"
                 className="w-fit border-white/15 bg-white/10 text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-gold"
->>>>>>> 3becf69 (Updated colors and layout)
               >
                 Sign Up
               </Badge>
@@ -225,44 +178,10 @@ function LifelinePage() {
               </div>
             </Card>
 
-<<<<<<< HEAD
-        <Card className="gap-0 rounded-2xl border-mba-blue-soft/40 bg-white p-6 py-6 ring-0 sm:p-8 dark:border-mba-blue-soft/25 dark:bg-slate-900">
-          <Badge
-            variant="outline"
-            className="w-fit border-mba-gold/35 bg-white text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue-deep dark:border-mba-gold/25 dark:bg-slate-800 dark:text-slate-50"
-          >
-            Donate
-          </Badge>
-          <h2 className="mt-4 font-heading text-2xl leading-tight tracking-[-0.03em] text-mba-blue-deep sm:text-3xl dark:text-slate-50">
-            Donations help fund the equipment, technology, and vehicles MBA
-            depends on.
-          </h2>
-          <div className="mt-4 space-y-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8 dark:text-slate-400">
-            <p className="font-semibold text-slate-950 dark:text-slate-50">
-              Donations are tax deductible, and the nonprofit EIN listed on the
-              staged page is 95-6100536 .
-            </p>
-            <p>
-              Every dollar received from individuals and organizations in the
-              Morongo Basin supports service improvements, technology,
-              state-of-the-art medical equipment, supplies, and maintenance for
-              the five ambulances running daily across a 2700-square-mile area.
-            </p>
-          </div>
-          <div className="mt-6">
-            <Button
-              asChild
-              className="rounded-full bg-mba-blue px-6 font-semibold text-white hover:bg-mba-blue-deep! hover:text-mba-gold"
-            >
-              <a
-                href={donationHref}
-                className="inline-flex items-center gap-1.5"
-=======
             <Card className="gap-0 rounded-xl border-mba-blue/25 bg-white p-6 py-6 ring-0 sm:p-8 dark:border-mba-blue/20 dark:bg-slate-900">
               <Badge
                 variant="outline"
                 className="w-fit border-mba-gold/35 bg-white text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue-deep dark:border-mba-gold/25 dark:bg-slate-800 dark:text-slate-50"
->>>>>>> 3becf69 (Updated colors and layout)
               >
                 Donate
               </Badge>
@@ -310,9 +229,6 @@ function LifelinePage() {
         </div>
       </section>
 
-<<<<<<< HEAD
-      <Card className="overflow-hidden rounded-2xl border-mba-blue-soft/40 bg-white ring-0 ring-transparent dark:border-mba-blue-soft/25 dark:bg-slate-900"></Card>
-=======
       <section className="w-full border-b border-mba-blue/20 bg-white dark:border-mba-blue/10 dark:bg-slate-900">
         <div className={cn(PAGE_CONTAINER, "py-8 sm:py-10 md:py-12")}>
           <div className="grid gap-6 md:grid-cols-[1.1fr_0.9fr] md:items-end">
@@ -350,7 +266,6 @@ function LifelinePage() {
           </div>
         </div>
       </section>
->>>>>>> 3becf69 (Updated colors and layout)
     </main>
   );
 }
