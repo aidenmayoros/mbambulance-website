@@ -66,7 +66,7 @@ function Header({
           viewport={false}
           className="hidden max-w-none flex-1 lg:flex"
         >
-          <NavigationMenuList className="flex gap-0 xl:gap-1">
+          <NavigationMenuList className="flex gap-1.5 xl:gap-2">
             {topNav.map((item) => {
               const active = isCurrentPage(pathname, item.href);
 
@@ -75,7 +75,7 @@ function Header({
                   <NavigationMenuLink
                     asChild
                     className={cn(
-                      "whitespace-nowrap rounded-md px-2 py-1.5 text-[0.8125rem] font-medium text-slate-600 transition-colors xl:px-3 xl:text-sm dark:text-slate-400",
+                      "whitespace-nowrap rounded-md px-3 py-1.5 text-[0.8125rem] font-medium text-slate-600 transition-colors xl:px-4 xl:text-sm dark:text-slate-400",
                       "hover:bg-mba-blue-deep hover:text-white dark:hover:bg-slate-800 dark:hover:text-white",
                       active &&
                         "bg-mba-blue-deep text-white dark:bg-slate-800 dark:text-white",
@@ -164,7 +164,7 @@ function Header({
                             href={item.href}
                             onClick={closeMenu}
                             className={cn(
-                              "block rounded-md px-3 py-2.5 text-sm font-medium text-slate-600 transition-colors dark:text-slate-400",
+                              "block rounded-md px-4 py-3 text-sm font-medium text-slate-600 transition-colors dark:text-slate-400",
                               "hover:bg-mba-blue-deep hover:text-white dark:hover:bg-slate-800 dark:hover:text-white",
                               active &&
                                 "bg-mba-blue-deep text-white dark:bg-slate-800 dark:text-white",

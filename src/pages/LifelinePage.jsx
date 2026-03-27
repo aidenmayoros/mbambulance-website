@@ -25,12 +25,7 @@ function LifelinePage() {
   return (
     <main className="flex flex-col">
       <section className="w-full border-b border-mba-blue/20 bg-white dark:border-mba-blue/10 dark:bg-slate-900">
-        <div
-          className={cn(
-            PAGE_CONTAINER,
-            "py-8 sm:py-10 md:py-12 lg:py-14",
-          )}
-        >
+        <div className={cn(PAGE_CONTAINER, "py-8 sm:py-10 md:py-12 lg:py-14")}>
           <div className="grid gap-6 sm:gap-8 md:gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
             <div className="flex flex-col">
               <Badge
@@ -47,8 +42,8 @@ function LifelinePage() {
               <p className="mt-5 max-w-xl text-base leading-8 text-slate-600 sm:mt-6 sm:text-lg dark:text-slate-400">
                 Be a lifesaver and join the Lifeline Club. As a nonprofit
                 ambulance company, MBA relies on the generosity of the community
-                to keep services strong, stay prepared, and care for the people of
-                the Morongo Basin when every second counts.
+                to keep services strong, stay prepared, and care for the people
+                of the Morongo Basin when every second counts.
               </p>
 
               <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
@@ -98,10 +93,12 @@ function LifelinePage() {
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <SectionHeader
               eyebrow="Why Give Monthly"
+              eyebrowClassName="bg-slate-50"
               title="Small recurring gifts help keep emergency care ready."
+              titleClassName="text-mba-blue-deep! dark:text-slate-50!"
               className="max-w-2xl"
             />
-            <p className="max-w-xl text-sm leading-7 text-slate-500 md:text-right dark:text-slate-400">
+            <p className="max-w-xl text-sm leading-7 text-mba-blue-deep md:text-right dark:text-slate-400">
               These impact points come directly from the staging Lifeline page
               and make the monthly-giving story much clearer than a generic
               donation ask.
@@ -152,14 +149,15 @@ function LifelinePage() {
                 Sign Up
               </Badge>
               <h2 className="mt-4 font-heading text-2xl leading-tight tracking-[-0.03em] text-white sm:text-3xl">
-                A nonprofit service built with community support from the beginning.
+                A nonprofit service built with community support from the
+                beginning.
               </h2>
               <div className="mt-4 space-y-4 text-sm leading-7 text-slate-400 sm:text-base sm:leading-8">
                 <p>MBA started in 1948 with only volunteers.</p>
                 <p>
-                  Today it remains one of only two nonprofit ambulance companies in
-                  California, and community support still matters because public tax
-                  funding has never been part of the model.
+                  Today it remains one of only two nonprofit ambulance companies
+                  in California, and community support still matters because
+                  public tax funding has never been part of the model.
                 </p>
               </div>
               <div className="mt-6">
@@ -191,23 +189,19 @@ function LifelinePage() {
               </h2>
               <div className="mt-4 space-y-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8 dark:text-slate-400">
                 <p>
-                  The staging page explains that rising costs in supplies,
-                  communications, maintenance, and operations make donor support
-                  directly meaningful.
-                </p>
-                <p>
-                  Donations are tax deductible, and the nonprofit EIN listed on the
-                  staged page is{" "}
+                  Donations are tax deductible, and the nonprofit EIN listed on
+                  the staged page is{" "}
                   <span className="font-semibold text-slate-950 dark:text-slate-50">
                     95-6100536
                   </span>
                   .
                 </p>
                 <p>
-                  Every dollar received from individuals and organizations in the
-                  Morongo Basin supports service improvements, technology,
-                  state-of-the-art medical equipment, supplies, and maintenance for
-                  the five ambulances running daily across a 2700-square-mile area.
+                  Every dollar received from individuals and organizations in
+                  the Morongo Basin supports service improvements, technology,
+                  state-of-the-art medical equipment, supplies, and maintenance
+                  for the five ambulances running daily across a
+                  2700-square-mile area.
                 </p>
               </div>
               <div className="mt-6">
@@ -225,44 +219,6 @@ function LifelinePage() {
                 </Button>
               </div>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      <section className="w-full border-b border-mba-blue/20 bg-white dark:border-mba-blue/10 dark:bg-slate-900">
-        <div className={cn(PAGE_CONTAINER, "py-8 sm:py-10 md:py-12")}>
-          <div className="grid gap-6 md:grid-cols-[1.1fr_0.9fr] md:items-end">
-            <div>
-              <Badge
-                variant="outline"
-                className="w-fit border-mba-blue/35 bg-mba-tan/50 text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue-deep dark:border-mba-blue/25 dark:bg-slate-800 dark:text-slate-50"
-              >
-                Contact MBA
-              </Badge>
-              <h2 className="mt-3 font-heading text-2xl leading-tight tracking-[-0.03em] text-slate-950 sm:text-3xl lg:text-4xl dark:text-slate-50">
-                Questions about giving or monthly support?
-              </h2>
-              <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8 dark:text-slate-400">
-                The staged page closes by thanking supporters and directing
-                visitors to contact MBA for more information.
-              </p>
-            </div>
-            <div className="space-y-2.5 text-sm text-slate-600 dark:text-slate-400">
-              <p className="flex items-start gap-2">
-                <IconMapPin
-                  className="mt-0.5 size-4 shrink-0 text-slate-400 dark:text-slate-500"
-                  aria-hidden
-                />
-                6335 Park Blvd (PO Box 460), Joshua Tree, CA 92252
-              </p>
-              <p className="flex items-center gap-2">
-                <IconPhone
-                  className="size-4 shrink-0 text-slate-400 dark:text-slate-500"
-                  aria-hidden
-                />
-                760-366-8474
-              </p>
-            </div>
           </div>
         </div>
       </section>

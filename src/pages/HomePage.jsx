@@ -17,13 +17,8 @@ function HomePage() {
   return (
     <main className="flex flex-col">
       <section className="w-full border-b border-mba-blue/20 bg-white dark:border-mba-blue/10 dark:bg-slate-900">
-        <div
-          className={cn(
-            PAGE_CONTAINER,
-            "py-8 sm:py-10 md:py-12 lg:py-14",
-          )}
-        >
-          <div className="grid gap-6 sm:gap-8 md:gap-10 lg:grid-cols-[1fr_1fr] lg:gap-10">
+        <div className={cn(PAGE_CONTAINER, "py-8 sm:py-10 md:py-12 lg:py-14")}>
+          <div className="grid gap-6 sm:gap-8 md:gap-10 lg:grid-cols-[1.3fr_.7fr] lg:gap-10">
             <div className="flex flex-col">
               <Badge
                 variant="outline"
@@ -44,18 +39,19 @@ function HomePage() {
                 </p>
                 <p className="hidden sm:block">
                   Morongo Basin Ambulance provides 9-1-1 emergency and
-                  non-emergency medical transportation across multiple communities
-                  in San Bernardino County.
+                  non-emergency medical transportation across multiple
+                  communities in San Bernardino County.
                 </p>
                 <p className="hidden sm:block">
-                  Founded in 1948 as a non-tax based, non-profit corporation, MBA
-                  is the sole provider of 9-1-1 emergency ambulance services to
-                  much of the Morongo Basin, including Joshua Tree National Park.
+                  Founded in 1948 as a non-tax based, non-profit corporation,
+                  MBA is the sole provider of 9-1-1 emergency ambulance services
+                  to much of the Morongo Basin, including Joshua Tree National
+                  Park.
                 </p>
                 <p className="hidden sm:block">
                   Revenue above operating costs is put back into the company and
-                  the communities it serves, with care centered on service rather
-                  than maximizing profit.
+                  the communities it serves, with care centered on service
+                  rather than maximizing profit.
                 </p>
               </div>
 
@@ -104,9 +100,10 @@ function HomePage() {
                   About MBA
                 </Badge>
                 <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-400 sm:text-[0.95rem] sm:leading-8">
-                  Morongo Basin Ambulance is a non-tax based nonprofit focused on
-                  emergency response, non-emergency transport, community support,
-                  and reinvesting back into the hi-desert communities it serves.
+                  Morongo Basin Ambulance is a non-tax based nonprofit focused
+                  on emergency response, non-emergency transport, community
+                  support, and reinvesting back into the hi-desert communities
+                  it serves.
                 </p>
               </Card>
             </div>
@@ -116,7 +113,7 @@ function HomePage() {
                 <img
                   src="/mba-crew.jpg"
                   alt="Morongo Basin Ambulance crew"
-                  className="w-full object-center sm:aspect-square"
+                  className="w-full object-center lg:aspect-square"
                 />
               </Card>
 
@@ -128,9 +125,10 @@ function HomePage() {
                   Service Area
                 </Badge>
                 <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-400">
-                  MBA serves communities across the Morongo Basin and Joshua Tree
-                  National Park while operating as a nonprofit built around care,
-                  local trust, and service rather than profit maximization.
+                  MBA serves communities across the Morongo Basin and Joshua
+                  Tree National Park while operating as a nonprofit built around
+                  care, local trust, and service rather than profit
+                  maximization.
                 </p>
                 <div className="mt-4 flex flex-wrap gap-1.5">
                   {serviceArea.map((place) => (
@@ -156,7 +154,7 @@ function HomePage() {
         <div className={cn(PAGE_CONTAINER, "py-8 pb-10 md:pb-12")}>
           <Badge
             variant="outline"
-            className="w-fit border-mba-blue/35 bg-mba-tan/50 text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue-deep dark:border-mba-blue/25 dark:bg-slate-800/80 dark:text-slate-300 sm:text-[0.65rem]"
+            className="w-fit border-mba-blue/35 bg-slate-50 text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue-deep dark:border-mba-blue/25 dark:bg-slate-800/80 dark:text-slate-300 sm:text-[0.65rem]"
           >
             Ambulance Services
           </Badge>

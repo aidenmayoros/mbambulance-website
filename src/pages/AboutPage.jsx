@@ -24,90 +24,85 @@ function AboutPage() {
   return (
     <main className="flex flex-col">
       <section className="w-full border-b border-mba-blue/20 bg-white dark:border-mba-blue/10 dark:bg-slate-900">
-        <div
-          className={cn(
-            PAGE_CONTAINER,
-            "py-8 sm:py-10 md:py-12 lg:py-14",
-          )}
-        >
-        <div className="grid gap-6 sm:gap-8 md:gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-10">
-          <div className="flex flex-col">
-            <Badge
-              variant="outline"
-              className="w-fit border-mba-blue/35 bg-mba-tan/50 text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue-deep dark:border-mba-blue/25 dark:bg-slate-800 dark:text-slate-50 sm:text-[0.65rem]"
-            >
-              About MBA
-            </Badge>
-
-            <h1 className="mt-5 font-heading text-[2.4rem] leading-[0.93] tracking-[-0.05em] text-mba-blue-deep dark:text-slate-50 sm:mt-6 sm:text-5xl sm:leading-[0.94] lg:text-6xl">
-              About Morongo Basin Ambulance
-            </h1>
-
-            <p className="mt-5 max-w-xl text-base leading-8 text-slate-600 dark:text-slate-400 sm:mt-6 sm:text-lg">
-              Morongo Basin Ambulance is a 501(c)(3) community-based,
-              non-profit, non-tax based corporation founded in 1948 by seven
-              resident volunteers in Joshua Tree. MBA now responds to more than
-              6,500 calls per year and covers over 2,700 square miles.
-            </p>
-
-            <Card className="mt-6 gap-0 rounded-xl border-mba-blue-deep bg-mba-blue-deep p-6 py-6 text-white ring-0 sm:mt-8">
+        <div className={cn(PAGE_CONTAINER, "py-8 sm:py-10 md:py-12 lg:py-14")}>
+          <div className="grid gap-6 sm:gap-8 md:gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-10">
+            <div className="flex flex-col">
               <Badge
                 variant="outline"
-                className="w-fit border-white/20 bg-white/10 text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-gold"
+                className="w-fit border-mba-blue/35 bg-mba-tan/50 text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue-deep dark:border-mba-blue/25 dark:bg-slate-800 dark:text-slate-50 sm:text-[0.65rem]"
               >
-                Our Mission
+                About MBA
               </Badge>
-              <p className="mt-4 text-sm leading-8 text-blue-50/90">
-                "Our responsibility is to the members of the communities that we
-                serve. We strive to be a model of excellence within the EMS
-                system, through outstanding performance and commitment."
-              </p>
-            </Card>
-          </div>
 
-          <aside className="grid gap-4 self-end">
-            <Card className="gap-0 overflow-hidden rounded-xl border-mba-blue/25 p-0 py-0 ring-0 dark:border-mba-blue/20">
-              <img
-                src="/about-mba.jpg"
-                alt="Morongo Basin Ambulance team"
-                className="aspect-4/3 w-full object-cover"
-              />
-              <CardContent className="p-5">
+              <h1 className="mt-5 font-heading text-[2.4rem] leading-[0.93] tracking-[-0.05em] text-mba-blue-deep dark:text-slate-50 sm:mt-6 sm:text-5xl sm:leading-[0.94] lg:text-6xl">
+                About Morongo Basin Ambulance
+              </h1>
+
+              <p className="mt-5 max-w-xl text-base leading-8 text-slate-600 dark:text-slate-400 sm:mt-6 sm:text-lg">
+                Morongo Basin Ambulance is a 501(c)(3) community-based,
+                non-profit, non-tax based corporation founded in 1948 by seven
+                resident volunteers in Joshua Tree. MBA now responds to more
+                than 6,500 calls per year and covers over 2,700 square miles.
+              </p>
+
+              <Card className="mt-6 gap-0 rounded-xl border-mba-blue-deep bg-mba-blue-deep p-6 py-6 text-white ring-0 sm:mt-8">
+                <Badge
+                  variant="outline"
+                  className="w-fit border-white/20 bg-white/10 text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-gold"
+                >
+                  Our Mission
+                </Badge>
+                <p className="mt-4 text-sm leading-8 text-blue-50/90">
+                  "Our responsibility is to the members of the communities that
+                  we serve. We strive to be a model of excellence within the EMS
+                  system, through outstanding performance and commitment."
+                </p>
+              </Card>
+            </div>
+
+            <aside className="grid gap-4 self-end">
+              <Card className="gap-0 overflow-hidden rounded-xl border-mba-blue/25 p-0 py-0 ring-0 dark:border-mba-blue/20">
+                <img
+                  src="/about-mba.jpg"
+                  alt="Morongo Basin Ambulance team"
+                  className="aspect-4/3 w-full object-cover"
+                />
+                <CardContent className="p-5">
+                  <Badge
+                    variant="outline"
+                    className="w-fit border-mba-gold/35 bg-white text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue-deep dark:border-mba-gold/25 dark:bg-slate-800 dark:text-slate-50"
+                  >
+                    Serving the Hi-Desert
+                  </Badge>
+                  <CardDescription className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-400">
+                    MBA grew with the needs of the community, added EMT staffing
+                    in the early 1970s, and progressed into Advanced Life
+                    Support services by the early 1980s.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+
+              <Card className="gap-0 rounded-xl border-mba-gold/30 bg-mba-tan/50 dark:bg-mba-tan/10 p-6 py-6 ring-0">
                 <Badge
                   variant="outline"
                   className="w-fit border-mba-gold/35 bg-white text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue-deep dark:border-mba-gold/25 dark:bg-slate-800 dark:text-slate-50"
                 >
-                  Serving the Hi-Desert
+                  Coverage
                 </Badge>
-                <CardDescription className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-400">
-                  MBA grew with the needs of the community, added EMT staffing
-                  in the early 1970s, and progressed into Advanced Life Support
-                  services by the early 1980s.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="gap-0 rounded-xl border-mba-gold/30 bg-mba-tan/50 dark:bg-mba-tan/10 p-6 py-6 ring-0">
-              <Badge
-                variant="outline"
-                className="w-fit border-mba-gold/35 bg-white text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue-deep dark:border-mba-gold/25 dark:bg-slate-800 dark:text-slate-50"
-              >
-                Coverage
-              </Badge>
-              <div className="mt-4 flex flex-wrap gap-1.5">
-                {serviceArea.map((place) => (
-                  <Badge
-                    key={place}
-                    variant="outline"
-                    className="border-mba-blue/30 bg-white/85 text-xs font-medium text-mba-blue-deep dark:border-mba-blue/25 dark:bg-slate-800/80 dark:text-slate-300"
-                  >
-                    {place}
-                  </Badge>
-                ))}
-              </div>
-            </Card>
-          </aside>
-        </div>
+                <div className="mt-4 flex flex-wrap gap-1.5">
+                  {serviceArea.map((place) => (
+                    <Badge
+                      key={place}
+                      variant="outline"
+                      className="border-mba-blue/30 bg-white/85 text-xs font-medium text-mba-blue-deep dark:border-mba-blue/25 dark:bg-slate-800/80 dark:text-slate-300"
+                    >
+                      {place}
+                    </Badge>
+                  ))}
+                </div>
+              </Card>
+            </aside>
+          </div>
         </div>
       </section>
 
@@ -117,6 +112,7 @@ function AboutPage() {
             <div>
               <SectionHeader
                 eyebrow="MBA in the Community"
+                eyebrowClassName="bg-slate-50 border-mba-gold"
                 title="Community support belongs inside the broader MBA story."
                 titleClassName="text-white dark:text-slate-50!"
                 className="max-w-3xl"
@@ -193,6 +189,7 @@ function AboutPage() {
                     <div className="min-w-0 flex h-full flex-col justify-center">
                       <SectionHeader
                         eyebrow={service.eyebrow}
+                        eyebrowClassName="border-mba-blue/30 bg-white/85 px-2.5 py-1 text-left text-xs leading-5 font-medium text-mba-blue-deep dark:border-mba-blue/25 dark:bg-slate-800/80 dark:text-slate-300"
                         title={service.title}
                         titleClassName="text-mba-blue-deep! dark:text-slate-50!"
                         className="max-w-3xl"
@@ -226,7 +223,7 @@ function AboutPage() {
                           <Badge
                             key={item}
                             variant="outline"
-                            className="h-auto whitespace-normal border-mba-blue/30 bg-white/85 px-2.5 py-1 text-left text-xs leading-5 font-medium text-mba-blue-deep dark:border-mba-blue/25 dark:bg-slate-800/80 dark:text-slate-300"
+                            className="h-auto cursor-default whitespace-normal border-mba-blue/30 bg-white/85 px-2.5 py-1 text-left text-xs leading-5 font-medium text-mba-blue-deep dark:border-mba-blue/25 dark:bg-slate-800/80 dark:text-slate-300"
                           >
                             {item}
                           </Badge>
