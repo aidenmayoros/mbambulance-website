@@ -22,7 +22,7 @@ function HomePage() {
             <div className="flex flex-col">
               <Badge
                 variant="outline"
-                className="w-fit border-mba-blue/35 bg-mba-tan/50 text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue-deep dark:border-mba-blue/25 dark:bg-slate-800 dark:text-slate-50 sm:text-[0.65rem]"
+                className="h-auto max-w-full whitespace-normal border-mba-blue/35 bg-mba-tan/50 px-2.5 py-1 text-left text-[0.6rem] leading-5 font-semibold uppercase tracking-[0.22em] text-mba-blue-deep dark:border-mba-blue/25 dark:bg-slate-800 dark:text-slate-50 sm:w-fit sm:text-[0.65rem]"
               >
                 9-1-1 Emergency &amp; Non-Emergency Medical Transport
               </Badge>
