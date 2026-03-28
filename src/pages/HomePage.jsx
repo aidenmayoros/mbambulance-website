@@ -113,7 +113,7 @@ function HomePage() {
                 <img
                   src="/mba-crew.jpg"
                   alt="Morongo Basin Ambulance crew"
-                  className="aspect-4/3 w-full object-cover object-center lg:aspect-[5/4] lg:object-[center_18%]"
+                  className="aspect-4/3 w-full object-cover object-center lg:aspect-5/4 lg:object-[center_18%]"
                 />
               </Card>
 

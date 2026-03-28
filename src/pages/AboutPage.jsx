@@ -20,6 +20,15 @@ import { cn } from "@/lib/utils";
 import SectionHeader from "../components/SectionHeader";
 import { aboutServices, serviceArea } from "../data/siteContent";
 
+const aboutContactLinkClass =
+  "text-slate-400 transition-colors hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/40";
+
+const ABOUT_PHONE_TEL = "tel:+17603668474";
+const ABOUT_EMAIL_MAILTO = "mailto:cbell@mbambulance.org";
+const ABOUT_ADDRESS_MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+  "6335 Park Blvd, Joshua Tree, CA 92252",
+)}`;
+
 function AboutPage() {
   return (
     <main className="flex flex-col">
@@ -191,7 +200,11 @@ function AboutPage() {
                       />
 
                       <div className="mt-5 space-y-4 text-base leading-8 text-slate-600 dark:text-slate-400">
-                        <p dangerouslySetInnerHTML={{ __html: service.description }} />
+                        <p
+                          dangerouslySetInnerHTML={{
+                            __html: service.description,
+                          }}
+                        />
                       </div>
 
                       {service.cta ? (
@@ -253,21 +266,47 @@ function AboutPage() {
                   className="mt-0.5 size-4 shrink-0 text-slate-500"
                   aria-hidden
                 />
-                6335 Park Blvd (PO Box 460), Joshua Tree, CA 92252
+                <a
+                  href={ABOUT_ADDRESS_MAPS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={cn(
+                    aboutContactLinkClass,
+                    "wrap-break-word underline-offset-2 hover:underline",
+                  )}
+                >
+                  6335 Park Blvd (PO Box 460), Joshua Tree, CA 92252
+                </a>
               </p>
               <p className="flex items-center gap-2">
                 <IconPhone
                   className="size-4 shrink-0 text-slate-500"
                   aria-hidden
                 />
-                760-366-8474
+                <a
+                  href={ABOUT_PHONE_TEL}
+                  className={cn(
+                    aboutContactLinkClass,
+                    "underline-offset-2 hover:underline",
+                  )}
+                >
+                  760-366-8474
+                </a>
               </p>
               <p className="flex items-center gap-2">
                 <IconMail
                   className="size-4 shrink-0 text-slate-500"
                   aria-hidden
                 />
-                cbell@mbambulance.org
+                <a
+                  href={ABOUT_EMAIL_MAILTO}
+                  className={cn(
+                    aboutContactLinkClass,
+                    "underline-offset-2 hover:underline",
+                  )}
+                >
+                  cbell@mbambulance.org
+                </a>
               </p>
             </div>
           </div>
