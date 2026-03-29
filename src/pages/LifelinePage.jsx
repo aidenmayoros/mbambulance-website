@@ -19,7 +19,7 @@ import SectionHeader from "../components/SectionHeader";
 import { lifelineImpact } from "../data/siteContent";
 
 const donationHref =
-  "https://www.paypal.com/donate?token=_FoF-RRRvCH1cDK37L7Kz2j3Z3psHoYxBqmHOq99rZgVXL4RGHvvEJUEEz0nfb_RszXSNB910tbayG5k";
+  "https://www.paypal.com/donate/?hosted_button_id=E7WKHU5LXRRR2";
 
 function LifelinePage() {
   return (
