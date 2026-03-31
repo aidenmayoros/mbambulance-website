@@ -1,8 +1,6 @@
-import { useSyncExternalStore } from 'react'
-import L from 'leaflet'
+import { useEffect, useState } from 'react'
 
 import { cn } from '@/lib/utils'
-import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
 
 import 'leaflet/dist/leaflet.css'
 
@@ -10,39 +8,75 @@ import icon2x from 'leaflet/dist/images/marker-icon-2x.png'
 import icon from 'leaflet/dist/images/marker-icon.png'
 import shadow from 'leaflet/dist/images/marker-shadow.png'
 
-delete L.Icon.Default.prototype._getIconUrl
-L.Icon.Default.mergeOptions({
-  iconRetinaUrl: icon2x,
-  iconUrl: icon,
-  shadowUrl: shadow,
-})
-
-/** 6335 Park Blvd, Joshua Tree, CA — approximate center for map display */
 const POSITION = [34.13585, -116.3132]
-
-/** Sized for the main footer map column (room freed by moving nav links below). */
 const MAP_FRAME = 'h-[220px] w-full sm:h-[260px] lg:h-[280px]'
-
-const noopSubscribe = () => () => {}
-
-function useIsClient() {
-  return useSyncExternalStore(noopSubscribe, () => true, () => false)
-}
+const ADDRESS_MAPS_URL =
+  'https://www.google.com/maps/search/?api=1&query=6335%20Park%20Blvd%2C%20Joshua%20Tree%2C%20CA%2092252'
 
 function FooterMap() {
-  const isClient = useIsClient()
+  const [mapParts, setMapParts] = useState(null)
+  const [mapFailedToLoad, setMapFailedToLoad] = useState(false)
 
-  if (!isClient) {
+  useEffect(() => {
+    let isMounted = true
+
+    async function loadMap() {
+      try {
+        const leafletModule = await import('leaflet')
+        const reactLeafletModule = await import('react-leaflet')
+
+        const leaflet = leafletModule.default
+
+        delete leaflet.Icon.Default.prototype._getIconUrl
+        leaflet.Icon.Default.mergeOptions({
+          iconRetinaUrl: icon2x,
+          iconUrl: icon,
+          shadowUrl: shadow,
+        })
+
+        if (!isMounted) {
+          return
+        }
+
+        setMapParts({
+          MapContainer: reactLeafletModule.MapContainer,
+          Marker: reactLeafletModule.Marker,
+          Popup: reactLeafletModule.Popup,
+          TileLayer: reactLeafletModule.TileLayer,
+        })
+      } catch (error) {
+        console.error('Unable to load footer map.', error)
+
+        if (isMounted) {
+          setMapFailedToLoad(true)
+        }
+      }
+    }
+
+    loadMap()
+
+    return () => {
+      isMounted = false
+    }
+  }, [])
+
+  if (!mapParts || mapFailedToLoad) {
     return (
-      <div
+      <a
+        href={ADDRESS_MAPS_URL}
+        target="_blank"
+        rel="noopener noreferrer"
         className={cn(
           MAP_FRAME,
-          'rounded-xl border border-white/10 bg-slate-900/80',
+          'flex items-center justify-center rounded-xl border border-white/10 bg-slate-900/80 px-5 text-center text-sm text-slate-300 transition-colors hover:border-white/20 hover:text-white',
         )}
-        aria-hidden
-      />
+      >
+        View MBA on Google Maps
+      </a>
     )
   }
+
+  const { MapContainer, Marker, Popup, TileLayer } = mapParts
 
   return (
     <div

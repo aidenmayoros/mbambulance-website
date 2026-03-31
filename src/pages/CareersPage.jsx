@@ -62,10 +62,7 @@ function CareersPage() {
                     Emergency response, transport, and critical care
                     opportunities
                   </li>
-                  <li>
-                    Pathways for field staff, communications, reserve, and youth
-                    exploration
-                  </li>
+                  <li>Pathways for field staff & communications.</li>
                 </ul>
               </Card>
 

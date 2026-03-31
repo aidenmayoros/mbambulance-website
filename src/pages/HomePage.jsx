@@ -87,7 +87,8 @@ function HomePage() {
                     Desert service area
                   </CardTitle>
                   <CardDescription className="mt-1 text-sm text-slate-500 dark:text-slate-400">
-                    Communities plus the national park
+                    Morongo Basin communities including Joshua Tree National
+                    Park
                   </CardDescription>
                 </Card>
               </div>

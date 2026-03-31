@@ -69,7 +69,7 @@ function LifelinePage() {
                 <img
                   src="/lifeline-community.jpg"
                   alt="Morongo Basin Ambulance community support"
-                  className="aspect-4/3 w-full object-cover"
+                  className="block h-auto w-full"
                 />
                 <CardContent className="p-5">
                   <Badge
@@ -101,9 +101,9 @@ function LifelinePage() {
               className="max-w-2xl"
             />
             <p className="max-w-xl text-sm leading-7 text-mba-blue-deep md:text-right dark:text-slate-400">
-              These impact points come directly from the staging Lifeline page
-              and make the monthly-giving story much clearer than a generic
-              donation ask.
+              Monthly support helps Morongo Basin Ambulance stay prepared with
+              the equipment, training, and day-to-day readiness our crews rely
+              on to serve the community.
             </p>
           </div>
 
@@ -193,8 +193,8 @@ function LifelinePage() {
               </h2>
               <div className="mt-4 space-y-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8 dark:text-slate-400">
                 <p>
-                  Donations are tax deductible, and the nonprofit EIN listed on
-                  the staged page is{" "}
+                  All donations are tax deductible, and donation receipts are
+                  provided. Our non-profit EIN is{" "}
                   <span className="font-semibold text-slate-950 dark:text-slate-50">
                     95-6100536
                   </span>
