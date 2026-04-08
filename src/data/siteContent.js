@@ -113,7 +113,7 @@ export const boardMembers = [
 export const careersRoles = [
   {
     title: "Full/Part-Time Paramedic",
-    tone: "blue",
+    tone: "red",
     description:
       "MBA employs paramedics who help cover 9-1-1 emergency response and non-emergency transport across the Morongo Basin service area.",
     requirements: [
@@ -128,7 +128,7 @@ export const careersRoles = [
   },
   {
     title: "Part-Time EMT-B",
-    tone: "blue",
+    tone: "red",
     description:
       "EMT-B positions support frontline ambulance response and patient care for one of the few nonprofit ambulance services in California.",
     requirements: [

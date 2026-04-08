@@ -147,7 +147,7 @@ function CareersPage() {
                       variant="outline"
                       className="h-auto max-w-full whitespace-normal border-mba-red/25 bg-mba-red/8 px-2.5 py-1 text-left text-[0.6rem] leading-5 font-semibold uppercase tracking-[0.18em] text-mba-red dark:border-mba-red/30 dark:bg-mba-red/10"
                     >
-                      Not Currently Hiring — Applications Accepted
+                      Not Currently Hiring — Accepting Applications
                     </Badge>
                   ) : (
                     <Badge
