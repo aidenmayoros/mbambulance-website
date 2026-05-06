@@ -20,6 +20,8 @@ import { lifelineImpact } from "../data/siteContent";
 
 const donationHref =
   "https://www.paypal.com/donate/?hosted_button_id=E7WKHU5LXRRR2";
+const esdpRenewalHref =
+  "https://www.cognitoforms.com/MorongoBasinAmbulance1/MorongoBasinAmbulanceEmergencyServicesDiscountPlanRenewalApplication";
 
 function LifelinePage() {
   return (
@@ -226,6 +228,46 @@ function LifelinePage() {
               </div>
             </Card>
           </div>
+
+          <Card className="mt-4 gap-0 rounded-xl border-mba-blue/25 bg-white p-6 py-6 ring-0 sm:p-8 dark:border-mba-blue/20 dark:bg-slate-900">
+            <Badge
+              variant="outline"
+              className="w-fit border-mba-blue/35 bg-mba-tan/50 text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-mba-blue-deep dark:border-mba-blue/25 dark:bg-slate-800 dark:text-slate-50"
+            >
+              Current ESDP Members
+            </Badge>
+            <h2 className="mt-4 font-heading text-2xl leading-tight tracking-[-0.03em] text-mba-blue-deep sm:text-3xl dark:text-slate-50">
+              Need to renew your Emergency Services Discount Plan?
+            </h2>
+            <div className="mt-4 space-y-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8 dark:text-slate-400">
+              <p>
+                Although Lifeline is now the primary support program, Morongo
+                Basin Ambulance is still honoring ESDP renewals for current
+                members.
+              </p>
+              <p>
+                If you are already enrolled in the Emergency Services Discount
+                Plan, you can continue your renewal online here.
+              </p>
+            </div>
+            <div className="mt-6">
+              <Button
+                asChild
+                variant="outline"
+                className="rounded-full border-mba-blue/35 bg-white px-6 font-semibold text-mba-blue-deep hover:bg-mba-blue-deep! hover:text-mba-gold dark:border-mba-blue/25 dark:bg-slate-800 dark:text-slate-50"
+              >
+                <a
+                  href={esdpRenewalHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5"
+                >
+                  Renew ESDP Membership
+                  <IconArrowRight className="size-4" aria-hidden />
+                </a>
+              </Button>
+            </div>
+          </Card>
         </div>
       </section>
     </main>

@@ -41,10 +41,7 @@ function CareersPage() {
 
               <p className="mt-5 max-w-xl text-base leading-8 text-slate-600 sm:mt-6 sm:text-lg dark:text-slate-400">
                 Morongo Basin Ambulance employs full time and part time
-                Paramedics, EMTs, CCT RNs, and Communications Operators. The
-                organization also offers limited positions in its Reserve
-                program, plus early experience opportunities for local high
-                school students through the Explorer program.
+                Paramedics, EMTs, CCT RNs, and Communications Operators.
               </p>
             </div>
 
