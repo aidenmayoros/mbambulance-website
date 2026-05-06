@@ -233,7 +233,6 @@ export const aboutServices = [
       "Designed for higher-acuity patients moving between hospitals or facilities",
       "CCT RNs and CCPs can provide a higher level of care than a standard paramedic unit",
       "CCT nurses work closely with paramedics and EMTs to support the sickest patients",
-      "Staged copy highlights RNs with emergency room backgrounds and multiple years of experience",
     ],
   },
   {
