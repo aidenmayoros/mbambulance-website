@@ -69,7 +69,7 @@ function LifelinePage() {
             <aside className="self-end">
               <Card className="gap-0 overflow-hidden rounded-xl border-mba-blue/25 p-0 py-0 ring-0 dark:border-mba-blue/20">
                 <img
-                  src="/lifeline-community.jpeg"
+                  src="/lifeline-community.jpg"
                   alt="Morongo Basin Ambulance community support"
                   className="block h-auto w-full"
                 />
